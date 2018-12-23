@@ -1,0 +1,22 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean />
+  </SettingsComponent>
+  <RecentFilesTracker>
+    <RecentFilesTracker>
+      <TrackedFile location="E:\#Receipts\Test\AutoCompleteText\Form1.cs" offset="771" line="16" column="0" />
+      <TrackedFile location="E:\#Receipts\Test\AutoCompleteText\AutoCompleteText.cs" offset="114" line="0" column="0" />
+    </RecentFilesTracker>
+  </RecentFilesTracker>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Handle" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AutoCompleteText.AutoCompleteTextBox">
+      <Item value="AutoCompleteFiles" priority="0" />
+      <Item value="AutoCompleteUrls" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AJAX_Test1", "http://localhost/AJAX_Test1/AJAX_Test1.csproj", "{5B2730E6-EEB1-44AF-B8CC-70EAFF550300}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{5B2730E6-EEB1-44AF-B8CC-70EAFF550300}.Debug.ActiveCfg = Debug|.NET
+		{5B2730E6-EEB1-44AF-B8CC-70EAFF550300}.Debug.Build.0 = Debug|.NET
+		{5B2730E6-EEB1-44AF-B8CC-70EAFF550300}.Release.ActiveCfg = Release|.NET
+		{5B2730E6-EEB1-44AF-B8CC-70EAFF550300}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

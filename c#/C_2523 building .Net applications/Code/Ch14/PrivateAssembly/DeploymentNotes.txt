@@ -1,0 +1,4 @@
+Steps
+- Right click on the references and pick Add Reference
+- Click Browse and navigate to the bin/Debug of the PhotoAlbum Component (PhotoAlbum.dll) and select the dll
+- Put in the Using PhotoAlbum; at the top and your in business.

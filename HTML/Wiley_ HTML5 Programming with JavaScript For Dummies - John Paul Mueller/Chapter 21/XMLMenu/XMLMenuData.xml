@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Menu>
+   <Entry id="Home"
+          caption="Home"
+          target="#" />
+   <Entry id="Products"
+          caption="Products"
+          target="#">
+      <Entry id="ProductsWidgets"
+             caption="Widgets"
+             target="#">
+         <Entry id="ProductsWidgets1"
+                caption="Widget 1"
+                target="#" />
+         <Entry id="ProductsWidgets2"
+                caption="Widget 2"
+                target="#" />
+      </Entry>
+      <Entry id="ProductsGizmos"
+             caption="Gizmos"
+             target="#">
+         <Entry id="ProductsGizmos1"
+                caption="Gizmo 1"
+                target="#" />
+         <Entry id="ProductsGizmos2"
+                caption="Gizmo 2"
+                target="#" />
+         <Entry id="ProductsGizmos3"
+                caption="Gizmo 3"
+                target="#" />
+      </Entry>
+   </Entry>
+   <Entry id="About"
+          caption="About"
+          target="#">
+      <Entry id="AboutLocation"
+             caption="Location"
+             target="#" />
+      <Entry id="AboutContact"
+             caption="Contact Us"
+             target="#" />
+      <Entry id="AboutSupport"
+             caption="Customer Support"
+             target="#" />
+   </Entry>
+</Menu>

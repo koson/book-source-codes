@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Using the Prototype Method</title>
+   <script type="text/javascript">
+      // Use the prototype function to add
+      // features to the String type.
+      String.prototype.getFiveLetters =
+         function ()
+         {
+            return this.substring(0, 5);
+         }
+         
+      
+      function UsePrototype()
+      {
+         // Create an object based on String.
+         var UseString =
+            new String("Hello There!");
+         
+         // The new function is immediately
+         // available for use.
+         alert(UseString.getFiveLetters());
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Using the Prototype Method</h1>
+   <input type="button"
+          value="Use Prototype"
+          onclick="UsePrototype()" />
+</body>
+</html>

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseCSV", "ParseCSV.csproj", "{4B21D8F3-E13B-4AF2-9D57-786A89207023}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4B21D8F3-E13B-4AF2-9D57-786A89207023}.Debug.ActiveCfg = Debug|.NET
+		{4B21D8F3-E13B-4AF2-9D57-786A89207023}.Debug.Build.0 = Debug|.NET
+		{4B21D8F3-E13B-4AF2-9D57-786A89207023}.Release.ActiveCfg = Release|.NET
+		{4B21D8F3-E13B-4AF2-9D57-786A89207023}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

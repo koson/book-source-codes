@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Creating Animations Through Class Transitions</title>
+   <style>
+      .Transition
+      {
+         border: solid;
+         padding: 3px;
+         width: 50%;
+         margin: 5px;
+         font-family: sans-serif;
+      }
+      .Normal
+      {
+         font-size: medium;
+         border: none;
+         background-color: white;
+         text-align: left;
+         margin: 0px;
+      }
+      .Effect
+      {
+         font-size: large;
+         border: groove;
+         background-color: #7fff7f;
+         text-align: center;
+         margin: 10px;
+      }
+      .Effect2
+      {
+         font-size: small;
+         border: outset;
+         background-color: #ff7f7f;
+         text-align: right;
+         margin: 20px;
+      }
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            $("#ChangeClass").click(function()
+               {
+                  $("#SampleText").addClass(
+                     "Effect", 1500, RemoveClass);
+                  return false;
+               });
+            
+            function RemoveClass()
+            {
+               $("#SampleText").removeClass(
+                  "Effect", 1500, "easeOutBounce");
+            };
+            
+            $("#SwitchClass").click(function()
+               {
+                  $(".Normal").switchClass(
+                     "Normal", "Effect", 1500, "easeInElastic");
+                  $(".Effect").switchClass(
+                     "Effect", "Effect2", 1500,
+                     "easeOutElastic");
+                  $(".Effect2").switchClass(
+                     "Effect2", "Normal", 1500,
+                     "easeInOutElastic");
+                  return false;
+               });
+            
+            $("#ToggleClass").click(function()
+               {
+                  $(".Normal").toggleClass("Effect", 1500);
+                  return false;
+               })
+        })
+   </script>
+</head>
+
+<body>
+   <h1>Creating Animations Through Class Transitions</h1>
+   <div class="Transition" >
+      <div id="SampleText" class="Normal">
+         This is some text to transition.
+      </div>
+   </div>
+   <div>
+      <input type="button"
+             id="ChangeClass"
+             value="Add/Remove Class" />
+      <input type="button"
+             id="SwitchClass"
+             value="Switch Between Classes" />
+      <input type="button"
+             id="ToggleClass"
+             value="Toggle Between Classes" />
+   </div>
+</body>
+</html>

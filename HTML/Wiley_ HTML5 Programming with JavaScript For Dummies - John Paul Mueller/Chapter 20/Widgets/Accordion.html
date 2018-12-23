@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Using the Accordion Widget</title>
+   <style>
+      #Configuration
+      {
+         width: 400px;
+         text-align: center;
+      }
+      #Configuration div
+      {
+          text-align: left;
+      }
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            $("#Configuration").accordion();
+        });
+   </script>
+</head>
+
+<body>
+   <h1>Using the Accordion Widget</h1>
+   <form id="ConfigForm" method="get" action="Accordion.html">
+      <div id="Configuration">
+         <h2>Foreground Color</h2>
+         <div>
+            <input id="FGRed"
+                   type="radio"
+                   name="Foreground"
+                   value="Red"
+                   checked="checked" />
+            <label for="FGRed">Red</label><br />
+            <input id="FGOrange"
+                   type="radio"
+                   name="Foreground"
+                   value="Orange" />
+            <label for="FGOrange">Orange</label><br />
+            <input id="FGGreen"
+                   type="radio"
+                   name="Foreground"
+                   value="Green" />
+            <label for="FGGreen">Green</label><br />
+            <input id="FGBlue"
+                   type="radio"
+                   name="Foreground"
+                   value="Blue" />
+            <label for="FGBlue">Blue</label>
+         </div>
+         <h2>Background Color</h2>
+         <div>
+            <input id="BGRed"
+                   type="radio"
+                   name="Background"
+                   value="Red"
+                   checked="checked" />
+            <label for="BGRed">Red</label><br />
+            <input id="BGOrange"
+                   type="radio"
+                   name="Background"
+                   value="Orange" />
+            <label for="BGOrange">Orange</label><br />
+            <input id="BGGreen"
+                   type="radio"
+                   name="Background"
+                   value="Green" />
+            <label for="BGGreen">Green</label><br />
+            <input id="BGBlue"
+                   type="radio"
+                   name="Background"
+                   value="Blue" />
+            <label for="BGBlue">Blue</label>
+         </div>
+         <h2>Options</h2>
+         <div>
+            <input id="Sounds"
+                   type="checkbox"
+                   name="Sounds"
+                   value="SpecialSounds" />
+            <label for="Sounds">Use Special Sounds</label><br />
+            <input id="Effects"
+                   type="checkbox"
+                   name="Effects"
+                   value="SpecialEffects" />
+            <label for="Effects">Use Special Effects</label>
+         </div>
+      </div>
+      <input id="ChangeConfig"
+             type="submit"
+             value="Change Configuration" />
+   </form>
+</body>
+</html>

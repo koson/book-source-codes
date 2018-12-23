@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Getting Today's Date</title>
+</head>
+
+<body>
+    <h1>Today's Date/Time</h1>
+    <script language="JavaScript">
+        var Today = new Date();
+        document.write("<p>Full Date/Time: " +
+            Today.toLocaleString() + "<br />");
+        document.write("Full Date: " +
+            Today.toLocaleDateString() + "<br />");
+        document.write("Date Only: " +
+            Today.toDateString() + "<br />");
+        document.write("Full Time: " +
+            Today.toLocaleTimeString() + "<br />");
+        document.write("Time Only: " +
+            Today.toTimeString() + "</p>");
+        document.write("<p>Custom Date (m/d/y): " +
+            (Today.getMonth() + 1) + "/" +
+            Today.getDate() + "/" +
+            Today.getFullYear() + "<br />");
+        document.write("Custom Time (h:m:s:ms): " +
+            Today.getHours() + ":" +
+            Today.getMinutes() + ":" +
+            Today.getSeconds() + "." +
+            Today.getMilliseconds() + "</p>");
+    </script>
+</body>
+</html>

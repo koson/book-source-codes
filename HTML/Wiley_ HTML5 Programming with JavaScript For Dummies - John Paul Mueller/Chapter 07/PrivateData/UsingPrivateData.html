@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Using Private Properties and Methods</title>
+   <script language="JavaScript">
+      // param is private.
+      function TestObject(param)
+      {
+         // ThisString is private.
+         ThisString = "abc";
+         
+         // ChangeString is private.
+         function ChangeString(input)
+         {
+            return input.toUpperCase();
+         }
+         
+         // MeldData is privileged.
+         this.MeldData = function()
+         {
+            return ChangeString(ThisString + param);
+         }
+      }
+      
+      function CreateObject()
+      {
+         var DoTest = new TestObject("def");
+         
+         // This code won't work.
+         //document.getElementById("Result").innerHTML =
+         //   DoTest.ChangeString("def");
+         
+         // This code will.
+         document.getElementById("Result").innerHTML =
+            DoTest.MeldData();
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Using Private Properties and Methods</h1>
+   <input type="button"
+          value="Click Me"
+          onclick="CreateObject()" />
+   <p id="Result"></p>
+</body>
+</html>

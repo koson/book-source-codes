@@ -1,0 +1,13 @@
+<Configuration>
+  <RecentFilesTracker>
+    <RecentFilesTracker>
+      <TrackedFile location="E:\#Receipts\Source\Reflection2\Class1.cs" offset="41" line="-1" column="-1" />
+    </RecentFilesTracker>
+  </RecentFilesTracker>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean />
+  </SettingsComponent>
+  <CompletionStatisticsManager />
+</Configuration>

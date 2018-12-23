@@ -1,0 +1,7 @@
+// database.idl
+
+interface database {
+  void addRecord(in string key, in string record);
+  string lookupRecord(in string key);
+};
+

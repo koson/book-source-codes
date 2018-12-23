@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResolveAssembly", "ResolveAssembly.csproj", "{CAA2FB53-F856-47A0-9C7F-06CD032E7BF1}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{177E191B-B83F-4F85-BD19-ACEC63CE14C9}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary2", "ClassLibrary2\ClassLibrary2.csproj", "{283BB45D-2AFA-4B08-9EF8-BD0192A1B5EB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CAA2FB53-F856-47A0-9C7F-06CD032E7BF1}.Debug.ActiveCfg = Debug|.NET
+		{CAA2FB53-F856-47A0-9C7F-06CD032E7BF1}.Debug.Build.0 = Debug|.NET
+		{CAA2FB53-F856-47A0-9C7F-06CD032E7BF1}.Release.ActiveCfg = Release|.NET
+		{CAA2FB53-F856-47A0-9C7F-06CD032E7BF1}.Release.Build.0 = Release|.NET
+		{177E191B-B83F-4F85-BD19-ACEC63CE14C9}.Debug.ActiveCfg = Debug|.NET
+		{177E191B-B83F-4F85-BD19-ACEC63CE14C9}.Debug.Build.0 = Debug|.NET
+		{177E191B-B83F-4F85-BD19-ACEC63CE14C9}.Release.ActiveCfg = Release|.NET
+		{177E191B-B83F-4F85-BD19-ACEC63CE14C9}.Release.Build.0 = Release|.NET
+		{283BB45D-2AFA-4B08-9EF8-BD0192A1B5EB}.Debug.ActiveCfg = Debug|.NET
+		{283BB45D-2AFA-4B08-9EF8-BD0192A1B5EB}.Debug.Build.0 = Debug|.NET
+		{283BB45D-2AFA-4B08-9EF8-BD0192A1B5EB}.Release.ActiveCfg = Release|.NET
+		{283BB45D-2AFA-4B08-9EF8-BD0192A1B5EB}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

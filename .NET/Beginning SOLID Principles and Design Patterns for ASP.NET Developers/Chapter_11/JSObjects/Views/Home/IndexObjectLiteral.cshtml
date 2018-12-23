@@ -1,0 +1,66 @@
+﻿<html>
+    <head>
+        <title>Object Literals</title>
+        <script src="~/scripts/jquery-2.1.1.js"></script>
+
+        <script type="text/javascript">
+
+
+            $(document).ready(function () {
+
+                $("#display").click(function () {
+
+                    var employee = {};
+                    employee.employeeID = $("#employeeid").val();
+                    employee.firstName = $("#firstname").val();
+                    employee.lastName = $("#lastname").val();
+                    employee.display = function () {
+                        alert("#" + this.employeeID + " - " + this.firstName + " " + this.lastName);
+                    };
+
+
+                    var employee = {
+                        "ID": $("#employeeid").val(),
+                        "FirstName": $("#firstname").val(),
+                        "LastName": $("#lastname").val(),
+                        "display": function () {
+                            alert("#" + this.ID + " - " + this.FirstName + " " + this.LastName);
+                        }
+                    };
+
+
+                    employee.display();
+
+                });
+
+            });
+
+        </script>
+
+
+    </head>
+
+    <body>
+        <h1>Employee Details</h1>
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>Employee ID :</td>
+                <td><input type="text" id="employeeid" /></td>
+            </tr>
+            <tr>
+                <td>First Name :</td>
+                <td><input type="text" id="firstname" /></td>
+            </tr>
+            <tr>
+                <td>Last Name :</td>
+                <td><input type="text" id="lastname" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Display" id="display" />
+                </td>
+            </tr>
+
+        </table>
+    </body>
+</html>

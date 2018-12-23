@@ -1,0 +1,70 @@
+﻿<html>
+<head>
+    <title>Observer</title>
+    <script src="~/scripts/jquery-2.1.1.js"></script>
+
+    <script type="text/javascript">
+
+        function BlogComment() {
+            this.observers = [];
+        }
+
+        BlogComment.prototype = {
+
+            subscribe: function (fn) {
+                this.observers.push(fn);
+            },
+
+            unsubscribe: function (fn) {
+                this.observers = this.handlers.filter(
+                    function (item) {
+                        if (item !== fn) {
+                            return item;
+                        }
+                    }
+                );
+            },
+
+            broadcast: function (data) {
+                this.observers.forEach(function (item) {
+                    item.call(null, data);
+                });
+            }
+        }
+     
+
+        $(document).ready(function () {
+
+            var Subscriber1 = function (data) {
+                $("#div1").html(data);
+            };
+
+            var Subscriber2 = function (data) {
+                $("#div2").html("<h4>Count : " + data.length + "</h4>");
+            };
+
+            var comment = new BlogComment();
+            comment.subscribe(Subscriber1);
+            comment.subscribe(Subscriber2);
+
+            $("#text1").keyup(function () {
+                comment.broadcast($("#text1").val());
+            });
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <h2>Comments:</h2>
+    <textarea cols="40" rows="4" id="text1"></textarea>
+
+    <br />
+
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>

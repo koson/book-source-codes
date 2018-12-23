@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Modifying the Output Stream</title>
+   <style type="text/css">
+      h1 {color: red;font-style: italic;text-align: center;}
+      p {color: blue;font-family: cursive;}
+   </style>
+</head>
+
+<body>
+   <h1>Modifying the Output Stream</h1>
+   <script language="JavaScript">
+      // Get the first stylesheet associated with
+      // this document.
+      var Sheets = document.styleSheets[0];
+      
+      // Obtain the rules on that sheet.
+      var Rules = Sheets.cssRules;
+      
+      // Display each of the rules on screen.
+      for (var i = 0; i < Rules.length; i++)
+      {
+         // Obtain a single rule and write the name
+         // of that rule on screen.
+         var Rule = Rules[i];
+         document.write("<p>" + Rule.selectorText +
+                        "<br />");
+         
+         // Obtain a list of styles for the rule.
+         var Styles = Rule.style;
+         
+         // Display each of the styles on screen.
+         for (var j=0; j < Styles.length; j++)
+         {
+            // Obtain the name of a property.
+            var PropertyName = Styles[j];
+            
+            // Use the property name to locate its value
+            // and display both name and value.
+            document.write(PropertyName + " : " +
+               Styles.getPropertyValue(PropertyName) +
+               "<br />");
+         }
+         
+         // End the document rule printout.
+         document.write("</p>");
+      }
+   </script>
+</body>
+</html>

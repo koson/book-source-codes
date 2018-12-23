@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeErrorModeTest", "ChangeErrorModeTest.csproj", "{9DD92CB3-4672-4FE9-8246-922AD02B6BC3}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9DD92CB3-4672-4FE9-8246-922AD02B6BC3}.Debug.ActiveCfg = Debug|.NET
+		{9DD92CB3-4672-4FE9-8246-922AD02B6BC3}.Debug.Build.0 = Debug|.NET
+		{9DD92CB3-4672-4FE9-8246-922AD02B6BC3}.Release.ActiveCfg = Release|.NET
+		{9DD92CB3-4672-4FE9-8246-922AD02B6BC3}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

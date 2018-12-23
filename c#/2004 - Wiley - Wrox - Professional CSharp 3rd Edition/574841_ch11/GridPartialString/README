@@ -1,0 +1,4 @@
+Compile each of GridTest.cpp and GridTestString.cpp separately.
+
+Although we believe it is legal C++, GridTestString.cpp does not compile
+with Microsoft Visual Studio.

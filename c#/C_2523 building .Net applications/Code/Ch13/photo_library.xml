@@ -1,0 +1,16 @@
+﻿<?xml version='1.0' ?>
+<!-- This file represents a fragment of a photo library -->
+<photolibrary path="/images">
+	<photo genre="vacation" photodate="jan-1999" filename="src_beach_jan-1999_01.jpg">
+		<title>Fun at the Beach</title>
+		<filetypes>
+			<filetype type="hri" filename="src_beach_jan-1999_01.jpg" />
+		</filetypes>
+	</photo>
+	<photo genre="holiday" photodate="dec-2001" filename="src_christmas_dec-2001_01.jpg">
+		<title>Openning the gifts</title>
+		<filetypes>
+			<filetype type="lri" filename="lri_christmas_dec-2001_01.jpg" />
+		</filetypes>
+	</photo>
+</photolibrary>

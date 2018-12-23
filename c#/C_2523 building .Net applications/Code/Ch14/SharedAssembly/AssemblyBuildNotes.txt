@@ -1,0 +1,8 @@
+Configuration
+- create key pair with strong name tool (sn -k RyanSolutions) which creates RyanSolutions.snk
+- add to AssemblyInfo.cs the following:
+	// path to KeyFile
+	[assembly: AssemblyKeyFile(@"D:\SharedAssemblyKeys\RyanSolutions.snk")]
+- compile
+- put into GAC (drag and drop into c:\winnt\assembly\ or gacutil - i *.dll)
+- you now have a shared assembly

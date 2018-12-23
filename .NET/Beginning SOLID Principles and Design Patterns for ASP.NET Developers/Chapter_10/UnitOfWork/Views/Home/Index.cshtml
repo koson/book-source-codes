@@ -1,0 +1,21 @@
+﻿<h1>Add New Project</h1>
+<form asp-action="CreateProject" asp-controller="Home">
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Project Name : </td>
+            <td><input name="ProjectName" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Team Members : </td>
+            <td>
+                <input name="members[0].Name" type="text" />
+                <br /><br />
+                <input name="members[1].Name" type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Create Project"/></td>
+        </tr>
+    </table>
+    @ViewBag.Message
+</form>

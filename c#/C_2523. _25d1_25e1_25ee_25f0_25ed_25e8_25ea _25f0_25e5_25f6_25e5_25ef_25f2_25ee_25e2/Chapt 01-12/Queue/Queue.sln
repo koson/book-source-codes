@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue.csproj", "{85C2A2F5-3ADB-41C7-B00C-DF062F9777F0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{85C2A2F5-3ADB-41C7-B00C-DF062F9777F0}.Debug.ActiveCfg = Debug|.NET
+		{85C2A2F5-3ADB-41C7-B00C-DF062F9777F0}.Debug.Build.0 = Debug|.NET
+		{85C2A2F5-3ADB-41C7-B00C-DF062F9777F0}.Release.ActiveCfg = Release|.NET
+		{85C2A2F5-3ADB-41C7-B00C-DF062F9777F0}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

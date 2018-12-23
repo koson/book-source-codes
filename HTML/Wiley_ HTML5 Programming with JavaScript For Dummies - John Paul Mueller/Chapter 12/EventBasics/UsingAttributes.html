@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Assigning an Event Handler</title>
+   <script language="JavaScript">
+      function AssignHandler()
+      {
+         // Subscribe to the click event.
+         document.getElementById(
+            "btnClickMe").onclick=SayHello;
+         
+         // Display a subscription message.
+         alert("Button Assigned");
+      }
+      
+      function SayHello()
+      {
+         // Display a message.
+         alert("Hello There");
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Assigning an Event Handler</h1>
+   <input id="btnAssign"
+          type="button"
+          value="Assign the Event Handler"
+          onclick="AssignHandler()" />
+   <input id="btnClickMe"
+          type="button"
+          value="Click Me" />
+</body>
+</html>

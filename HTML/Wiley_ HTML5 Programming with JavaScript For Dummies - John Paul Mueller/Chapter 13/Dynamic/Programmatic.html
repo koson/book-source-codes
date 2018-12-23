@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Moving Elements Around</title>
+   <script language="JavaScript">
+      function ChangeStyles()
+      {
+         // Obtain a reference to the button.
+         var ThisButton = document.getElementById("btnChange");
+         
+         // Change its absolute position on screen.
+         ThisButton.style.position = "absolute";
+         ThisButton.style.left = "150px";
+         ThisButton.style.top = "250px";
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Moving Elements Around</h1>
+   <input id="btnChange"
+          type="button"
+          value="Change the Styles"
+          onclick="ChangeStyles()" />
+</body>
+</html>

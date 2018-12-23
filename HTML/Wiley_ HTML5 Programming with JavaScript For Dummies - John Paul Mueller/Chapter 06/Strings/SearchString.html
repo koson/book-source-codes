@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Searching a String</title>
+   <script language="JavaScript">
+      // Define a global search string.
+      var SearchString = "This is the search string!"
+      
+      function FindString()
+      {
+         // Obtain the value the user wants to find.
+         var FindValue =
+            document.getElementById("SearchString").value;
+            
+         // Perform the search.
+         var Result = SearchString.indexOf(FindValue);
+         
+         // Display an appropriate result.
+         // Check for a blank input first.
+         if (Result == 0)
+         {
+            document.getElementById("Result").innerHTML =
+               "You must provide an input value!";
+         }
+         
+         // Check for a result that doesn't exist next.
+         else if (Result == -1)
+         {
+            document.getElementById("Result").innerHTML =
+               "The search string doesn't exist.";
+         }
+         
+         // Display the location information.
+         else
+         {
+            document.getElementById("Result").innerHTML =
+               'The search string "' + FindValue +
+               '" appears at character ' + Result;
+         }
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Searching a String</h1>
+   <p>
+      This is the original string:
+      <script language="JavaScript">
+         document.write(SearchString);
+      </script>
+   </p>
+   <p>Type a search string:
+      <input id="SearchString" type="text" value="the" />
+      <input id="FindIt" type="button" value="Find It" onclick="FindString()" />
+   </p>
+   <p id="Result" />
+</body>
+</html>

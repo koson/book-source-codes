@@ -1,0 +1,19 @@
+For this task there will have to be a starter project.  This will go into a seperate solution.
+
+High Level Steps
+
+Create Version 1.0.0.0
+	AssemblyInfo.cs
+		[assembly: AssemblyVersion("1.0.0.0")]
+		[assembly: AssemblyKeyFile(@"D:\SharedAssemblyKeys\RyanSolutions.snk")]
+	Create Folder "Version 1.0.0.0"
+	Compile
+	Put binary from Debug into subdirectory "Version 1.0.0.0"
+Create Version 2.0.0.0
+	AssemblyInfo.cs	
+		[assembly: AssemblyVersion("2.0.0.0")]
+	Create Folder "Version 2.0.0.0"
+	Compile
+	Put binary from Debug into subdirectory "Version 2.0.0.0"
+
+	

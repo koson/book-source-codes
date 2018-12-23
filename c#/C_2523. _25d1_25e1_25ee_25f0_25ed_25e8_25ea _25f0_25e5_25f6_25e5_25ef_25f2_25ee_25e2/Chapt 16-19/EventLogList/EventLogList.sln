@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventLogList", "EventLogList.csproj", "{89ABA76D-C83B-4A66-A460-DC3580C7BFE9}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{89ABA76D-C83B-4A66-A460-DC3580C7BFE9}.Debug.ActiveCfg = Debug|.NET
+		{89ABA76D-C83B-4A66-A460-DC3580C7BFE9}.Debug.Build.0 = Debug|.NET
+		{89ABA76D-C83B-4A66-A460-DC3580C7BFE9}.Release.ActiveCfg = Release|.NET
+		{89ABA76D-C83B-4A66-A460-DC3580C7BFE9}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

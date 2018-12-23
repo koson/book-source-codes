@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindCustomContructor", "FindCustomContructor.csproj", "{A5CD2ECF-0162-472C-B70C-75C0691E5823}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A5CD2ECF-0162-472C-B70C-75C0691E5823}.Debug.ActiveCfg = Debug|.NET
+		{A5CD2ECF-0162-472C-B70C-75C0691E5823}.Debug.Build.0 = Debug|.NET
+		{A5CD2ECF-0162-472C-B70C-75C0691E5823}.Release.ActiveCfg = Release|.NET
+		{A5CD2ECF-0162-472C-B70C-75C0691E5823}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

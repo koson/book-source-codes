@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Formatting HTML by Tag Type</title>
+   <script language="JavaScript">
+      function ChangeStyles()
+      {
+         // Modify the <h1> tag style.
+         var Header = document.getElementsByTagName("h1")
+         for (var i = 0; i < Header.length; i++)
+         {
+            Header[i].style.fontFamily = "Arial";
+            Header[i].style.fontSize = "45px";
+            Header[i].style.fontWeight = "bold";
+            Header[i].style.color = "green";
+            Header[i].style.textAlign = "center";
+            Header[i].style.marginLeft = "20px";
+            Header[i].style.marginRight = "20px";
+            Header[i].style.border = "medium double green";
+         }
+         
+         // Modify the <p> tag style.
+         var Para = document.getElementsByTagName("p");
+         for (var i= 0; i < Para.length; i++)
+         {
+            Para[i].style.fontFamily = "serif";
+            Para[i].style.fontStyle = "italic";
+            Para[i].style.fontSize = "1em";
+            Para[i].style.color = "blue";
+         }
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Formatting HTML by Tag Type</h1>
+   <p>Some text to format.</p>
+   <p>Some more text to format.</p>
+   <input id="btnChange"
+          type="button"
+          value="Change the Styles"
+          onclick="ChangeStyles()" />
+</body>
+</html>

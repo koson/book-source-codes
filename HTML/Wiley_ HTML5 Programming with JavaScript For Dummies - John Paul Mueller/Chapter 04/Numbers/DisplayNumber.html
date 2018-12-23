@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Formatting Numbers</title>
+    <script language="JavaScript">var ThisNumber = 22.5</script>
+</head>
+
+<body>
+   <h1>Formatting Numbers</h1>
+   <p>toExponential():
+      <script language="JavaScript">
+         document.write(ThisNumber.toExponential(5));
+      </script>
+   </p>
+   <p>toFixed():
+      <script language="JavaScript">
+         document.write(ThisNumber.toFixed(5));
+      </script>
+   </p>
+   <p>toLocaleString():
+      <script language="JavaScript">
+         document.write(ThisNumber.toLocaleString());
+      </script>
+   </p>
+   <p>toPrecision():
+      <script language="JavaScript">
+         document.write(ThisNumber.toPrecision(5));
+      </script>
+   </p>
+   <p>toString():
+      <ul>
+         <li>Binary:
+            <script language="JavaScript">
+               document.write(ThisNumber.toString(2));
+            </script>
+         </li>
+         <li>Octal:
+            <script language="JavaScript">
+               document.write(ThisNumber.toString(8));
+            </script>
+         </li>
+         <li>Decimal:
+            <script language="JavaScript">
+               document.write(ThisNumber.toString(10));
+            </script>
+         </li>
+         <li>Hexadecimal:
+            <script language="JavaScript">
+               document.write(ThisNumber.toString(16));
+            </script>
+         </li>
+      </ul>
+   </p>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Formatting the Style Tag Directly</title>
+   <script language="JavaScript">
+      function ChangeStyles()
+      {
+         // Obtain access to the header.
+         Head = document.getElementsByTagName("head")[0];
+         
+         // Create a <style> tag.
+         StyleTag = document.createElement("style");
+         
+         // Set the <style> tag type.
+         StyleTag.type = "text/css";
+         
+         // Create a variable to hold the style information.
+         var Styles = 
+            "h1 {font-family:Arial;font-size:45px;" +
+            "font-weight:bold;color:green;text-align:center;" +
+            "margin-left:20px;margin-right:20px;" +
+            "border:medium double green;}" +
+            "p {font-family:serif;font-style:italic;" +
+            "font-size:1em;color:blue}";
+         
+         // Add the style to the <style> tag.
+         StyleTag.appendChild(document.createTextNode(Styles));
+         
+         // Add the <style> tag to the heading.
+         Head.appendChild(StyleTag);
+      }
+   </script>
+</head>
+
+<body>
+   <h1 id="Header">Formatting the Style Tag Directly</h1>
+   <p id="Paragraph">Some text to format.</p>
+   <p>Some more text to format.</p>
+   <input id="btnChange"
+          type="button"
+          value="Change the Styles"
+          onclick="ChangeStyles()" />
+</body>
+</html>

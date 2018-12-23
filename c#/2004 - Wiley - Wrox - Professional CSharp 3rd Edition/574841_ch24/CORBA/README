@@ -1,0 +1,26 @@
+This CORBA example depends on the omniORB-4.0.4 framework, available for
+download at htpp://omniorb.sourceforge.net/. It was tested only on Linux.
+
+To build the example:
+
+1. Install the omniORB framework. Let $OMNIROOT denote the root directory of
+the omniORB installation.
+
+2. Compile the idl file:
+
+>$OMNIROOT/build/bin/omniidl -bcxx database.idl
+
+3. Add the appropriate paths to LD_LIBRARY_PATH and PATH:
+
+bourne-shell-like commands:
+
+>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OMNIROOT/build/lib
+>export PATH=$PATH:$OMNIROOT/build/bin
+
+4. Build the server:
+
+g++ -o dbsrv -I. -I$OMNIROOT/include/ -I$OMNIROOT/build/include/ -D__linux__ -D__x86__ -D__OSVERSION=2__ -D__cplusplus__ -L$OMNIROOT/build/lib/ -lomniORB4 -lomniDynamic4 DatabaseServer.cpp databaseSK.cc
+
+5. Build the client:
+
+g++ -o dbclnt -I. -I$OMNIROOT/include/ -I$OMNIROOT/build/include/ -D__linux__ -D__x86__ -D__OSVERSION=2__ -D__cplusplus__ -L$OMNIROOT/build/lib/ -lomniORB4 -lomniDynamic4 DatabaseClient.cpp databaseSK.cc

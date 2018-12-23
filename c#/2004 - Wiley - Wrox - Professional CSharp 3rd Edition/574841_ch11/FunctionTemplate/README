@@ -1,0 +1,12 @@
+Include the following combinations of files in your project:
+
+FindTemplate.cpp and SpreadsheetCell.cpp
+or
+FindTemplateOverload.cpp
+or
+FindTemplatePtr.cpp and SpreadsheetCell.cpp
+or
+FindTemplateSpecialization.cpp
+or
+FindTemplateSpecialOverload.cpp
+

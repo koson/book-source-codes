@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beep", "Beep.csproj", "{464291F9-1306-4B8D-8551-3CEADFD1E760}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{464291F9-1306-4B8D-8551-3CEADFD1E760}.Debug.ActiveCfg = Debug|.NET
+		{464291F9-1306-4B8D-8551-3CEADFD1E760}.Debug.Build.0 = Debug|.NET
+		{464291F9-1306-4B8D-8551-3CEADFD1E760}.Release.ActiveCfg = Release|.NET
+		{464291F9-1306-4B8D-8551-3CEADFD1E760}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

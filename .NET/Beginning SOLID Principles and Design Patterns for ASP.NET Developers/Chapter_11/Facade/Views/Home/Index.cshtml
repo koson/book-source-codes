@@ -1,0 +1,61 @@
+﻿<html>
+<head>
+    <title>Facade</title>
+    <script src="~/scripts/jquery-2.1.1.js"></script>
+
+    <script type="text/javascript">
+
+        var OrderProcessor = function () {
+
+        }
+
+        OrderProcessor.prototype.validateDetails = function () {
+            var addresss = new AddressDetails();
+            var bank = new BankDetails();
+            var employment = new EmploymentDetails();
+
+            var result = true;
+
+            if (!addresss.validate()) {
+                result = false;
+            } else if (!bank.validate()) {
+                result = false;
+            } else if (!employment.validate()) {
+                result = false;
+            }
+            return result;
+        }
+        
+
+        var AddressDetails = function () {
+            this.validate = function () {
+                return true;
+            }
+        }
+
+        var BankDetails = function () {
+            this.validate = function () {
+                return true;
+            }
+        }
+
+        var EmploymentDetails = function () {
+            this.validate = function () {
+                return true;
+            }
+        }
+
+        $(document).ready(function () {
+            var app = new OrderProcessor();
+            var status = app.validateDetails();
+            alert("Are details valid? " + status);
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+</body>
+</html>

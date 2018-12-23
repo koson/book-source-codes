@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tabs>
+   <TabData>
+      <Heading id="Tab1"
+               href="#Tabs1"
+               caption="Tab 1" />
+      <Heading id="Tab2"
+               href="#Tabs2"
+               caption="Tab 2" />
+      <Heading id="Tab3"
+               href="#Tabs3"
+               caption="Tab 3" />
+   </TabData>
+   <TabContent>
+      <Content id="Tabs1">
+         This is some content for Tab 1.
+      </Content>
+      <Content id="Tabs2">
+         This is some content for Tab 2.
+      </Content>
+      <Content id="Tabs3">
+         This is some content for Tab 3.
+      </Content>
+   </TabContent>
+</Tabs>

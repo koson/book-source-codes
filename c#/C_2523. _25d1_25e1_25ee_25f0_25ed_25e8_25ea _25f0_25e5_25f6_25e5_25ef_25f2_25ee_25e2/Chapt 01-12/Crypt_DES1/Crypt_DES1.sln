@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypt_DES1", "Crypt_DES1.csproj", "{B639A1D7-D416-44EB-B45A-BF61DFD3E753}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B639A1D7-D416-44EB-B45A-BF61DFD3E753}.Debug.ActiveCfg = Debug|.NET
+		{B639A1D7-D416-44EB-B45A-BF61DFD3E753}.Debug.Build.0 = Debug|.NET
+		{B639A1D7-D416-44EB-B45A-BF61DFD3E753}.Release.ActiveCfg = Release|.NET
+		{B639A1D7-D416-44EB-B45A-BF61DFD3E753}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,90 @@
+﻿<html>
+    <head>
+        <title>JavaScript Module Pattern</title>
+        <script src="~/scripts/jquery-2.1.1.js"></script>
+        <script src="~/scripts/customerapp.customermanager.js"></script>
+        @*<script src="~/scripts/customerapp.customermanager-revealing.js"></script>*@
+
+        <script>
+            $(document).ready(function () {
+
+                CustomerApp.CustomerManager.SelectAll(function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        $("#customerid").append("<option>" + data[i].CustomerID + "</option>");
+                    }
+                });
+
+                $("#customerid").change(function () {
+                    CustomerApp.CustomerManager.SelectByID($("#customerid").val(), function (data) {
+                        $("#companyname").val(data.CompanyName);
+                        $("#contactname").val(data.ContactName);
+                        $("#country").val(data.Country);
+                    });
+                });
+
+                $("#insert").click(function () {
+                    var obj = {};
+                    obj.CustomerID = $("#newcustomerid").val();
+                    obj.CompanyName = $("#companyname").val();
+                    obj.ContactName = $("#contactname").val();
+                    obj.Country = $("#country").val();
+                    CustomerApp.CustomerManager.Insert(obj, function (msg) {
+                        alert(msg);
+                    });
+                });
+
+                $("#update").click(function () {
+                    var obj = {};
+                    obj.CustomerID = $("#customerid").val();
+                    obj.CompanyName = $("#companyname").val();
+                    obj.ContactName = $("#contactname").val();
+                    obj.Country = $("#country").val();
+                    CustomerApp.CustomerManager.Update(obj, function (msg) {
+                        alert(msg);
+                    });
+                });
+
+                $("#delete").click(function () {
+                    CustomerApp.CustomerManager.Delete($("#customerid").val(), function (msg) {
+                        alert(msg);
+                    });
+                });
+
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <h1>Manage Customers</h1>
+        <table border="1" cellpadding="11">
+            <tr>
+                <td>Customer ID :</td>
+                <td>
+                    <select id="customerid"></select>
+                    OR
+                    <input id="newcustomerid" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>Company Name :</td>
+                <td><input id="companyname" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Contact Name :</td>
+                <td><input id="contactname" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Country :</td>
+                <td><input id="country" type="text" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input id="insert" type="button" value="Insert" />
+                    <input id="update" type="button" value="Update" />
+                    <input id="delete" type="button" value="Delete" />
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

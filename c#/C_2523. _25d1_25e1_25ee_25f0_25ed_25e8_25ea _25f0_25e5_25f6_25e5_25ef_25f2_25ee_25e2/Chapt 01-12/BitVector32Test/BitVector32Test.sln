@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitVector32Test", "BitVector32Test.csproj", "{3674B1A8-8606-4D07-994E-6871AFE7C094}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{3674B1A8-8606-4D07-994E-6871AFE7C094}.Debug.ActiveCfg = Debug|.NET
+		{3674B1A8-8606-4D07-994E-6871AFE7C094}.Debug.Build.0 = Debug|.NET
+		{3674B1A8-8606-4D07-994E-6871AFE7C094}.Release.ActiveCfg = Release|.NET
+		{3674B1A8-8606-4D07-994E-6871AFE7C094}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndexProperty", "IndexProperty.csproj", "{13986D90-81BD-40A9-9B94-A1B2043BC643}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{13986D90-81BD-40A9-9B94-A1B2043BC643}.Debug.ActiveCfg = Debug|.NET
+		{13986D90-81BD-40A9-9B94-A1B2043BC643}.Debug.Build.0 = Debug|.NET
+		{13986D90-81BD-40A9-9B94-A1B2043BC643}.Release.ActiveCfg = Release|.NET
+		{13986D90-81BD-40A9-9B94-A1B2043BC643}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

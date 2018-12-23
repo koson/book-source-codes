@@ -1,0 +1,57 @@
+﻿<html>
+    <head>
+        <title>Function Objects</title>
+        <script src="~/scripts/jquery-2.1.1.js"></script>
+
+        <script type="text/javascript">
+
+            var employee = function () {
+                this.ID = 0;
+                this.firstName = "";
+                this.lastName = "";
+                this.display = function () {
+                    alert("#" + this.ID + " - " + this.firstName + " " + this.lastName);
+                }
+            }
+
+            $(document).ready(function () {
+
+                $("#display").click(function () {
+                    var emp = new employee();
+                    emp.ID = $("#employeeid").val();
+                    emp.firstName = $("#firstname").val();
+                    emp.lastName = $("#lastname").val();
+                    emp.display();
+                });
+
+            });
+
+        </script>
+
+
+    </head>
+
+    <body>
+        <h1>Employee Details</h1>
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>Employee ID :</td>
+                <td><input type="text" id="employeeid" /></td>
+            </tr>
+            <tr>
+                <td>First Name :</td>
+                <td><input type="text" id="firstname" /></td>
+            </tr>
+            <tr>
+                <td>Last Name :</td>
+                <td><input type="text" id="lastname" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Display" id="display" />
+                </td>
+            </tr>
+
+        </table>
+    </body>
+</html>

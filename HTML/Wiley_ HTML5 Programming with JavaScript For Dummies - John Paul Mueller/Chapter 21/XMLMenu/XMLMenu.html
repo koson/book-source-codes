@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>XML-based Menu Example</title>
+   <style>
+      .ui-menu
+      {
+         width: 175px;
+         font-size: medium;
+      }
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            $(window).load(
+               function()
+               {
+                  // Create a connection to the file.
+                  var Connect = new XMLHttpRequest();
+                  
+                  // Define which file to open and
+                  // send the request.
+                  Connect.open("GET", "XMLMenuData.xml", false);
+                  Connect.setRequestHeader(
+                     "Content-Type", "text/xml");
+                  Connect.send(null);
+                  
+                  // Place the response in an XML document.
+                  var Response = Connect.responseXML;
+                  
+                  // Place the root node in an element.
+                  var MenuEntries = Response.childNodes[0];
+                  
+                  // Start at the upper levels and move down.
+                  if (MenuEntries.children.length > 0)
+                     ProcessEntries(MenuEntries.children);
+                     
+                  // Make the menu entries public.
+                  $("#Menu").append(MenuData);
+                  
+                  // Create the menu on screen.
+                  $("#Menu").menu();
+               }
+            );
+            
+            var MenuData = "";
+            
+            function ProcessEntries(Nodes)
+            {
+               for (var i = 0; i < Nodes.length; i++)
+               {
+                  // Store the current node and add it
+                  // to the menu.
+                  var ThisNode = Nodes[i];
+                  MenuData +=
+                     "<li id='" + $(ThisNode).attr("id")
+                        + "'>" +
+                     "<a href='" + $(ThisNode).attr("target")
+                        + "'>" +
+                     $(ThisNode).attr("caption") + "</a>";
+                  
+                  // Check for submenus and process them.
+                  if (ThisNode.children.length > 0)
+                  {
+                     MenuData += "<ul>";
+                     ProcessEntries(ThisNode.children);
+                     MenuData += "</ul>";
+                  }
+                  
+                  // End the current node.
+                  MenuData += "</li>";
+               }
+               
+               // Return to the caller.
+               return;
+            }
+        });
+   </script>
+</head>
+
+<body>
+   <h1>XML-based Menu Example</h1>
+   <ul id="Menu"></ul>
+</body>
+</html>

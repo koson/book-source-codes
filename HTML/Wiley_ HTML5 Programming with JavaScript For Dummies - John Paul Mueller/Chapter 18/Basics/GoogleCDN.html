@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Creating a Basic jQuery Application</title>
+   <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+   </script>
+   <script language="JavaScript">
+      function SayHello()
+      {
+         alert("Hello There!");
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Creating a Basic jQuery Application</h1>
+   <input id="btnMsg"
+          type="button"
+          value="Click Me"
+          onclick="SayHello()"
+          disabled=true />
+   <script language="JavaScript">
+      $(document).ready(
+         function(){$("#btnMsg").attr("disabled", false);});
+   </script>
+</body>
+</html>

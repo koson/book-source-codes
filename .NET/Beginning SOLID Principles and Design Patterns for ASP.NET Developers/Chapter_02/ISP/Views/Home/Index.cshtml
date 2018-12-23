@@ -1,0 +1,15 @@
+﻿<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Place Your Order</h1>
+    <form asp-controller="Home" asp-action="ProcessOrder" method="post">
+        <select name="paymentmode">
+            <option value="card">Credit Card</option>
+            <option value="cod">Cash On Delivery</option>
+        </select>
+        <input type="submit" value="Place Order" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawByHwnd", "DrawByHwnd.csproj", "{C056D646-A99A-4EA4-B09C-FBF6B67D658D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C056D646-A99A-4EA4-B09C-FBF6B67D658D}.Debug.ActiveCfg = Debug|.NET
+		{C056D646-A99A-4EA4-B09C-FBF6B67D658D}.Debug.Build.0 = Debug|.NET
+		{C056D646-A99A-4EA4-B09C-FBF6B67D658D}.Release.ActiveCfg = Release|.NET
+		{C056D646-A99A-4EA4-B09C-FBF6B67D658D}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

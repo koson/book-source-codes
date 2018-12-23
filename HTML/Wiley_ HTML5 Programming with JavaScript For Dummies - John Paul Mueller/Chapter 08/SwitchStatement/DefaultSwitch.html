@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Using the Default Clause</title>
+   <script language="JavaScript">
+      function CheckChoice(option)
+      {
+         // Make a selection.
+         switch (option)
+         {
+            case 1:
+               document.getElementById("Result").innerHTML =
+                  "You chose Item A.";
+               break;
+            case 2:
+               document.getElementById("Result").innerHTML =
+                  "You chose Item B.";
+               break;
+            case 3:
+               document.getElementById("Result").innerHTML =
+                  "You chose Item C.";
+               break;
+            default:
+               // Display an error dialog.
+               alert("The value supplied is out of range!");
+               break;
+         }
+      }
+      
+      function MakeAChoice()
+      {
+         // Ask the user to provide input.
+         var Selection = prompt("Type a menu option.");
+        
+         // Convert the string to a number.
+         var IntSelect = parseInt(Selection);
+        
+         // Verify the user has provided a number.
+         if (isNaN(IntSelect))
+         {
+            // Display an error dialog.
+            alert("Please provide numeric input!");
+            
+            // Return without doing anything more.
+            return;
+         }
+        
+         // Call the selection function.
+         CheckChoice(IntSelect);
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Using the Default Clause</h1>
+   <p>Menu Options:</p>
+   <ol>
+    <li>Item A</li>
+    <li>Item B</li>
+    <li>Item C</li>
+   </ol>
+   <input type="button"
+          value="Choose a Menu Item"
+          onclick="MakeAChoice()" />
+   <p id="Result"></p>
+</body>
+</html>

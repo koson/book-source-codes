@@ -1,0 +1,28 @@
+﻿@model List<SRP.Core.Customer>
+
+<html>
+    <head>
+        <title>Search Results</title>
+    </head>
+    <body>
+        <h1>Search Results</h1>
+        <form asp-controller="Home" asp-action="Export" method="post">
+            <input type="hidden" name="criteria" value="@ViewBag.Criteria" />
+            <input type="hidden" name="searchby" value="@ViewBag.SearchBy" />
+            <input type="submit" value="Export" />
+        </form>
+        <table border="1" cellpadding="5">
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.CustomerID</td>
+                    <td>@item.CompanyName</td>
+                    <td>@item.ContactName</td>
+                    <td>@item.Country</td>
+                </tr>
+            }
+        </table>
+        <br />
+        <a asp-controller="Home" asp-action="Index">Back to search</a>
+    </body>
+</html>

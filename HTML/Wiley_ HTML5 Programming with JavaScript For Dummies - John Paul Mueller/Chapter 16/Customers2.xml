@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="CustomerOut.xslt"?>
+<Customers>
+   <Customer LastUpdated="01/15/2013">
+      <Name>Joe Smith</Name>
+      <Age>42</Age>
+      <FavoriteColor>Blue</FavoriteColor>
+   </Customer>
+   <Customer LastUpdated="01/21/2013">
+      <Name>Amy Wang</Name>
+      <Age>33</Age>
+      <FavoriteColor>Orange</FavoriteColor>
+   </Customer>
+</Customers>

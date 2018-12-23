@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication", "TestApplication.csproj", "{9671637B-5886-4CAB-9A6F-6023FF85A65F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigHandler", "..\ConfigHandler\ConfigHandler.csproj", "{1267F0E6-F79B-4E10-9482-3B9AE83A980A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{9671637B-5886-4CAB-9A6F-6023FF85A65F}.Debug.ActiveCfg = Debug|.NET
+		{9671637B-5886-4CAB-9A6F-6023FF85A65F}.Debug.Build.0 = Debug|.NET
+		{9671637B-5886-4CAB-9A6F-6023FF85A65F}.Release.ActiveCfg = Release|.NET
+		{9671637B-5886-4CAB-9A6F-6023FF85A65F}.Release.Build.0 = Release|.NET
+		{1267F0E6-F79B-4E10-9482-3B9AE83A980A}.Debug.ActiveCfg = Debug|.NET
+		{1267F0E6-F79B-4E10-9482-3B9AE83A980A}.Debug.Build.0 = Debug|.NET
+		{1267F0E6-F79B-4E10-9482-3B9AE83A980A}.Release.ActiveCfg = Release|.NET
+		{1267F0E6-F79B-4E10-9482-3B9AE83A980A}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

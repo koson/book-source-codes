@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Working with Object Literals</title>
+</head>
+
+<body>
+   <h1>Create and Use Object Literals</h1>
+   
+   <script language="JavaScript">
+      // Create the object literal.
+      var customerData =
+      {
+         Name: 'Sally Jones',
+         Age: 32,
+         Birthday: new Date("01/15/1981")
+      }
+      
+      // Display the object literal data on screen.
+      document.write(
+         "<p>The customer's name is: " + customerData.Name +
+         " age is: " + customerData.Age +
+         " and date of birth is: " +
+         customerData.Birthday.toDateString() + "</p>");
+   </script>
+</body>
+</html>

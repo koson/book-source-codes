@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Creating a Resizable Element</title>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <style>
+      #ResizeMe
+      {
+         border: solid;
+         width: 200px;
+         height: 60px;
+         text-align: center;
+      }
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            $("#ResizeMe").resizable(
+               {
+                  minWidth: 200,
+                  minHeight: 60,
+                  resize: function(event, ui)
+                  {
+                     $("#Content")
+                        .html("Width: " +ui.size.width +
+                           "<br/>Height: " + ui.size.height);
+                  }
+               });
+        });
+   </script>
+</head>
+
+<body>
+   <h1>Creating a Resizable Element</h1>
+   <div id="ResizeMe">
+      <p id="Content">
+         Resizable Paragraph
+      </p>
+   </div>
+</body>
+</html>

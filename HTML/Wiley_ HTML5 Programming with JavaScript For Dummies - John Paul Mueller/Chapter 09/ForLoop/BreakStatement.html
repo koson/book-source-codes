@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Using the Break Statement</title>
+   <script language="JavaScript">
+      function OptionalArgument(param)
+      {
+         // Determine whether there were any params passed.
+         if (arguments.length == 0)
+         {
+            // Display an error message and exit.
+            document.getElementById("Result").innerHTML =
+               "Nothing Passed!";
+            return;
+         }
+            
+         // Create a string to hold the arguments.
+         var Result = new String();
+         
+         // Process each of the arguments in turn.
+         for (var i = 0; i < arguments.length; i++)
+         {
+            // Verify that the argument is of the right type.
+            if (typeof(arguments[i]) != 'string')
+            {
+               // When the argument is incorrect, stop
+               // loop execution.
+               break;
+            }
+            
+            // Add to the argument string.
+            Result += arguments[i] + "<br />";
+         }
+         
+         // Display the results on screen.
+         document.getElementById("Result").innerHTML = Result;
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Using the Break Statement</h1>
+   <input type="button"
+          value="All Arguments Correct"
+          onclick="OptionalArgument('Red', 'Green', 'Blue')" />
+   <input type="button"
+          value="Three Correct Arguments with Errors"
+          onclick="OptionalArgument('Red', 'Green', true, 'Orange')" />
+   <input type="button"
+          value="Three Correct Arguments with Initial Error"
+          onclick="OptionalArgument(true, 'Red', 'Yellow', 'Orange')" />
+   <p id="Result"></p>
+</body>
+</html>

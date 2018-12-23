@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Creating a Category/Detail View</title>
+   <style>
+      h1
+      {
+         text-align: center;
+      }
+      
+      #Categories
+      {
+         width: 220px;
+      }
+      
+      .Selections .ui-selected
+      {
+         background: blue;
+         color: white;
+      }
+      
+      .Selections
+      {
+         margin: 0;
+         padding: 0;
+         width: 150px;
+         list-style-type: none;
+      }
+      
+      #DrawingContainer
+      {
+         width: 533px;
+         height: 400px;
+         border: solid;
+         position: absolute;
+         left: 250px;
+         top: 80px;
+      }
+      
+      #Drawing
+      {
+         width: 523px;
+         height: 390px;
+         margin: 5px;
+      }
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            // Create an Accordion as a means to
+            // organize the data.
+            $("#Categories").accordion();
+            
+            // Choose a particular image based on the
+            // user's selection. Display it using the
+            // src attribute of the <img> tag.
+            $(".Selections").selectable(
+               {
+                  selected: function(event, ui)
+                  {
+                     switch(ui.selected.id)
+                     {
+                        case "Cactus":
+                           $("#Drawing").attr(
+                              "src", "CactusBlossom.jpg");
+                           break;
+                        case "Nanking":
+                           $("#Drawing").attr(
+                              "src", "NankingCherry.jpg");
+                           break;
+                        case "Mountain":
+                           $("#Drawing").attr(
+                              "src", "MountainView.jpg");
+                           break;
+                        case "Harvest":
+                           $("#Drawing").attr(
+                              "src", "SquashHarvest.jpg");
+                           break;
+                        case "Snow":
+                           $("#Drawing").attr(
+                              "src", "FirstSnow.jpg");
+                           break;
+                     }
+                  }
+               });
+        });
+   </script>
+</head>
+
+<body>
+   <h1>Creating a Category/Detail View</h1>
+   <div id="Categories">
+      <h2>Flowers</h2>
+      <div>
+         <ol id="FlowerSelect" class="Selections">
+            <li id="Cactus">Cactus</li>
+            <li id="Nanking">Nanking Cherry</li>
+         </ol>
+      </div>
+      <h2>Seasons</h2>
+      <div>
+         <ol id="SeasonSelect" class="Selections">
+            <li id="Nanking">Nanking Cherry</li>
+            <li id="Mountain">Mountain View</li>
+            <li id="Harvest">Squash Harvest</li>
+            <li id="Snow">First Snow</li>
+         </ol>
+      </div>
+      <h2>Gardening</h2>
+      <div>
+         <ol id="SeasonSelect" class="Selections">
+            <li id="Nanking">Nanking Cherry</li>
+            <li id="Harvest">Squash Harvest</li>
+         </ol>
+      </div>
+   </div>
+   <div id="DrawingContainer">
+      <img id="Drawing" />
+   </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyExtShell", "MyExtShell.csproj", "{7D3C7142-A977-4292-A87E-59A3996463B0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7D3C7142-A977-4292-A87E-59A3996463B0}.Debug.ActiveCfg = Debug|.NET
+		{7D3C7142-A977-4292-A87E-59A3996463B0}.Debug.Build.0 = Debug|.NET
+		{7D3C7142-A977-4292-A87E-59A3996463B0}.Release.ActiveCfg = Release|.NET
+		{7D3C7142-A977-4292-A87E-59A3996463B0}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,49 @@
+﻿@model List<Composite.Core.Menu>
+
+<html>
+<head>
+    <title>Menus</title>
+    <style>
+        ul {
+            font-size:31px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Here is your menu!</h1>
+
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                @if (item.OpenInNewWindow)
+                {
+                    <a href="@item.NavigateUrl" target="_blank">@item.Text</a>
+                }
+                else
+                {
+                    <a href="@item.NavigateUrl">@item.Text</a>
+                }
+            </li>
+            <ul>
+                @foreach (var subItem in item.Children)
+                {
+                    <li>
+                        @if (item.OpenInNewWindow)
+                        {
+                            <a href="@subItem.NavigateUrl" target="_blank">@subItem.Text</a>
+                        }
+                        else
+                        {
+                            <a href="@subItem.NavigateUrl">@subItem.Text</a>
+                        }
+
+                    </li>
+                }
+            </ul>
+        }
+    </ul>
+
+
+</body>
+</html>

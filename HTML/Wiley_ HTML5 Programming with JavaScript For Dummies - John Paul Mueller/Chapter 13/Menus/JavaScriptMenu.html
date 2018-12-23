@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <style type="text/css">
+      #menu
+      {
+         margin: 0;
+         padding: 0;
+      }
+      #menu li
+      {
+         margin: 0;
+         padding: 0;
+         list-style: none;
+         float: left;
+      }
+      #menu li a
+      {
+         display: block;
+         margin: 0 1px 0 0;
+         padding: 4px 10px;
+         width: 80px;
+         background: black;
+         color: white;
+         text-align: center;
+      }
+      #menu li a:hover
+      {
+         background: green;
+      }
+      #menu ul
+      {
+         position: absolute;
+         visibility: hidden;
+         margin: 0;
+         padding: 0;
+         background: grey;
+         border: 1px solid white;
+      }
+      #menu ul a
+      {
+         position: relative;
+         display: block;
+         margin: 0;
+         padding: 5px 10px;
+         width: 80px;
+         text-align: left;
+         background: lightgrey;
+         color: black;
+      }
+      #menu ul a:hover
+      {
+         background: #7f7fff;
+      }
+   </style>
+   <title>Creating a JavaScript Menu</title>
+   <script language="JavaScript">
+      // Holds the current open menu item.
+      var Item;
+      
+      // Holds the timeout value.
+      var Timer;
+      
+      // Hide the menu after clicking outside it.
+      document.onclick = CloseMenu;
+      
+      function OpenMenu(Menu)
+      {
+         // If there is an item that is open, close it.
+         if (Item)
+         {
+            Item.style.visibility = "hidden";
+         }
+         
+         // Obtain an item reference for the new menu.
+         Item = document.getElementById(Menu);
+         
+         // Make it visible.
+         Item.style.visibility = "visible";
+      }
+      
+      function CloseMenu()
+      {
+         // Set a timer for closing the menu.
+         Timer = window.setTimeout(PerformClose, 500);
+      }
+      
+      function PerformClose()
+      {
+         // If the item is still open.
+         if (Item)
+         {
+            // Close it.
+            Item.style.visibility = "hidden";
+         }
+      }
+      
+      function KeepSubmenu()
+      {
+         // Reset the timer.
+         window.clearTimeout(Timer);
+      }
+   </script>
+</head>
+
+<body>
+   <ul id="menu">
+      <li id="Item1">
+         <a href="http://www.somewhere.com"
+            onmouseover="CloseMenu()">Home</a>
+      </li>
+      <li id="Item2">
+         <a href="http://www.somewhere.com"
+            onmouseover="OpenMenu('Item2Submenu')">Events</a>
+         <ul id="Item2Submenu"
+             onmouseover="KeepSubmenu()"
+             onmouseout="CloseMenu()">
+            <a href="http://www.somewhere.com">Event 1</a>
+            <a href="http://www.somewhere.com">Event 2</a>
+            <a href="http://www.somewhere.com">Event 3</a>
+         </ul>
+      </li>
+      <li id="Item3">
+         <a href="http://www.somewhere.com"
+            onmouseover="OpenMenu('Item3Submenu')">
+               Contact Us
+         </a>
+         <ul id="Item3Submenu"
+             onmouseover="KeepSubmenu()"
+             onmouseout="CloseMenu()">
+            <a href="http://www.somewhere.com">Telephone</a>
+            <a href="http://www.somewhere.com">Mail</a>
+            <a href="http://www.somewhere.com">E-mail</a>
+         </ul>
+      </li>
+   </ul>
+
+</body>
+</html>

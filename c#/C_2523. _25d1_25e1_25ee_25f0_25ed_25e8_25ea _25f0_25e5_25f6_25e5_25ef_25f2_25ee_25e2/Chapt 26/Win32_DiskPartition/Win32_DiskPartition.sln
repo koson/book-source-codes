@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win32_DiskPartition", "Win32_DiskPartition.csproj", "{44FA239C-CE4A-4C0F-9F6D-A715DBA805CF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{44FA239C-CE4A-4C0F-9F6D-A715DBA805CF}.Debug.ActiveCfg = Debug|.NET
+		{44FA239C-CE4A-4C0F-9F6D-A715DBA805CF}.Debug.Build.0 = Debug|.NET
+		{44FA239C-CE4A-4C0F-9F6D-A715DBA805CF}.Release.ActiveCfg = Release|.NET
+		{44FA239C-CE4A-4C0F-9F6D-A715DBA805CF}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

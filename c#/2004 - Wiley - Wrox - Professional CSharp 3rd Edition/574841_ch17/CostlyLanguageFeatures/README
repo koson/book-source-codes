@@ -1,0 +1,8 @@
+Try compiling test.cpp like this:
+
+>g++ -fno-exceptions test.cpp
+
+or
+
+>g++ -fno-rtti test.cpp
+

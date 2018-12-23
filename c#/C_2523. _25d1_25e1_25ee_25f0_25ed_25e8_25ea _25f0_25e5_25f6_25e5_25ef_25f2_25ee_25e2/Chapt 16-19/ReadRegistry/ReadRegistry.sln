@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadRegistry", "ReadRegistry.csproj", "{8BF39CA4-BC4B-44B4-867A-96C981C5601C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{8BF39CA4-BC4B-44B4-867A-96C981C5601C}.Debug.ActiveCfg = Debug|.NET
+		{8BF39CA4-BC4B-44B4-867A-96C981C5601C}.Debug.Build.0 = Debug|.NET
+		{8BF39CA4-BC4B-44B4-867A-96C981C5601C}.Release.ActiveCfg = Release|.NET
+		{8BF39CA4-BC4B-44B4-867A-96C981C5601C}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

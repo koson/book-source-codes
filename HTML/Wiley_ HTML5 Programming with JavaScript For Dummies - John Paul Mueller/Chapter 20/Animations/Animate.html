@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Performing an Animation</title>
+   <style>
+      .Transition
+      {
+         margin: 5px;
+         font-family: sans-serif;
+      }
+      .Normal
+      {
+         background-color: #7fffff;
+         color: black;
+         border: groove;
+         border-width: 5px;
+         padding: 3px;
+         height: 50px;
+         width: 400px;
+      }
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            // Track the normal state.
+            var State = true;
+            
+            $("#ChangeColors").click(
+               function()
+               {
+                  if (State)
+                  {
+                     // Set to the changed state.
+                     $("#SampleText").animate(
+                        {
+                           backgroundColor: "#0000ff",
+                           color: "white",
+                           borderColor: "#ff0000",
+                           height: 100,
+                           width: 600
+                        }, 1500);
+                  }
+                  else
+                  {
+                     // Set to the normal state.
+                     $("#SampleText").animate(
+                        {
+                           backgroundColor: "#7fffff",
+                           color: "black",
+                           borderColor: "#00ff00",
+                           height: 50,
+                           width: 400
+                        }, 1500);
+                  }
+                  
+                  // Change the state.
+                  State = !State;
+               }
+            )
+        })
+   </script>
+</head>
+
+<body>
+   <h1>Performing an Animation</h1>
+   <div class="Transition" >
+      <div id="SampleText" class="Normal">
+         This is some text to transition.
+      </div>
+   </div>
+   <div>
+      <input type="button"
+             id="ChangeColors"
+             value="Change Colors" />
+   </div>
+</body>
+</html>

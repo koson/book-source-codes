@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array", "Array.csproj", "{5A0EBA13-BBEE-48F9-8026-51BDADD0B88B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{5A0EBA13-BBEE-48F9-8026-51BDADD0B88B}.Debug.ActiveCfg = Debug|.NET
+		{5A0EBA13-BBEE-48F9-8026-51BDADD0B88B}.Debug.Build.0 = Debug|.NET
+		{5A0EBA13-BBEE-48F9-8026-51BDADD0B88B}.Release.ActiveCfg = Release|.NET
+		{5A0EBA13-BBEE-48F9-8026-51BDADD0B88B}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

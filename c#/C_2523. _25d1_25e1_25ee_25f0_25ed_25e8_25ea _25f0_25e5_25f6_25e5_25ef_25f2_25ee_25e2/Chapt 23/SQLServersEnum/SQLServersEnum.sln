@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServersEnum", "SQLServersEnum.csproj", "{FCA17FD7-EC78-4F74-9CDC-8E0534AE45FE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{FCA17FD7-EC78-4F74-9CDC-8E0534AE45FE}.Debug.ActiveCfg = Debug|.NET
+		{FCA17FD7-EC78-4F74-9CDC-8E0534AE45FE}.Debug.Build.0 = Debug|.NET
+		{FCA17FD7-EC78-4F74-9CDC-8E0534AE45FE}.Release.ActiveCfg = Release|.NET
+		{FCA17FD7-EC78-4F74-9CDC-8E0534AE45FE}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

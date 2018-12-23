@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraceCallStack", "TraceCallStack.csproj", "{D48CCA30-7A55-4336-BB0C-72B01245DF2B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{D48CCA30-7A55-4336-BB0C-72B01245DF2B}.Debug.ActiveCfg = Debug|.NET
+		{D48CCA30-7A55-4336-BB0C-72B01245DF2B}.Debug.Build.0 = Debug|.NET
+		{D48CCA30-7A55-4336-BB0C-72B01245DF2B}.Release.ActiveCfg = Release|.NET
+		{D48CCA30-7A55-4336-BB0C-72B01245DF2B}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

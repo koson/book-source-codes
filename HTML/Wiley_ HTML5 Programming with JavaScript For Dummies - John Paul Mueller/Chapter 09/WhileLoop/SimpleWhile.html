@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Working with a Basic While Loop</title>
+   <script language="JavaScript">
+      function OptionalArgument(param)
+      {
+        // Display the default output.
+        document.getElementById("Result").innerHTML =
+           "Nothing Passed!";
+           
+         // Create a string to hold the arguments.
+         var Result = new String();
+         
+         // Process each of the arguments in turn.
+         while (param.length > 0)
+         {
+            // Remove the current argument.
+            var Argument = param.shift();
+            
+            // Verify that the argument is of the right type.
+            if (typeof(Argument) == 'string')
+            {
+               // Add to the argument string.
+               Result += Argument + "<br />";
+            }
+         }
+         
+         // Display the results on screen.
+         document.getElementById("Result").innerHTML = Result;
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Working with a Basic While Loop</h1>
+   <input type="button"
+          value="Send 0 Arguments"
+          onclick="OptionalArgument()" />
+   <input type="button"
+          value="Send 1 Argument"
+          onclick="OptionalArgument(new Array('Red'))" />
+   <input type="button"
+          value="Send 3 Arguments"
+          onclick="OptionalArgument(new Array('Red', 'Green', 'Blue'))" />
+   <input type="button"
+          value="Send Various Argument Types"
+          onclick="OptionalArgument(new Array('Red', 0, true, 'Orange'))" />
+   <input type="button"
+          value="Send a String"
+          onclick="OptionalArgument('Red', 0, true, 'Orange')" />
+   <p id="Result"></p>
+</body>
+</html>

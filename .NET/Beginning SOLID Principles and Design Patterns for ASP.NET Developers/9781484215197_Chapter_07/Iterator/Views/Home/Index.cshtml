@@ -1,0 +1,23 @@
+﻿@model List<Iterator.Core.Order>
+
+<html>
+<head>
+    <title>Order History</title>
+</head>
+<body>
+    <h1>List of Orders</h1>
+
+    <table border="1" cellpadding="10">
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.OrderID</td>
+                <td>@item.CustomerID</td>
+                <td>@item.OrderDate</td>
+                <td>@item.ShippedDate</td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>

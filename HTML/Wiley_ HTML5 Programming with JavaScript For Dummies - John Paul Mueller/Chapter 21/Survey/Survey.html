@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Simple Survey</title>
+   <style>
+      div
+      {
+         margin: 5px;
+      }
+      
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            // Submit the form.
+            $("#Submit").click(function()
+               {
+                  $("#Test").submit(
+                     function()
+                     {
+                        // Verify that the name field
+                        // contains information.
+                        if ($("#Name").val().length == 0)
+                        {
+                           alert("You must provide a name!");
+                           return false;
+                        }
+                        
+                        // If the name field contains data,
+                        // allow the submission.
+                        return true;
+                     });
+               });
+        });
+   </script>
+</head>
+
+<body>
+   <form id="Test"
+         action="ReadData.html"
+         method="get">
+      <h1>Simple Survey</h1>
+      <div>
+         <label for="Name">
+            Name:
+         </label>
+         <input name="Name"
+                id="Name"
+                type="text"
+                maxlength="40"
+                placeholder="Type Your Name" />
+      </div>
+      <div>
+         <label for="Age">
+            Age:
+         </label>
+         <select name="Age">
+            <option value="Less Than 20">&lt; 20</option>
+            <option value="20 to 30">20 - 30</option>
+            <option value="31 to 40">31 - 40</option>
+            <option value="41 to 50">41 - 50</option>
+            <option value="51 to 60">51 - 60</option>
+            <option value="61 to 70">61 - 70</option>
+            <option value="Greater Than 70">&gt; 70</option>
+            <option value="Unknown">No Comment</option>
+         </select>
+      </div>
+      <div>
+         <label for="Gender">
+            Gender:
+         </label>
+         <input type="radio"
+                name="Gender"
+                value="Male" />Male
+         <input type="radio"
+                name="Gender"
+                value="Female" />Female
+         <input type="radio"
+                name="Gender"
+                value="Unknown"
+                checked />Rather Not Say
+      </div>
+      <div>
+         <label for="Reason">
+            Reason for Visit:
+         </label>
+         <select name="Reason">
+            <option value="Curiosity">Curiosity</option>
+            <option value="Friend">Referred by Friend</option>
+            <option value="Magazine">Saw Site in Magazine</option>
+            <option value="Search">Found in a Search Engine</option>
+            <option value="Mistake">Came Here by Mistake</option>
+         </select>
+      </div>
+      <input type="submit"
+             id="Submit"
+             value="Submit" />
+   </form>
+</body>
+</html>

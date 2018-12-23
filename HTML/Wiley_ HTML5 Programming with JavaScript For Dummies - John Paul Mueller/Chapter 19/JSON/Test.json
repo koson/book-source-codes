@@ -1,0 +1,20 @@
+{
+  "Users" :
+  [
+    {
+      "Name" : "George Smith",
+      "Number" : 28,
+      "Birthday": "\/Date(377244000000)\/"
+    },
+    {
+      "Name" : "Amy Jones",
+      "Number" : 41,
+      "Birthday": "\/Date(414914400000)\/"
+    },
+    {
+      "Name" : "Sammy Wang",
+      "Number" : 33,
+      "Birthday": "\/Date(-147380400000)\/"
+    }
+  ]
+}

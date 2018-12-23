@@ -1,0 +1,19 @@
+﻿<html>
+    <head>
+        <title>Index</title>
+    </head>
+    <body>
+        <br />
+        <form asp-controller="Home" asp-action="Search" method="post">
+            <label for="criteria">Search Criteria :</label>
+            <input name="criteria" />
+            <label for="searchby">Search By :</label>
+            <select name="searchby">
+                <option value="companyname">Company Name</option>
+                <option value="contactname">Contact Name</option>
+                <option value="country">Country</option>
+            </select>
+            <input type="submit" value="Search" />
+        </form>
+    </body>
+</html>

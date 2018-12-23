@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Changing Element Attributes</title>
+   <style type="text/css">
+      p {color: red;font-style: italic;font-family: sans-serif;}
+      .special {color: blue;font-weight: bold;font-family: cursive;}
+   </style>
+   <script language="JavaScript">
+      function EnableButton()
+      {
+         // Reconfigure btnSecond.
+         var Button2 = document.getElementById("btnSecond");
+         Button2.removeAttribute("disabled");
+         Button2.setAttribute("value", "Change Content");
+      }
+      
+      function ChangeP1()
+      {
+         // Now that the second button is enabled, use
+         // it to change the <p> tag style.
+         var P1 = document.getElementById("p1");
+         P1.setAttribute("class", "special");
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Changing Element Attributes</h1>
+   <p id="p1">Some Content</p>
+   <input id="btnFirst"
+          type="button"
+          value="Enable Button"
+          onclick="EnableButton()" />
+   <input id="btnSecond"
+          type="button"
+          value="Disabled"
+          onclick="ChangeP1()"
+          disabled="disabled" />
+</body>
+</html>

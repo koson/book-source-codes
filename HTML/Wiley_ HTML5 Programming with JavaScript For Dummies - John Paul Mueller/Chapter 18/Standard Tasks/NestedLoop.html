@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <style type="text/css">
+      .Selected
+      {
+         color: blue;
+         font-size: 30px;
+         font-weight: bold;
+      }
+   </style>
+   <title>Nesting Loops</title>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+</head>
+
+<body>
+   <h1>Nesting Loops - Multiplication Table</h1>
+   <script language="JavaScript">
+      // Start the table.
+      document.write("<table>");
+      
+      // Start a heading row.
+      document.write("<tr>");
+      
+      // Create a heading.
+      for (var i = 0; i <= 10; i++)
+      {
+         if (i == 0)
+         {
+            document.write("<th />");
+         }
+         else
+         {
+            document.write("<th>" + i + "</th>");
+         }
+      }
+      
+      // End the heading row.
+      document.write("</tr>");
+      
+      for (var i = 1; i <= 10; i++)
+      {
+         // Start a data row.
+         document.write("<tr>")
+         
+         // Create the row header.
+         document.write("<th>" + i + "</th>");
+         
+         for (var j = 1; j <= 10; j++)
+         {
+            // Add each data element.
+            document.write("<td>" + i * j + "</td>");
+         }
+         
+         // End a data row.
+         document.write("</tr>")
+      }
+      
+      // End the table.
+      document.write("</table>");
+      
+      // Perform some basic formatting.
+      $("th:even").css("background-color", "lightblue");
+      $("th:odd").css("background-color", "lightgreen");
+      $("td:even").css("background-color", "lightgreen");
+      $("td:odd").css("background-color", "lightblue");
+      $("th, td").css("width", "50px");
+      
+      // Add a special effect.
+      $("td").mouseover(
+         function()
+         {
+            $(this).toggleClass("Selected");
+         });
+      $("td").mouseout(
+         function()
+         {
+            $(this).toggleClass("Selected");
+         });
+   </script>
+</body>
+</html>

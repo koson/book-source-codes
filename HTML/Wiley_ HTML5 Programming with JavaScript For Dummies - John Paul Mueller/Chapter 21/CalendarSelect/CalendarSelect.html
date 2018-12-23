@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <link rel="stylesheet"
+         media="screen"
+         type="text/css"
+         href="datepicker.css" />
+   <script type="text/javascript"
+           src="datepicker.js"></script>
+   <title>Using Calendars to Select Data</title>
+   <style>
+      #SelectedData
+      {
+         border: solid;
+         width: 40%;
+         margin: 5px;
+         padding: 5px;
+      }
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            $("#DateSelect").DatePicker(
+               {
+                  // Set the initial configuration.
+                  flat: true,
+                  date: "2013-03-01",
+                  current: "2013-03-01",
+                  calendars: 1,
+                  starts: 0,
+                  
+                  // Process date changes.
+                  onChange: function(formatted, dates)
+                  {
+                     // Display the selected date.
+                     $("#SelectedDate").text(
+                        dates.toDateString());
+                     
+                     // Display a thought for the day.
+                     switch (dates.toDateString())
+                     {
+                        case "Fri Mar 01 2013":
+                           $("#Thought").text("Thought One");
+                           break;
+                        case "Mon Mar 04 2013":
+                           $("#Thought").text("Thought Two");
+                           break;
+                        case "Tue Mar 05 2013":
+                           $("#Thought").text("Thought Three");
+                           break;
+                        default:
+                           $("#Thought").text("No Thought");
+                           break;
+                     }
+                  }
+               });
+        });
+   </script>
+</head>
+
+<body>
+   <h1>Using Calendars to Select Data</h1>
+   <div id="DateContainer">
+      <label for="DateSelect">
+         Choose a Highlighted Date:
+      </label>
+      <span id="DateSelect" />
+   </div>
+   <div id="SelectedData">
+      <p id="SelectedDate" />
+      <p id="Thought" />
+   </div>
+</body>
+</html>

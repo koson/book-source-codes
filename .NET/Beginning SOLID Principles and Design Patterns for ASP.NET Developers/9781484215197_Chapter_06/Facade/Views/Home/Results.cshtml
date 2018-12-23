@@ -1,0 +1,24 @@
+﻿@model List<Facade.Core.Book>
+
+<html>
+<head>
+    <title>Search Books</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+
+    <table border="1" cellpadding="10">
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.ISBN</td>
+                <td>@item.Title</td>
+                <td>@item.Price</td>
+                <td>@item.Source</td>
+                <td><a href="@item.PurchaseUrl">Purchase</a></td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>

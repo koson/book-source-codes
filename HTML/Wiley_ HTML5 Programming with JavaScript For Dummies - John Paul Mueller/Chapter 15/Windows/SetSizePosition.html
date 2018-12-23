@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Change Size and Position</title>
+   <script language="JavaScript">
+      function ChangeSizePosition()
+      {
+         // Open a new blank window.
+         var NewWindow = window.open("", "New Window",
+            "width=300,height=300");
+         
+         // Wait to resize the window.
+         NewWindow.window.alert(
+            "Click OK to Move and Resize the Window");
+         
+         // Move and resize the new window.
+         NewWindow.resizeTo(600, 600);
+         NewWindow.moveTo(20, 20);
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Change Size and Position</h1>
+   <input id="btnChange"
+          type="button"
+          value="Change Size and Position"
+          onclick="ChangeSizePosition()" />
+</body>
+</html>

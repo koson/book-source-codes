@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Using JavaScript and AJAX to Change Content</title>
+   <script language="JavaScript">
+      
+      // Create a connection to the server.
+      var Connect = new XMLHttpRequest();
+      
+      function ChangeText()
+      {
+         // Set up the event handler for the
+         // asynchronous data request.
+         Connect.onreadystatechange(ProcessTextChange);
+         
+         // Create the request and send it.
+         Connect.open("GET", "Special.txt", true);
+         Connect.send();
+      }
+      
+      function ProcessTextChange()
+      {
+         // Check the return status.
+         if ((Connect.readyState == 4) &&
+             (Connect.status == 200))
+         {
+            // Change the <div> text.
+            var Div = document.getElementById("ChangeText");
+            Div.innerHTML = Connect.responseText;
+         }
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Using JavaScript and AJAX to Change Content</h1>
+   <div id="ChangeText">
+      Some Standard Text
+   </div>
+   <input id="btnChange"
+          type="button"
+          value="Change the Text"
+          onclick="ChangeText()" />
+</body>
+</html>

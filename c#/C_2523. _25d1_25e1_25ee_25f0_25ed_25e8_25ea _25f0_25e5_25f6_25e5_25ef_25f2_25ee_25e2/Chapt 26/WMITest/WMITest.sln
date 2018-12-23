@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WMITest", "WMITest.csproj", "{E8987F78-BA6B-4BF0-BB69-E57C4C34DE5C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E8987F78-BA6B-4BF0-BB69-E57C4C34DE5C}.Debug.ActiveCfg = Debug|.NET
+		{E8987F78-BA6B-4BF0-BB69-E57C4C34DE5C}.Debug.Build.0 = Debug|.NET
+		{E8987F78-BA6B-4BF0-BB69-E57C4C34DE5C}.Release.ActiveCfg = Release|.NET
+		{E8987F78-BA6B-4BF0-BB69-E57C4C34DE5C}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

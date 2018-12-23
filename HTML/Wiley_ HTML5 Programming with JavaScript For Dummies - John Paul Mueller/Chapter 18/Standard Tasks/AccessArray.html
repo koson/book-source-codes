@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Access Array Elements</title>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+</head>
+
+<body>
+    <h1>Access Array Elements</h1>
+    <div id="Output"></div>
+    <script language="JavaScript">
+        // Create the array and fill it with data.
+        var Colors = ["Blue", "Green", "Purple"];
+        
+        // Define a loop to access each array element
+        // and display it on screen.
+        jQuery.each(Colors, function()
+            {
+                $("#Output").append(
+                    "Colors " +
+                    jQuery.inArray(this.toString(), Colors) +
+                    " = " + this + "<br />");
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Creating and Using Functions</title>
+   <script language="JavaScript">
+      function TestParams(param)
+      {
+         // Output the param on screen.
+         document.getElementById("Result").innerHTML =
+            "The param is: " + param;
+      }
+      
+      function TestReturn()
+      {
+         return document.title;
+      }
+      
+      function DisplayReturn()
+      {
+         // Output the param on screen.
+         document.getElementById("Result").innerHTML =
+            "The return value is: " + TestReturn();
+      }
+      
+      function OptionalArgument(param)
+      {
+         // Determine whether there were any params passed.
+         if (typeof(param) == "undefined")
+            param = "Hello There!";
+         
+         // Determine whether there are extra params.
+         if (typeof(arguments[1]) != "undefined")
+         
+            // If so, output the param and optional
+            // argument on screen.
+            document.getElementById("Result").innerHTML =
+               "The param is: " + param +
+               " and the optional argument is: " + arguments[1];
+               
+         else
+            // Output the param on screen.
+            document.getElementById("Result").innerHTML =
+               "The param is: " + param;
+      }
+      
+      function RequiredArgument(param)
+      {
+         // Determine whether there were any params passed.
+         if (typeof(param) != "string")
+         
+            // If not, return to the caller without doing
+            // anything.
+            return;
+         
+         // If so, then display the value on screen.
+         else
+            document.getElementById("Result").innerHTML =
+               "The param is: " + param;
+      }
+      
+      // This is a global variable.
+      var MyNumber = 22;
+      
+      function TestVariable1()
+      {
+         // This is a local variable.
+         var MyNumber = 34;
+         
+         // The local variable overrides
+         // the global variable.
+         document.getElementById("Result").innerHTML =
+            "The value of TestVariable is: " + MyNumber;
+      }
+      
+      function TestVariable2()
+      {
+         // There is no local variable to
+         // override the global variable.
+         document.getElementById("Result").innerHTML =
+            "The value of TestVariable is: " + MyNumber;
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Creating and Using Functions</h1>
+   <input type="button"
+          value="Test Param"
+          onclick="TestParams('Hello There!')" />
+   <input type="button"
+          value="Test Return Value"
+          onclick="DisplayReturn()" />
+   <input type="button"
+          value="Test Optional Param"
+          onclick="OptionalArgument('Hello', 'Goodbye')" />
+   <input type="button"
+          value="Test Required Param"
+          onclick="RequiredArgument('Hello')" />
+   <input type="button"
+          value="Test Local Variable"
+          onclick="TestVariable1()" />
+   <input type="button"
+          value="Test Global Variable"
+          onclick="TestVariable2()" />
+   <p id="Result"></p>
+</body>
+</html>

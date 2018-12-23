@@ -1,0 +1,57 @@
+﻿<html>
+    <head>
+        <title>JavaScript Sandbox</title>
+        <script src="~/scripts/jquery-2.1.1.js"></script>
+        <script src="~/scripts/customerapp.sandbox.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#search").click(function () {
+                    var criteria = $("#criteria").val();
+                    var searchField = $("#searchfield").val();
+                    switch (searchField) {
+                        case "CustomerID":
+                            CustomerApp(['search', 'hello'], function (sandbox) {
+                                sandbox.SearchByID(criteria, 'results');
+                                sandbox.HelloWorld();
+                            });
+                            break;
+                        case "CompanyName":
+                            CustomerApp(['search'], function (sandbox) {
+                                sandbox.SearchByCompany(criteria, 'results');
+                            });
+                            break;
+                        case "ContactName":
+                            CustomerApp(['search'], function (sandbox) {
+                                sandbox.SearchByContact(criteria, 'results');
+                            });
+                            break;
+                        case "Country":
+                            CustomerApp(['search'], function (sandbox) {
+                                sandbox.SearchByCountry(criteria, 'results');
+                            });
+                            break;
+                    }
+                });
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <h1>Search Customers</h1>
+        <div>
+            Search For 
+            <input id="criteria" type="text" /> 
+            in 
+            <select id="searchfield">
+                <option>CustomerID</option>
+                <option>CompanyName</option>
+                <option>ContactName</option>
+                <option>Country</option>
+            </select>
+            <input type="submit" value="Search" id="search" />
+        </div>
+        <br />
+        <div id="results"></div>
+    </body>
+</html>

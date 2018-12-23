@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimatedGif", "AnimatedGif.csproj", "{77722CAF-105D-4AC2-A4AF-7EF922F9A223}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{77722CAF-105D-4AC2-A4AF-7EF922F9A223}.Debug.ActiveCfg = Debug|.NET
+		{77722CAF-105D-4AC2-A4AF-7EF922F9A223}.Debug.Build.0 = Debug|.NET
+		{77722CAF-105D-4AC2-A4AF-7EF922F9A223}.Release.ActiveCfg = Release|.NET
+		{77722CAF-105D-4AC2-A4AF-7EF922F9A223}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

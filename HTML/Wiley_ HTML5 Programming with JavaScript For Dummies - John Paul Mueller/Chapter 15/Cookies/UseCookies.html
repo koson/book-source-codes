@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Working with Cookies</title>
+   <script language="JavaScript">
+      function SetCookie(Name, Value, Expiration)
+      {
+         // Create a date variable that contains
+         // the expiration date.
+         var ExpDate = new Date();
+         if (Expiration != null)
+            ExpDate.setDate(ExpDate.getDate() +
+                            Expiration);
+            
+         // Encode the data for storage.
+         var CookieValue = escape(Value) +
+            "; expires=" + ExpDate.toUTCString();
+            
+         // Store the cookie.
+         document.cookie = Name + "=" + CookieValue;
+      }
+      
+      function GetCookie(Name)
+      {
+         // Obtain all of the cookies and split
+         // them into individual cookies.
+         var Cookies=document.cookie.split(";");
+         
+         // Process each cookie in turn.
+         for (var i=0; i<Cookies.length; i++)
+         {
+            // Obtain the name of the cookie.
+            var CName = Cookies[i].substr(0,
+               Cookies[i].indexOf("="));
+            
+            // Obtain the value of the cookie.
+            var CValue = Cookies[i].substr(
+               Cookies[i].indexOf("=") + 1);
+            
+            // Replace any escaped characters.
+            CName = CName.replace(/^\s+|\s+$/g, "");
+            
+            // If the name of the cookie matches the
+            // name that was passed by the caller, return
+            // the associated cookie.
+            if (Name == CName)
+            {
+               return unescape(CValue);
+            }
+         }
+         
+         // Return a null value when the cookie isn't found.
+         return null;
+      }
+      
+      function CheckName()
+      {
+         // Obtain the user's name.
+         var UserName = GetCookie("Username");
+         
+         // Check for a user name.
+         if ((UserName == null) || (UserName == ""))
+         {
+            // Obtain a username from the user.
+            UserName = prompt("Please type your name: ");
+            
+            // Set a cookie for the username that will
+            // expire in one year.
+            SetCookie("Username", UserName, 365);
+         }
+         else
+         {
+            // Otherwise, extend the message.
+            UserName = "Back " + UserName;
+         }
+         
+         // Display the user's name on screen.
+         var SetName = document.getElementById("Name");
+         SetName.innerHTML = UserName;
+      }
+   </script>
+</head>
+
+<body onload="CheckName()">
+   <h1>Working with Cookies</h1>
+   <p>Welcome <span id="Name"></span></p>
+</body>
+</html>

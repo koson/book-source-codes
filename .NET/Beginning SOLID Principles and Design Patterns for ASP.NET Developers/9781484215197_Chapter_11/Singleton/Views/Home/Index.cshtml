@@ -1,0 +1,64 @@
+﻿<html>
+<head>
+    <title>Singleton</title>
+    <script src="~/scripts/jquery-2.1.1.js"></script>
+
+    <script type="text/javascript">
+
+        //var ThemeSettings = function () {
+        //    var instance = this;
+
+        //    this.colorTheme = "Office";
+        //    this.fontTheme = "Modern";
+        //    this.layoutTheme = "SideBySide";
+
+        //    ThemeSettings = function () {
+        //        return instance;
+        //    }
+        //};
+
+        var ThemeSettings = (function () {
+            var instance;
+
+            function createInstance() {
+                var settings = new Object();
+                settings.colorTheme = "Office";
+                settings.fontTheme = "Modern";
+                settings.layoutTheme = "SideBySide";
+                return settings;
+            }
+
+            return {
+                getInstance: function () {
+                    if (!instance) {
+                        instance = createInstance();
+                    }
+                    return instance;
+                }
+            };
+        })();
+
+
+        $(document).ready(function () {
+
+            //var settings1 = new ThemeSettings();
+            //var settings2 = new ThemeSettings();
+            //alert("Is ThemeSettings instance same? " + (settings1 === settings2));
+            //settings2.colorTheme = "Nature";
+            //alert("settings1.colorTheme is " + settings1.colorTheme);
+
+            var settings1 = ThemeSettings.getInstance();
+            var settings2 = ThemeSettings.getInstance();
+            alert("Is ThemeSettings instance same? " + (settings1 === settings2));
+            settings2.colorTheme = "Nature";
+            alert("settings1.colorTheme is " + settings1.colorTheme);
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+</body>
+</html>

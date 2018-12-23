@@ -1,0 +1,16 @@
+<Configuration>
+  <RecentFilesTracker>
+    <RecentFilesTracker>
+      <TrackedFile location="E:\#Receipts\Test\CustomAppConfig\ConfigHandler\XMLSectionHandler.cs" offset="15" line="0" column="0" />
+      <TrackedFile location="E:\#Receipts\Test\CustomAppConfig\TestApplication\Main.cs" offset="1096" line="0" column="0" />
+      <TrackedFile location="E:\#Receipts\Test\CustomAppConfig\TestApplication\app.config" offset="1272" line="0" column="0" />
+      <TrackedFile location="E:\#Receipts\Test\CustomAppConfig\ConfigHandler\HandlerClass.cs" offset="0" line="0" column="0" />
+    </RecentFilesTracker>
+  </RecentFilesTracker>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean />
+  </SettingsComponent>
+  <CompletionStatisticsManager />
+</Configuration>

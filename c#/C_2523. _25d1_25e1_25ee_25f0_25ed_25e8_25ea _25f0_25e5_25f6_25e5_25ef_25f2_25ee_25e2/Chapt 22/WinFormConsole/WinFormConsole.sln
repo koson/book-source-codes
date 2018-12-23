@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormConsole", "WinFormConsole.csproj", "{BDC6B9A5-A657-4C1B-95D4-205A404EFCEF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{BDC6B9A5-A657-4C1B-95D4-205A404EFCEF}.Debug.ActiveCfg = Debug|.NET
+		{BDC6B9A5-A657-4C1B-95D4-205A404EFCEF}.Debug.Build.0 = Debug|.NET
+		{BDC6B9A5-A657-4C1B-95D4-205A404EFCEF}.Release.ActiveCfg = Release|.NET
+		{BDC6B9A5-A657-4C1B-95D4-205A404EFCEF}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

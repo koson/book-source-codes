@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Using Multiple Statements</title>
+   <script language="JavaScript">
+      /* This function makes changes to the text on the
+       * page after the user clicks Click Me as a
+       * demonstration of modifying page elements using
+       * multiple lines of code.
+       *
+       * Written by: John Mueller */
+      
+      function WriteText()
+      {
+         // Change the first statement, then wait so the
+         // user can see the change.
+         document.getElementById("First").innerHTML =
+            "Changed First";
+         alert("Check First!"); // Wait here.
+         
+         // After the user clicks Click Me, show the
+         // change to the second statement.
+         document.getElementById("Second").innerHTML =
+            "Changed Second";
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Using Multiple Statements</h1>
+   <p id="First">First Statement</p>
+   <p id="Second">Second Statement</p>
+   <input id="btnClick" type="button" value="Click Me" onclick="WriteText()">
+</body>
+</html>

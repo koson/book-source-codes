@@ -1,0 +1,54 @@
+﻿<html>
+    <head>
+        <title>JavaScript Namespaces</title>
+        <script src="~/scripts/jquery-2.1.1.js"></script>
+        <script src="~/Scripts/JSWithoutNamespace.js"></script>
+        <script src="~/scripts/customerapp.search.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $("#search").click(function () {
+                    var criteria = $("#criteria").val();
+                    var searchField = $("#searchfield").val();
+                    switch (searchField) {
+                        case "CustomerID":
+                            //SearchByID(criteria);
+                            MyApp.Search.SearchByID(criteria,'results');
+                            break;
+                        case "CompanyName":
+                            //SearchByCompany(criteria);
+                            MyApp.Search.SearchByCompany(criteria, 'results');
+                            break;
+                        case "ContactName":
+                            //SearchByContact(criteria);
+                            MyApp.Search.SearchByContact(criteria, 'results');
+                            break;
+                        case "Country":
+                            //SearchByCountry(criteria);
+                            MyApp.Search.SearchByCountry(criteria, 'results');
+                            break;
+                    }
+                });
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <h1>Search Customers</h1>
+        <div>
+            Search For 
+            <input id="criteria" type="text" /> 
+            in 
+            <select id="searchfield">
+                <option>CustomerID</option>
+                <option>CompanyName</option>
+                <option>ContactName</option>
+                <option>Country</option>
+            </select>
+            <input type="button" value="Search" id="search" />
+        </div>
+        <br />
+        <div id="results"></div>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaptureDesktop", "CaptureDesktop.csproj", "{A4FA8669-F4A8-4510-AE75-2D7DA8EC2208}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A4FA8669-F4A8-4510-AE75-2D7DA8EC2208}.Debug.ActiveCfg = Debug|.NET
+		{A4FA8669-F4A8-4510-AE75-2D7DA8EC2208}.Debug.Build.0 = Debug|.NET
+		{A4FA8669-F4A8-4510-AE75-2D7DA8EC2208}.Release.ActiveCfg = Release|.NET
+		{A4FA8669-F4A8-4510-AE75-2D7DA8EC2208}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

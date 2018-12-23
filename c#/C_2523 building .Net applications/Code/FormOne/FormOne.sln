@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormOne", "FormOne.csproj", "{F1BC601D-D1FD-4144-A9EE-C6BC9E923DAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F1BC601D-D1FD-4144-A9EE-C6BC9E923DAA}.Debug.ActiveCfg = Debug|.NET
+		{F1BC601D-D1FD-4144-A9EE-C6BC9E923DAA}.Debug.Build.0 = Debug|.NET
+		{F1BC601D-D1FD-4144-A9EE-C6BC9E923DAA}.Release.ActiveCfg = Release|.NET
+		{F1BC601D-D1FD-4144-A9EE-C6BC9E923DAA}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

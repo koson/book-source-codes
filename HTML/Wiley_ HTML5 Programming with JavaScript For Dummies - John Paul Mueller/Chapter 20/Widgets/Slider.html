@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Using the Slider Widget</title>
+   <style>
+      #Slider
+      {
+         width: 50%;
+         margin: 30px;
+      }
+      
+      #Left
+      {
+         position: absolute;
+         top: 15px;
+         left: -5px;
+      }
+      
+      #Right
+      {
+         position: absolute;
+         top: 15px;
+         left: 99%;
+      }
+      
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            $("#Slider").slider(
+               {
+                  // Set the maximum slider value.
+                  max: 50,
+                  
+                  // Perform tasks when the value changes.
+                  change: function(event, ui)
+                  {
+                     // Display the current slider value.
+                     $("#Value").text(
+                        $("#Slider").slider("value"));
+                  }
+               });
+        })
+   </script>
+</head>
+
+<body>
+   <h1>Using the Slider Widget</h1>
+   <div id="Slider"><span id="Left">0</span><span id="Right">50</span></div>
+   <div>Value: <span id="Value"></span></div>
+</body>
+</html>

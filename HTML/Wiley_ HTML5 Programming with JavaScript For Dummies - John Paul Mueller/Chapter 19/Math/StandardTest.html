@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Scripting an Addition Routine with AJAX</title>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script language="JavaScript">
+      function PerformAdd()
+      {
+         $("#result").load(
+            "http://localhost/DoMath.php",
+            $("#DataEntry").serialize());
+      }
+   </script>
+</head>
+
+<body>
+   <form id="DataEntry">
+      <h1>Scripting an Addition Routine with AJAX</h1>
+      <div>
+         <label>Value 1:</label>
+         <input id="val1"
+                name="val1"
+                value="1"
+                type="text" />
+      </div>
+      <div>
+         <label>Value 2:</label>
+         <input id="val2"
+                name="val2"
+                value="2"
+                type="text" />
+      </div>
+      <div>
+         <label>Result:</label>
+         <span id="result"></span>
+      </div>
+      <input id="btnChange"
+             type="button"
+             value="Add the Numbers"
+             onclick="PerformAdd()" />
+   </form>
+</body>
+</html>

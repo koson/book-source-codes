@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunProcess", "RunProcess.csproj", "{A97EB1BE-98AC-4BA5-A4DE-87A181769E13}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A97EB1BE-98AC-4BA5-A4DE-87A181769E13}.Debug.ActiveCfg = Debug|.NET
+		{A97EB1BE-98AC-4BA5-A4DE-87A181769E13}.Debug.Build.0 = Debug|.NET
+		{A97EB1BE-98AC-4BA5-A4DE-87A181769E13}.Release.ActiveCfg = Release|.NET
+		{A97EB1BE-98AC-4BA5-A4DE-87A181769E13}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Simulate Click</title>
+    <script language="JavaScript">
+      function SimulateClick()
+      {
+         // Create the event.
+         var ClickEvent = document.createEvent("MouseEvents");
+         
+         // Configure the event.
+         ClickEvent.initMouseEvent(
+            "click", // Event type
+            true,    // Can use the bubble technique?
+            true,    // Is this event cancelable?
+            window,  // View, should always be window.
+            0,       // Number of mouse clicks.
+            0,       // Screen X coordinate
+            0,       // Screen Y coordinate
+            0,       // Client X coordinate
+            0,       // Client Y coordinate
+            false,   // Ctrl Key Pressed?
+            false,   // Alt Key Pressed?
+            false,   // Shift Key Pressed?
+            false,   // Meta Key Pressed?
+            0,       // Number of button clicked.
+            null);   // Related target
+         
+         // Obtain a reference to the object.
+         var TestCheck = document.getElementById("chkTest");
+         
+         // Perform the click and record whether the click
+         // was cancelled by another handler.
+         var Succeeded  = TestCheck.dispatchEvent(ClickEvent);
+         
+         // Display the result of the simulation on screen.
+         if (Succeeded)
+         {
+            alert("The click succeeded!");
+         }
+         else
+         {
+            alert("The click was cancelled!");
+         }
+      }
+      
+      function PreventDefault(event)
+      {
+         // Prevent the default action.
+         event.preventDefault();
+      }
+      
+      function AddHandler()
+      {
+         // Obtain an object reference.
+         var TestCheck = document.getElementById("chkTest");
+         
+         // Add the event handler.
+         TestCheck.addEventListener(
+            "click",          // Type of event
+            PreventDefault,   // Name of the event listener.
+            false);           // Use the capture technique?
+      }
+      
+      function RemoveHandler()
+      {
+         // Obtain an object reference.
+         var TestCheck = document.getElementById("chkTest");
+         
+         // Add the event handler.
+         TestCheck.removeEventListener(
+            "click",          // Type of event
+            PreventDefault,   // Name of the event listener.
+            false);           // Use the capture technique?
+      }
+    </script>
+</head>
+
+<body>
+   <h1>Simulate Click</h1>
+   <p>
+      <input id="chkTest"
+             type="checkbox"
+             value="Test Checkbox" />
+      <label for="chkTest">
+         Test Checkbox
+      </label>
+   </p>
+   <p>
+      <input id="btnClick"
+             type="button"
+             value="Simulate a Click"
+             onclick="SimulateClick()" /><br />
+      <input id="btnAddHandler"
+             type="button"
+             value="Add a Default Action Handler"
+             onclick="AddHandler()" /><br />
+      <input id="btnRemoveHandler"
+             type="button"
+             value="Remove the Default Action Handler"
+             onclick="RemoveHandler()" />
+   </p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Using the Line Continuation Character</title>
+   <script language="JavaScript">
+      function WriteText()
+      {
+         document.getElementById("LongParagraph").innerHTML =
+            "This is a really long line of text that won't \
+            easily fit on a single line.";
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Using the Line Continuation Character</h1>
+   <p id="LongParagraph"></p>
+   <input id="btnClick" type="button" value="Click Me" onclick="WriteText()">
+</body>
+</html>

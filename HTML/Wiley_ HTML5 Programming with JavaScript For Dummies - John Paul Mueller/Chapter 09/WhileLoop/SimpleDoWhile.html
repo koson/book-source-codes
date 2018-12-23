@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Working with a Basic Do...While Loop</title>
+   <script language="JavaScript">
+      // Create a global array for storing the data.
+      var DataStore = new Array();
+      
+      function DisplayArray(TheArray, DisplayID)
+      {
+         // Create an output string.
+         var DisplayString = "<ul>"
+         
+         // Build the display string.
+         for (var i = 0; i < TheArray.length; i++)
+         {
+            DisplayString += "<li>" + TheArray[i] + "</li>";
+         }
+         
+         // Complete the list.
+         DisplayString += "</ul>";
+         
+         // Display the data.
+         document.getElementById(DisplayID).innerHTML =
+            DisplayString;
+      }
+      
+      function AddItems()
+      {
+         // Create an input variable.
+         var Input = new String();
+         
+         // Keep accepting input until the user
+         // types quit.
+         do
+         {
+            // Obtain new input.
+            Input = prompt("Type a new value (quit to exit):");
+            
+            // Verify the user hasn't typed quit.
+            if (Input.toUpperCase() != 'QUIT')
+            {
+               // Add the input to the array.
+               DataStore.push(Input);
+               
+               // Display the result on screen.
+               DisplayArray(DataStore, "Result")
+           }
+         } while (Input.toUpperCase() != 'QUIT')
+      }
+      
+      function RemoveFirstItem()
+      {
+         // Remove the item.
+         DataStore.shift();
+         
+         // Display the result.
+         DisplayArray(DataStore, "Result")
+      }
+      
+      function RemoveLastItem()
+      {
+         // Remove the item.
+         DataStore.pop();
+         
+         // Display the result.
+         DisplayArray(DataStore, "Result")
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Working with a Basic Do...While Loop</h1>
+   <input type="button"
+          value="Add Items"
+          onclick="AddItems()" />
+   <input type="button"
+          value="Remove the First Item"
+          onclick="RemoveFirstItem()" />
+   <input type="button"
+          value="Remove the Last Item"
+          onclick="RemoveLastItem()" />
+   <p id="Result"></p>
+</body>
+</html>

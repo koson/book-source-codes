@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMTP_Send", "SMTP_Send.csproj", "{842AA190-8551-443B-B8E7-03B089FD9279}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{842AA190-8551-443B-B8E7-03B089FD9279}.Debug.ActiveCfg = Debug|.NET
+		{842AA190-8551-443B-B8E7-03B089FD9279}.Debug.Build.0 = Debug|.NET
+		{842AA190-8551-443B-B8E7-03B089FD9279}.Release.ActiveCfg = Release|.NET
+		{842AA190-8551-443B-B8E7-03B089FD9279}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

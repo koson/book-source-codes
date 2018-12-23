@@ -1,0 +1,14 @@
+﻿@model Builder.Core.Computer
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Your computer has the following configuration :</h1>
+    @foreach(var item in Model.Parts)
+    {
+        <h3>@item.PartCode</h3>
+    }
+</body>
+</html>

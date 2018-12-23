@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexReplace", "RegexReplace.csproj", "{AFB868DC-890E-4E5A-A4EB-A88B07F22412}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{AFB868DC-890E-4E5A-A4EB-A88B07F22412}.Debug.ActiveCfg = Debug|.NET
+		{AFB868DC-890E-4E5A-A4EB-A88B07F22412}.Debug.Build.0 = Debug|.NET
+		{AFB868DC-890E-4E5A-A4EB-A88B07F22412}.Release.ActiveCfg = Release|.NET
+		{AFB868DC-890E-4E5A-A4EB-A88B07F22412}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

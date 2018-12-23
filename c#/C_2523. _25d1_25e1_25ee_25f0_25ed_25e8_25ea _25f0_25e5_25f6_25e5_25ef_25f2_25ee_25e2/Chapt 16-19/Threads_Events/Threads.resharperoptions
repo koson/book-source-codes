@@ -1,0 +1,14 @@
+<Configuration>
+  <RecentFilesTracker>
+    <RecentFilesTracker>
+      <TrackedFile location="E:\#Receipts\Source\Threads_Events\Class1.cs" offset="228" line="-1" column="-1" />
+      <TrackedFile location="E:\#Receipts\Source\Threads_Events\ThreadClass.cs" offset="40" line="-1" column="-1" />
+    </RecentFilesTracker>
+  </RecentFilesTracker>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean />
+  </SettingsComponent>
+  <CompletionStatisticsManager />
+</Configuration>

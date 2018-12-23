@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Adapter", "Adapter\Adapter.xproj", "{7715E9ED-3666-41AD-A2A9-13170876928D}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Bridge", "Bridge\Bridge.xproj", "{142B38BB-BDC9-4840-813E-C983DE74376E}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Composite", "Composite\Composite.xproj", "{053811C3-731F-4F85-AC71-22C95287C003}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Decorator", "Decorator\Decorator.xproj", "{CA579589-AC7F-4A55-B316-68B4BD14DF51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7715E9ED-3666-41AD-A2A9-13170876928D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7715E9ED-3666-41AD-A2A9-13170876928D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7715E9ED-3666-41AD-A2A9-13170876928D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7715E9ED-3666-41AD-A2A9-13170876928D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{142B38BB-BDC9-4840-813E-C983DE74376E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142B38BB-BDC9-4840-813E-C983DE74376E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142B38BB-BDC9-4840-813E-C983DE74376E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142B38BB-BDC9-4840-813E-C983DE74376E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{053811C3-731F-4F85-AC71-22C95287C003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{053811C3-731F-4F85-AC71-22C95287C003}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{053811C3-731F-4F85-AC71-22C95287C003}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{053811C3-731F-4F85-AC71-22C95287C003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA579589-AC7F-4A55-B316-68B4BD14DF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA579589-AC7F-4A55-B316-68B4BD14DF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA579589-AC7F-4A55-B316-68B4BD14DF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA579589-AC7F-4A55-B316-68B4BD14DF51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

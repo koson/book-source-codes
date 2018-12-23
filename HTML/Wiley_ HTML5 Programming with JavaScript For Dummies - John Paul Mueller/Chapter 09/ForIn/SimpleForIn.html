@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Using the for/in Loop</title>
+   <script language="JavaScript">
+      // Define a customer.
+      function Customer(FirstName, LastName, Age)
+      {
+         // Add the properties.
+         this.FirstName = FirstName;
+         this.LastName = LastName;
+         this.Age = Age;
+      }
+      
+      // Process the customers.
+      function ProcessCustomer()
+      {
+         // Create a new customer.
+         MyCustomer = new Customer("Josh", "Adams", 49);
+         
+         // Define a table for output.
+         var Output = "<table>";
+         
+         // Add a header row.
+         Output += "<tr>";
+         
+         // Process the headers.
+         for (ThisProperty in MyCustomer)
+         {
+            Output += "<th>" + ThisProperty + "</th>";
+         }
+         
+         // End the row.
+         Output += "</tr>";
+         
+         // Add a data row.
+         Output += "<tr>";
+         
+         // Process the customer.
+         for(ThisProperty in MyCustomer)
+         {
+            // Add each data element.
+            Output += "<td>" + MyCustomer[ThisProperty] +
+               "</td>";
+         }
+         
+         // End the row.
+         Output += "</tr>";
+         
+         // End the table.
+         Output += "</table>";
+         
+         // Display the results on screen.
+         document.getElementById("Result").innerHTML =
+            Output;
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Using the for/in Loop</h1>
+   <input type="button"
+          value="DisplayCustomers"
+          onclick="ProcessCustomer()" />
+   <p id="Result"></p>
+</body>
+</html>

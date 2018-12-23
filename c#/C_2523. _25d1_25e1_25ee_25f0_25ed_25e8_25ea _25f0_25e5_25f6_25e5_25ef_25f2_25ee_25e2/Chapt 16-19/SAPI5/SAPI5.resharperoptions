@@ -1,0 +1,51 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean />
+  </SettingsComponent>
+  <RecentFilesTracker>
+    <RecentFilesTracker>
+      <TrackedFile location="E:\#Receipts\Test\SAPI5\Form1.cs" offset="7968" line="240" column="0" />
+    </RecentFilesTracker>
+  </RecentFilesTracker>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox.ObjectCollection">
+      <Item value="Add" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TrackBar">
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Button">
+      <Item value="Tag" priority="1" />
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="Text" priority="2" />
+      <Item value="Items" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SpeechLib.SpVoice">
+      <Item value="SynchronousSpeakTimeout" priority="0" />
+      <Item value="Word" priority="1" />
+      <Item value="Status" priority="0" />
+      <Item value="AlertBoundary" priority="0" />
+      <Item value="Rate" priority="2" />
+      <Item value="EndStream" priority="0" />
+      <Item value="Voice" priority="1" />
+      <Item value="Priority" priority="0" />
+      <Item value="Sentence" priority="0" />
+      <Item value="Phoneme" priority="0" />
+      <Item value="Volume" priority="0" />
+      <Item value="AudioOutputStream" priority="0" />
+      <Item value="Resume" priority="0" />
+      <Item value="GetVoices" priority="0" />
+      <Item value="AudioOutput" priority="0" />
+      <Item value="AudioLevel" priority="0" />
+      <Item value="SpeakStream" priority="1" />
+      <Item value="StartStream" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:string">
+      <Item value="Length" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

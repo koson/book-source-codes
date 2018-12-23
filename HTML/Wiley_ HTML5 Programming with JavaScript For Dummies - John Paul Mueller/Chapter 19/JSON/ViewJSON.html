@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Viewing JSON Files</title>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script language="JavaScript">
+      function ViewData()
+      {
+         // Obtain the data from disk.
+         $.getJSON("Test.json",
+            function(data)
+            {
+               // Create an array to hold the data.
+               var items = [];
+
+               // Parse the data by looking at
+               // each entry in the Users object.
+               $.each(data.Users,
+                  function(key, value)
+                  {
+                     items.push("<li>" +
+                        value.Name + "<br />" +
+                        value.Number + "<br />" +
+                        (new Date(
+                           parseInt(value.Birthday.substr(6)))
+                        ).toDateString()
+                        + "</li>");
+                  });
+
+               // Place the result in an unordered list.
+               $('<ul/>', {html: items.join("")}).
+                  appendTo('body');
+            });
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Viewing JSON Files</h1>
+   <input id="btnView"
+          type="button"
+          value="View JSON Data"
+          onclick="ViewData()" />
+</body>
+</html>

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalSeparator", "DecimalSeparator.csproj", "{875A3BB0-9EE5-47CB-9CD3-F17C2CE3E09A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{875A3BB0-9EE5-47CB-9CD3-F17C2CE3E09A}.Debug.ActiveCfg = Debug|.NET
+		{875A3BB0-9EE5-47CB-9CD3-F17C2CE3E09A}.Debug.Build.0 = Debug|.NET
+		{875A3BB0-9EE5-47CB-9CD3-F17C2CE3E09A}.Release.ActiveCfg = Release|.NET
+		{875A3BB0-9EE5-47CB-9CD3-F17C2CE3E09A}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,29 @@
+﻿<html>
+    <head>
+        <title>JavaScript Namespaces</title>
+    </head>
+
+    <body>
+        <div id="advert"></div>
+
+        <script src="~/scripts/jquery-2.1.1.js"></script>
+        <script>
+            (function (elemID) {
+
+                $.ajax({
+                    url: "/home/GetAdvert",
+                    success: function (advertData) {
+                        var markup = "<strong>" + advertData.Title + "</strong>";
+                        markup += "<div>" + advertData.Description + "</div>";
+                        markup += "<a href='" + advertData.Url + "'>" + advertData.Url + "</a>";
+                        $("#" + elemID).html(markup);
+                    },
+                    dataType: "json"
+                });
+
+                
+            })("advert");
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Using the Progressbar Widget</title>
+   <script language="JavaScript">
+      // Configure the progressbar.
+      $(function()
+        {
+            $("#Progress").progressbar({value: 0});
+        })
+      
+      // Create a variable to hold the timer object.
+      var Timer;
+      
+      // Create a variable to hold the total timeout.
+      var Timeout;
+      
+      function StartTimer()
+      {
+         // Initialize the timeout.
+         Timeout = 0;
+         
+         // Set the progressbar maximum value.
+         $("#Progress").progressbar(
+            "option", "max", parseInt($("#StartValue").val()));
+         
+         // Create the timer variable.
+         Timer = window.setTimeout(UpdateTimer, 100);
+      }
+      
+      function UpdateTimer()
+      {
+         // Get the maximum value.
+         var MaxTime =
+            $("#Progress").progressbar("option", "max");
+         
+         // Check for the end of the timing cycle.
+         if (Timeout >= MaxTime)
+            return;
+         
+         // Update the Timeout value.
+         Timeout += 100;
+         
+         // Update the percentage completed.
+         $("#PercentDone").text(
+            Math.round((Timeout/MaxTime)*100));
+         
+         // Set the progressbar value.
+         $("#Progress").progressbar("value", Timeout);
+         
+         // Create the timer variable.
+         Timer = window.setTimeout(UpdateTimer, 100);
+      }
+   </script>
+   <style>
+      #Progress
+      {
+         border: solid;
+         margin: 20px;
+         width: 70%;
+         height: 10px;
+         background-color: gray;
+         color: green;
+      }
+   </style>
+</head>
+
+<body>
+   <h1>Using the Progressbar Widget</h1>
+   <label for="StartValue">Timer Interval (milliseconds): </label>
+   <input id="StartValue"
+          type="text"
+          value="5000" />
+   <div id="Progress"></div>
+   <div>
+      <label for="PercentDone">Percent Done: </label>
+      <span id="PercentDone">0</span>
+   </div>
+   <input id="btnStart"
+          type="button"
+          value="Start Timer"
+          onclick="StartTimer()" />
+</body>
+</html>

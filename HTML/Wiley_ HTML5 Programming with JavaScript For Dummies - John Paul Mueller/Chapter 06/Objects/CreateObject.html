@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Creating an Object</title>
+    <script language="JavaScript">
+        function customer()
+        {
+            // Add properties.
+            this.Name = "";
+            this.Age = "";
+        }
+        
+        // Create a true static method.
+        customer.help = function()
+        {
+            return "Defines a customer.";
+        }
+        
+        // Create a true method for the instance.
+        customer.prototype.toString = function()
+        {
+            return "Name: " + this.Name +
+                " Age: " + this.Age;
+        };
+        
+        function CreateCustomer()
+        {
+            // Display the help.
+            document.getElementById("Help").innerHTML =
+                customer.help();
+            
+            // Instantiate the object.
+            var ThisCustomer = new customer();
+            
+            // Add data to the object.
+            ThisCustomer.Name = "Adrian Watts";
+            ThisCustomer.Age = 22;
+            
+            // Display the data on screen.
+            document.getElementById("Output").innerHTML =
+                ThisCustomer.toString();
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="button"
+           value="Create Customer"
+           onclick="CreateCustomer()">
+        
+    <p id="Help"></p>
+    
+    <p id="Output"></p>
+
+</body>
+</html>

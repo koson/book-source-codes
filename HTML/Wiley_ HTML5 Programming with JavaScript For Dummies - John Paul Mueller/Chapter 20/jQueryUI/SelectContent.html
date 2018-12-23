@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Selecting Items</title>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <style>
+      #Selections .ui-selected
+      {
+         background: black;
+         color: white;
+      }
+      
+      #Selections
+      {
+         margin: 0;
+         padding: 0;
+         width: 50px;
+      }
+      
+      #Red
+      {
+         background: red;
+         color: white;
+      }
+      
+      #Green
+      {
+         background: green;
+         color: white;
+      }
+      
+      #Purple
+      {
+         background: purple;
+         color: white;
+      }
+      
+      #Blue
+      {
+         background: blue;
+         color: white;
+      }
+    </style>
+    <script language="JavaScript">
+      // Create an array to track the selections.
+      var Selections = new Array();
+      
+      // Handle the selects and unselects.
+      $(function()
+        {
+            $("#Selections").selectable(
+               {
+                  selected: function(event, ui)
+                  {
+                     // Verify the item hasn't already
+                     // been added.
+                     if (Selections.indexOf(ui.selected.id ) == -1)
+                     
+                        // Add the id of the selected item
+                        // to the array.
+                        Selections.push(ui.selected.id);
+                  },
+                  
+                  unselected: function(event, ui)
+                  {
+                     // Find the location of the unselected
+                     // item in the array.
+                     var Index =
+                        Selections.indexOf(ui.unselected.id);
+                        
+                     // Remove that item.
+                     Selections.splice(Index, 1);
+                  }
+               });
+        })
+      
+      // Display the results.
+      function ShowResults()
+      {
+         alert("You have selected: " + Selections);
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Selecting Items</h1>
+   <div id="Selections">
+      <p id="Red">Red</p>
+      <p id="Green">Green</p>
+      <p id="Blue">Blue</p>
+      <p id="Purple">Purple</p>
+   </div>
+   <input id="btnShowSelections"
+          type="button"
+          value="Show Selections"
+          onclick="ShowResults()" />
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Survey Results</title>
+   <script language="JavaScript">
+      $(function()
+        {
+            // Obtain access to the data and place
+            // each item in an array.
+            var Variables =
+               $(location).attr("href").split("?")[1];
+            var VarArray = Variables.split("&");
+            
+            // Display the data items on screen.
+            $("#Name").text(VarArray[0].split("=")[1]);
+            $("#Age").text(
+               VarArray[1].split("=")[1].replace(/\+/g, " "));
+            $("#Gender").text(VarArray[2].split("=")[1]);
+            $("#Reason").text(VarArray[3].split("=")[1]);
+            
+            // Go back to the previous form.
+            $("#GoBack").click(function()
+               {
+                  window.location = "Survey.html";
+               })
+        });
+   </script>
+</head>
+
+<body>
+   <h1>Survey Results</h1>
+   <div>
+      <label for="Name">
+         Name:
+      </label>
+      <span id="Name" />
+   </div>
+   <div>
+      <label for="Age">
+         Age:
+      </label>
+      <span id="Age" />
+   </div>
+   <div>
+      <label for="Gender">
+         Gender:
+      </label>
+      <span id="Gender" />
+   </div>
+   <div>
+      <label for="Reason">
+         Reason for Visit:
+      </label>
+      <span id="Reason" />
+   </div>
+   <input id="GoBack"
+          type="button"
+          value="Take Another Survey" />
+</body>
+</html>

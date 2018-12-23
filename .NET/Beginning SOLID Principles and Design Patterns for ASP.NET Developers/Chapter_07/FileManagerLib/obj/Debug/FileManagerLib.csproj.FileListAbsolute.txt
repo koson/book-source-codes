@@ -1,0 +1,5 @@
+Z:\Authoring\Books\Design Patterns\Code\RC 2\Chapter_07\FileManagerLib\bin\Debug\FileManagerLib.dll
+Z:\Authoring\Books\Design Patterns\Code\RC 2\Chapter_07\FileManagerLib\bin\Debug\FileManagerLib.pdb
+Z:\Authoring\Books\Design Patterns\Code\RC 2\Chapter_07\FileManagerLib\obj\Debug\FileManagerLib.csprojResolveAssemblyReference.cache
+Z:\Authoring\Books\Design Patterns\Code\RC 2\Chapter_07\FileManagerLib\obj\Debug\FileManagerLib.dll
+Z:\Authoring\Books\Design Patterns\Code\RC 2\Chapter_07\FileManagerLib\obj\Debug\FileManagerLib.pdb

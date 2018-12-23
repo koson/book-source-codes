@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetDefaultPrinter", "SetDefaultPrinter.csproj", "{ACC9FD86-F5AF-4D5E-9236-3ED30601C4ED}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{ACC9FD86-F5AF-4D5E-9236-3ED30601C4ED}.Debug.ActiveCfg = Debug|.NET
+		{ACC9FD86-F5AF-4D5E-9236-3ED30601C4ED}.Debug.Build.0 = Debug|.NET
+		{ACC9FD86-F5AF-4D5E-9236-3ED30601C4ED}.Release.ActiveCfg = Release|.NET
+		{ACC9FD86-F5AF-4D5E-9236-3ED30601C4ED}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

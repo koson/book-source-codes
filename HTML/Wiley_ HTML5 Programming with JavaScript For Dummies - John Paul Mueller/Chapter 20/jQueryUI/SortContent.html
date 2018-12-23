@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Sorting Items</title>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <style>
+      #SortMe
+      {
+         margin: 0;
+         padding: 0;
+         width: 200px;
+      }
+      
+      #SortMe p
+      {
+         margin: 0 3px 3px 3px;
+         padding: 0.4em;
+         padding-left: 1.5em;
+         height: 18px;
+         border: solid;
+      }
+      
+      #SortMe p span
+      {
+         position: absolute;
+         margin-left: -1.3em;
+      }
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            $("#SortMe").sortable();
+        })
+      
+      function ShowResults()
+      {
+         // Create the ouput string.
+         var Output = "The sort order is:\n      ";
+         
+         // Locate each of the required items and
+         // add them to the string.
+         $("#SortMe p").each(
+            function(index, element)
+            {
+               Output += element.innerHTML.substr(74);
+            });
+         
+         // Display the result.
+         alert(Output);
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Sorting Items</h1>
+   <h3>Move the item to where you want to see it on the list.</h3>
+   <div id="SortMe">
+      <p>
+         <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+         Item 1
+      </p>
+      <p>
+         <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+         Item 2
+      </p>
+      <p>
+         <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+         Item 3
+      </p>
+      <p>
+         <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>
+         Item 4
+      </p>
+   </div>
+   <input id="btnShowOrder"
+          type="button"
+          value="Show Order"
+          onclick="ShowResults()" />
+</body>
+</html>

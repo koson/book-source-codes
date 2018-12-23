@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Programmatically Changings Styles</title>
+   <script language="JavaScript">
+      function ChangeStyles()
+      {
+         // Modify the <p> tag style.
+         var PTag = document.getElementById("MyPTag");
+         PTag.style.fontFamily = "cursive";
+         PTag.style.color = "blue";
+         PTag.style.textAlign = "center";
+         PTag.style.border = "medium double green";
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Programmatically Changings Styles</h1>
+   <p id="MyPTag">Some Content</p>
+   <input id="btnChange"
+          type="button"
+          value="Change the Styles"
+          onclick="ChangeStyles()" />
+</body>
+</html>

@@ -1,0 +1,81 @@
+﻿<html>
+<head>
+    <title>JavaScript Closures</title>
+    <script src="~/scripts/jquery-2.1.1.js"></script>
+
+    <script type="text/javascript">
+
+            var employee = function () {
+                var ID = 0;
+                var firstName = "";
+                var lastName = "";
+
+                this.getID = function () {
+                    return ID;
+                }
+                this.setID = function (id) {
+                    ID = id;
+                }
+                this.getFirstName = function () {
+                    return firstName;
+                }
+                this.setFirstName = function (firstname) {
+                    firstName = firstname;
+                }
+                this.getLastName = function () {
+                    return lastName;
+                }
+                this.setLastName = function (lastname) {
+                    lastName = lastname;
+                }
+                this.display = function () {
+                    alert("#" + ID + " - " + firstName + " " + lastName);
+                }
+
+            }
+
+
+            $(document).ready(function () {
+
+                $("#display").click(function () {
+                    var emp = new employee();
+                    emp.setID($("#employeeid").val());
+                    emp.setFirstName($("#firstname").val());
+                    emp.setLastName($("#lastname").val());
+                    emp.display();
+                    
+                    alert(emp.getID() + " - " + emp.getFirstName() + " " + emp.getLastName());
+
+                });
+
+            });
+
+    </script>
+
+
+</head>
+
+<body>
+    <h1>Employee Details</h1>
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>Employee ID :</td>
+            <td><input type="text" id="employeeid" /></td>
+        </tr>
+        <tr>
+            <td>First Name :</td>
+            <td><input type="text" id="firstname" /></td>
+        </tr>
+        <tr>
+            <td>Last Name :</td>
+            <td><input type="text" id="lastname" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Display" id="display" />
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>

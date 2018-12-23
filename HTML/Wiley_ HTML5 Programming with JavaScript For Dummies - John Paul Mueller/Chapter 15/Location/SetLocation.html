@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Changing a Location</title>
+   <script language="JavaScript">
+      function AssignURL()
+      {
+         location.assign("GetLocation.html?Make a Query");
+      }
+      
+      function ReplaceURL()
+      {
+         location.replace("GetLocation.html?Make a Query");
+      }
+      
+      function ReloadURL()
+      {
+         location.reload();
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Changing a Location</h1>
+   <input id="btnAssign"
+          type="button"
+          value="Assign"
+          onclick="AssignURL()" />
+   <input id="btnReplace"
+          type="button"
+          value="Replace"
+          onclick="ReplaceURL()" />
+   <input id="btnReload"
+          type="button"
+          value="Reload"
+          onclick="ReloadURL()" />
+</body>
+</html>

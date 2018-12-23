@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Creating a Simple If Statement</title>
+</head>
+
+<body>
+   <h1>Creating a Simple If Statement</h1>
+   <p id="Result"></p>
+   <script language="JavaScript">
+      // Create an expression that results in true or false.
+      var Answer = confirm(
+         "Do you want to display the secret message?");
+      
+      // Test the expression using the if statement.
+      if (Answer)
+      {
+         // Display the secret message when the user
+         // clicks OK.
+         document.getElementById("Result").innerHTML =
+            "This is the secret message!";
+      }
+   </script>
+</body>
+</html>

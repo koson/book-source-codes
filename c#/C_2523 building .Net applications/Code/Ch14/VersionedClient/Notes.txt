@@ -1,0 +1,7 @@
+Steps
+-Compile against version 1.0.0.0
+-run code to see that it hit version 1.0.0.0
+-put in configuration file 
+	-need assembly and publickeytoken
+	-put in redirect 1 -> 2
+-run code and see that it hit version 2.0.0.0

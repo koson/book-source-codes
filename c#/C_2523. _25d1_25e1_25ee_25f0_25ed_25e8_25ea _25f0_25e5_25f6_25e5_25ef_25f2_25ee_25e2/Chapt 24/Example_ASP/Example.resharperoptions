@@ -1,0 +1,26 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean />
+  </SettingsComponent>
+  <RecentFilesTracker>
+    <RecentFilesTracker>
+      <TrackedFile location="E:\#Receipts\Source\Example_ASP\DownloadHandlerFactory.cs" offset="539" line="0" column="0" />
+      <TrackedFile location="E:\#Receipts\Source\Example_ASP\Web.config" offset="0" line="0" column="0" />
+      <TrackedFile location="E:\#Receipts\Source\Example_ASP\DownloadTxtHandler.cs" offset="0" line="0" column="0" />
+      <TrackedFile location="E:\#Receipts\Source\Example_ASP\Default.aspx" offset="1114" line="0" column="0" />
+      <TrackedFile location="E:\#Receipts\Source\Example_ASP\Cookies.aspx.cs" offset="1516" line="6" column="0" />
+      <TrackedFile location="E:\#Receipts\Source\Example_ASP\Cookies.aspx" offset="173" line="0" column="0" />
+      <TrackedFile location="E:\#Receipts\Source\Example_ASP\SetFocusScript.aspx.cs" offset="0" line="0" column="0" />
+    </RecentFilesTracker>
+  </RecentFilesTracker>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:System.Web.IHttpHandler">
+      <Item value="Equals" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:string">
+      <Item value="ToCharArray" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

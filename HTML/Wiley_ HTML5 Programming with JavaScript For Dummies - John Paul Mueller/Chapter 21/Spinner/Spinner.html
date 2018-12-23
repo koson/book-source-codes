@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Creating a Custom Spinner</title>
+   <style>
+      .ui-spinner
+      {
+         width: 45px;
+      }
+      
+      .ui-spinner-input
+      {
+         color: green;
+      }
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            var CurrentValue = 65;
+            
+            var ThisSpinner = $("#Spinner").spinner(
+               {
+                  // Set the minimum to the code for A
+                  // and the maxiumum to the code for Z.
+                  min: 65,
+                  max: 90,
+                  
+                  // When the user starts to spin the spinner,
+                  // convert the value to a number and hide the
+                  // text from view.
+                  start: function(ui, event)
+                  {
+                     ThisSpinner.spinner("value", CurrentValue);
+                     $("#Spinner").css("color", "white");
+                  },
+                  
+                  // When the user stops spinning the spinner,
+                  // save the numeric value, convert it to a 
+                  // letter and display the text on screen.
+                  stop: function(ui, event)
+                  {
+                     CurrentValue =
+                        ThisSpinner.spinner("value");
+                     ThisSpinner.spinner("value",
+                        String.fromCharCode(CurrentValue));
+                     $("#Spinner").css("color", "green");
+                  }
+               });
+        });
+   </script>
+</head>
+
+<body>
+   <h1>Creating a Custom Spinner</h1>
+   <label for="Spinner">First letter of your last name:</label>
+   <input id="Spinner" />
+</body>
+</html>

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShowAllGUIProcesses", "ShowAllGUIProcesses.csproj", "{CF43CDBA-8CC3-40B2-8854-D38623950638}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CF43CDBA-8CC3-40B2-8854-D38623950638}.Debug.ActiveCfg = Debug|.NET
+		{CF43CDBA-8CC3-40B2-8854-D38623950638}.Debug.Build.0 = Debug|.NET
+		{CF43CDBA-8CC3-40B2-8854-D38623950638}.Release.ActiveCfg = Release|.NET
+		{CF43CDBA-8CC3-40B2-8854-D38623950638}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Window Characteristics</title>
+</head>
+
+<body>
+   <h1>Window Characteristics</h1>
+   <div>Menu Bar Visible: 
+      <script language="JavaScript">
+         document.write(window.menubar.visible);
+      </script>
+   </div>
+   <div>Status Bar Visible: 
+      <script language="JavaScript">
+         document.write(window.statusbar.visible);
+         window.statusbar.visible = false;
+      </script>
+   </div>
+   <div>Height: 
+      <script language="JavaScript">
+         document.write(window.innerHeight);
+      </script>
+   </div>
+   <div>Width: 
+      <script language="JavaScript">
+         document.write(window.innerWidth);
+      </script>
+   </div>
+   <div>Screen X Position: 
+      <script language="JavaScript">
+         document.write(window.screenX);
+      </script>
+   </div>
+   <div>Screen Y Position: 
+      <script language="JavaScript">
+         document.write(window.screenY);
+      </script>
+   </div>
+   <div>Scrolled Horizontal Columns: 
+      <script language="JavaScript">
+         document.write(window.pageXOffset);
+      </script>
+   </div>
+   <div>Scrolled Vertical Lines: 
+      <script language="JavaScript">
+         document.write(window.pageYOffset);
+      </script>
+   </div>
+
+</body>
+</html>

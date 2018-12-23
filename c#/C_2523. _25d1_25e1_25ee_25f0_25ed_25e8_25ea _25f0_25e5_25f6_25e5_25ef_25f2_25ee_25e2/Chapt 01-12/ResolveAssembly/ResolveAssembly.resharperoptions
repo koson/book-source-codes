@@ -1,0 +1,44 @@
+<Configuration>
+  <RecentFilesTracker>
+    <RecentFilesTracker>
+      <TrackedFile location="E:\#Receipts\Test\ResolveAssembly\Class1.cs" offset="93" line="0" column="0" />
+      <TrackedFile location="E:\#Receipts\Test\ResolveAssembly\ClassLibrary2\Class1.cs" offset="10" line="0" column="0" />
+      <TrackedFile location="E:\#Receipts\Test\ResolveAssembly\ClassLibrary1\Class1.cs" offset="65" line="0" column="0" />
+    </RecentFilesTracker>
+  </RecentFilesTracker>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean />
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Qualified:@System.AppDomain.CurrentDomain">
+      <Item value="ResourceResolve" priority="0" />
+      <Item value="TypeResolve" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System">
+      <Item value="Int32" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine" priority="3" />
+      <Item value="ReadLine" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@">
+      <Item value="GetType" priority="1" />
+      <Item value="Name" priority="1" />
+      <Item value="Assembly" priority="0" />
+      <Item value="Message" priority="0" />
+      <Item value="ToString" priority="0" />
+      <Item value="Test" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ClassLibrary2">
+      <Item value="Class2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@ClassLibrary1">
+      <Item value="Class1" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:string">
+      <Item value="Equals" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Working with Tooltips</title>
+   <style>
+      .OptionalField
+      {
+         font-family: serif;
+         font-size: medium;
+         color: blue;
+      }
+      .RequiredField
+      {
+         font-family: sans-serif;
+         font-size: large;
+         font-weight: bolder;
+         color: red;
+      }
+   </style>
+   <script type="text/javascript">
+      $(function()
+        {
+            $("#FirstName").tooltip(
+               {
+                  position:
+                  {
+                     using: function(position, feedback)
+                     {
+                        $(this).addClass("OptionalField");
+                     }
+                  }
+               });
+            
+            $("#LastName").tooltip(
+               {
+                  position:
+                  {
+                     using: function(position, feedback)
+                     {
+                        $(this).addClass("RequiredField");
+                     }
+                  }
+               });
+        });
+   </script>
+</head>
+
+<body>
+   <h1>Working with Tooltips</h1>
+   <div>
+      <label for="FirstName">First Name:</label>
+      <input id="FirstName"
+             title="Type just your first name."
+             type="text"
+             maxlength="40" />
+   </div>
+   <div>
+      <label for="LastName">Last Name:</label>
+      <input id="LastName"
+             title="Type just your last name."
+             type="text"
+             maxlength="40" />
+   </div>
+</body>
+</html>

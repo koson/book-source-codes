@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+   
+<html>
+<head>
+   <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=<ADD YOUR KEY HERE>&sensor=false">
+   </script>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Google API Example</title>
+   <style type="text/css">
+      html
+      {
+         height: 100%;
+      }
+      body
+      {
+         height: 100%;
+         margin: 0;
+         padding: 0;
+      }
+      
+      #MapCanvas
+      {
+         height: 90%;
+         width:100%;
+      }
+      
+      #Input
+      {
+         width:100%;
+         height:10%;
+         padding-left:15px;
+      }
+      
+   </style>
+   <script type="text/javascript">
+      $(function()
+        {
+            // Track the current latitude using a
+            // spinner control.
+            var Latitude = $("#latitude").spinner(
+               {
+                  min: -90,
+                  max: 90,
+                  step: .1,
+                  
+                  change: function(event, ui)
+                  {
+                     if (Latitude.spinner("value") < -90)
+                        Latitude.spinner("value", -90);
+                     if (Latitude.spinner("value") > 90)
+                        Latitude.spinner("value", 90);
+                  }
+               });
+            
+            // Track the current longitude using a
+            // spinner control.
+            var Longitude = $("#longitude").spinner(
+               {
+                  min: -180,
+                  max: 180,
+                  step: .1,
+                  
+                  change: function(event, ui)
+                  {
+                     if (Longitude.spinner("value") < -180)
+                        Longitude.spinner("value", -180);
+                     if (Longitude.spinner("value") > 180)
+                        Longitude.spinner("value", 180);
+                  }
+               });
+            
+            // This function actually displays the map on
+            // screen.
+            function GetMap()
+            {
+               // Create a list of arguments to send to Google.
+               var MapOptions =
+               {
+                  center: new google.maps.LatLng(
+                              Latitude.spinner("value"),
+                              Longitude.spinner("value")),
+                  zoom: 8,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+               }
+               
+               // Provide the location to place the map and the 
+               // map options to Google.
+               var map = new google.maps.Map(
+                  document.getElementById("MapCanvas"),
+                  MapOptions);
+            };
+            
+            // The example provides two methods of getting a
+            // map: during page loading or by clicking Get Map.
+            $(window).load(
+               function()
+               {
+                  GetMap();
+               });
+            
+            $("#submit").click(
+               function()
+               {
+                  GetMap();
+               });
+        })
+   </script>
+</head>
+
+<body>
+   <h1>Google API Example</h1>
+   <div id="Input">
+      <label for="longitude">
+         Longitude: 
+      </label>
+      <input id="longitude"
+             value="-87.95"
+             type="text" />
+      <label for="latitude">
+         Latitude: 
+      </label>
+      <input id="latitude"
+             value="43.04"
+             type="text" />
+      <input id="submit"
+             value="Get Map"
+             type="button" />
+   </div>
+   <div id="MapCanvas"></div>
+</body>
+</html>

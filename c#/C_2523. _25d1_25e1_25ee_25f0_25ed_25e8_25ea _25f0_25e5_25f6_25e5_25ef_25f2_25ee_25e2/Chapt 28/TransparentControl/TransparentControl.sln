@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransparentControl", "TransparentControl.csproj", "{87402408-A241-4E4A-AFAA-4CE7FD32E6DB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{87402408-A241-4E4A-AFAA-4CE7FD32E6DB}.Debug.ActiveCfg = Debug|.NET
+		{87402408-A241-4E4A-AFAA-4CE7FD32E6DB}.Debug.Build.0 = Debug|.NET
+		{87402408-A241-4E4A-AFAA-4CE7FD32E6DB}.Release.ActiveCfg = Release|.NET
+		{87402408-A241-4E4A-AFAA-4CE7FD32E6DB}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Passing Parameters to Event Handlers</title>
+   <script language="JavaScript">
+      // Create a global variable to hold the event time.
+      var LastEvent = 0;
+      
+      function CheckEvent(event)
+      {
+         // Obtain a event time value.
+         var EventDifference;
+         if (LastEvent == 0)
+         {
+            EventDifference = "First Click";
+         }
+         else
+         {
+            EventDifference = event.timeStamp - LastEvent;
+         }
+         
+         // Save the last event time.
+         LastEvent = event.timeStamp;
+            
+         // Display statistics about the event.
+         document.getElementById("Output").innerHTML =
+            "Bubbles? " + event.bubbles +
+            "<br />Cancelable? " + event.cancelable +
+            "<br />ID: " + event.currentTarget.id +
+            "<br />Time: " + EventDifference +
+            "<br />Event Type: " + event.type;
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Passing Parameters to Event Handlers</h1>
+   <input id="btnClickMe"
+          type="button"
+          value="Click Me" />
+   <script language="JavaScript">
+      // Subscribe to the click event.
+      document.getElementById(
+         "btnClickMe").onclick=CheckEvent;
+   </script>
+   
+   <p id="Output"></p>
+</body>
+</html>

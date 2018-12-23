@@ -1,0 +1,53 @@
+div
+{
+   text-align: center;
+   font-family: sans-serif;
+   font-size: 20px;
+   border: 0px;
+   padding: 0px;
+}
+
+#Menu
+{
+   position: absolute;
+   background-color: #bfbfff;
+   width: 90%;
+   height: 80px;
+}
+
+#Header
+{
+   position: absolute;
+   top: 80px;
+   background-color: #ffff00;
+   width: 90%;
+   height: 80px;
+}
+
+#Sidebar
+{
+   position: absolute;
+   top: 160px;
+   background-color: #00ff00;
+   width: 30%;
+   height: 200px;
+}
+
+#Content
+{
+   position: absolute;
+   top: 160px;
+   left: 31%;
+   background-color: #ff8080;
+   width: 60%;
+   height: 200px;
+}
+
+#Footer
+{
+   position: absolute;
+   top: 360px;
+   background-color: #00ffff;
+   width: 90%;
+   height: 80px;
+}

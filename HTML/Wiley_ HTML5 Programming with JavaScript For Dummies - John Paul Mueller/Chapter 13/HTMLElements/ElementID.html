@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Formatting HTML Tags Directly</title>
+   <script language="JavaScript">
+      function ChangeStyles()
+      {
+         // Modify the <h1> tag style.
+         var Header = document.getElementById("Header");
+         Header.style.fontFamily = "Arial";
+         Header.style.fontSize = "45px";
+         Header.style.fontWeight = "bold";
+         Header.style.color = "green";
+         Header.style.textAlign = "center";
+         Header.style.marginLeft = "20px";
+         Header.style.marginRight = "20px";
+         Header.style.border = "medium double green";
+         
+         // Modify the <p> tag style.
+         var Para = document.getElementById("Paragraph");
+         Para.style.fontFamily = "serif";
+         Para.style.fontStyle = "italic";
+         Para.style.fontSize = "1em";
+         Para.style.color = "blue";
+      }
+   </script>
+</head>
+
+<body>
+   <h1 id="Header">Formatting HTML Tags Directly</h1>
+   <p id="Paragraph">Some text to format.</p>
+   <p>Some more text to format.</p>
+   <input id="btnChange"
+          type="button"
+          value="Change the Styles"
+          onclick="ChangeStyles()" />
+</body>
+</html>

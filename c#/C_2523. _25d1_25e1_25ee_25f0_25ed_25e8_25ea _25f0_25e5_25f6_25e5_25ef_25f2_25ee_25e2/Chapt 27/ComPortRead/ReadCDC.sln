@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadCDC", "ReadCDC.csproj", "{F65E3039-3495-4B7B-87B2-D3AEF3786F77}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F65E3039-3495-4B7B-87B2-D3AEF3786F77}.Debug.ActiveCfg = Debug|.NET
+		{F65E3039-3495-4B7B-87B2-D3AEF3786F77}.Debug.Build.0 = Debug|.NET
+		{F65E3039-3495-4B7B-87B2-D3AEF3786F77}.Release.ActiveCfg = Release|.NET
+		{F65E3039-3495-4B7B-87B2-D3AEF3786F77}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

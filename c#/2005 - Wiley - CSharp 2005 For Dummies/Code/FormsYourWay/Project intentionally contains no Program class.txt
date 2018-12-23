@@ -1,0 +1,2 @@
+The Main() function for FormsYourWay is located in the Form1.cs file. Main() can be a member 
+of any class, as long as each program has one and only one Main().

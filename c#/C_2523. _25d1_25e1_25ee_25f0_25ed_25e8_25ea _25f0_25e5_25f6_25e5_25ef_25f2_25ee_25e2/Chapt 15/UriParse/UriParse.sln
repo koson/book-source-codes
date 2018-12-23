@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UriParse", "UriParse.csproj", "{5D429FBE-15C8-4192-8DBE-51E56BC9EBED}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{5D429FBE-15C8-4192-8DBE-51E56BC9EBED}.Debug.ActiveCfg = Debug|.NET
+		{5D429FBE-15C8-4192-8DBE-51E56BC9EBED}.Debug.Build.0 = Debug|.NET
+		{5D429FBE-15C8-4192-8DBE-51E56BC9EBED}.Release.ActiveCfg = Release|.NET
+		{5D429FBE-15C8-4192-8DBE-51E56BC9EBED}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

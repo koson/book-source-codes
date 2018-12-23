@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>Using the Spinner Widget</title>
+   <script language="JavaScript">
+      $(function()
+        {
+            // Create the spinner and place a reference
+            // to it in ThisSpinner.
+            var ThisSpinner = $("#Spinner").spinner(
+               {
+                  // Set the minimum and maximum values.
+                  min: 1,
+                  max: 5,
+                  
+                  // Add validation.
+                  change: function(event, ui)
+                  {
+                     // Check for minimum and maximum value
+                     // compliance.
+                     if (ThisSpinner.spinner("value") < 1)
+                        ThisSpinner.spinner("value", 1);
+                     
+                     if (ThisSpinner.spinner("value") > 5)
+                        ThisSpinner.spinner("value", 5);
+                  }
+               });
+            
+            // Set the initial value.
+            ThisSpinner.spinner("value", 1);
+            
+            // Provide a means for returning the current value.
+            $("#GetSpinValue").click(
+               function()
+               {
+                  alert(ThisSpinner.spinner("value"));
+               }
+            );
+            
+            // Create buttons for all buttons on the form.
+            $("button").button();
+        });
+   </script>
+</head>
+
+<body>
+   <h1>Using the Spinner Widget</h1>
+   <p>
+      <label for="Spinner">
+         Provide a value between 1 and 5: 
+      </label>
+      <input id="Spinner"
+             name="Value" />
+   </p>
+   <p>
+      <button type="button"
+              id="GetSpinValue">
+         Get Spinner Value
+      </button>
+   </p>
+</body>
+</html>

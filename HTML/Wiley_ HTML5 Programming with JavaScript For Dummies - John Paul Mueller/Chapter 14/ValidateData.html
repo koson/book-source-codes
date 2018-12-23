@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <style>
+      div {padding: 5px}
+      :valid {box-shadow:  0 0 5px green}
+      :-moz-submit-invalid {box-shadow:  0 0 5px red}
+   </style>
+   <title>Validating Data</title>
+   <script>
+      function ValidatePassword(P1, P2)
+      {
+         if (P1.value != P2.value ||
+             P1.value == "" ||
+             P2.value == "")
+         {
+            P2.setCustomValidity(
+               "The Password Is Incorrect");
+         }
+         else
+         {
+            P2.setCustomValidity("");
+         }
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Validating Data</h1>
+   <form action="#" method="post"
+         enctype="multipart/form-data">
+      <fieldset>
+         <div>
+            <label>Name:</label>
+            <input id="Name"
+                   type="text"
+                   placeholder="Type Your Name"
+                   maxlength="100"
+                   required
+                   x-moz-errormessage="Type Your Name"/>
+         </div>
+         <div>
+            <label>Telephone:</label>
+            <input id="Telephone"
+                   type="tel"
+                   placeholder="Type Your Number"
+                   pattern="\d\d\d \d\d\d \d\d\d\d"
+                   required
+                   x-moz-errormessage=
+                      "Type Your Number as XXX XXX XXXX"/>
+         </div>
+         <div>
+            <label>Password:</label>
+            <input id="P1"
+                   type="password"
+                   placeholder="Password" />
+         </div>
+         <div>
+            <label>Confirm Password:</label>
+            <input id="P2"
+                   type="password"
+                   placeholder="Password"
+                   onfocus="ValidatePassword(
+                     document.getElementById('P1'), this);"
+                   oninput="ValidatePassword(
+                     document.getElementById('P1'), this);" />
+         </div>
+      </fieldset>
+      <fieldset>
+         <div>
+            <input id="Submit"
+                   type="submit"
+                   value="Submit Data" />
+         </div>
+      </fieldset>
+   </form>
+</body>
+</html>

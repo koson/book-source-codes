@@ -1,0 +1,13 @@
+Steps (very similiar to a private assembly)
+- Right click on the references and pick Add Reference
+- Click Browse and navigate to the bin/Debug of the SharedPhotoAlbum Component (SharedPhotoAlbum.dll) and select the dll
+- Go to properties of the reference and set local copy to false (this is the purpose of a shared assembly - one place for all, not local)
+- Put in the Using PhotoAlbum; at the top and your in business.
+
+- you can note the properties of the reference 
+	strong name = true
+	local copy = false
+
+Deployment
+-copy files
+-install server into GAC (gacutil /i or drag and drop)

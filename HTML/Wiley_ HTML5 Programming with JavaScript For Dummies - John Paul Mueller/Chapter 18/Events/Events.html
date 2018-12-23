@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Interacting with Events</title>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+</head>
+
+<body>
+   <h1>Interacting with Events</h1>
+   <input id="btnShowMessage"
+          type="button"
+          value="Show Message" />
+   <input id="btnFireEvent"
+          type="button"
+          value="Fire Click" />
+   <script language="JavaScript">
+      $("#btnShowMessage").click(
+         function()
+         {
+            alert("The event handler for " +
+               this.id + " was called.");
+         });
+      
+      $("#btnFireEvent").click(
+         function()
+         {
+            $("#btnShowMessage").click();
+         });
+   </script>
+</body>
+</html>

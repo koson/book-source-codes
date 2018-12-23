@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Working with a Basic For Loop</title>
+   <script language="JavaScript">
+      function OptionalArgument(param)
+      {
+         // Determine whether there were any params passed.
+         if (arguments.length == 0)
+         {
+            // Display an error message and exit.
+            document.getElementById("Result").innerHTML =
+               "Nothing Passed!";
+            return;
+         }
+            
+         // Create a string to hold the arguments.
+         var Result = new String();
+         
+         // Process each of the arguments in turn.
+         for (var i = 0; i < arguments.length; i++)
+         {
+            // Verify that the argument is of the right type.
+            if (typeof(arguments[i]) == 'string')
+            {
+               // Add to the argument string.
+               Result += arguments[i] + "<br />";
+            }
+         }
+         
+         // Display the results on screen.
+         document.getElementById("Result").innerHTML = Result;
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Working with a Basic For Loop</h1>
+   <input type="button"
+          value="Send 0 Arguments"
+          onclick="OptionalArgument()" />
+   <input type="button"
+          value="Send 1 Argument"
+          onclick="OptionalArgument('Red')" />
+   <input type="button"
+          value="Send 3 Arguments"
+          onclick="OptionalArgument('Red', 'Green', 'Blue')" />
+   <input type="button"
+          value="Send Various Argument Types"
+          onclick="OptionalArgument('Red', 0, true, 'Orange')" />
+   <p id="Result"></p>
+</body>
+</html>

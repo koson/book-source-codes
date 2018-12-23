@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Changing Page Nodes</title>
+   <script language="JavaScript">
+      function AddNodes()
+      {
+         // Create a new <p> tag and assign values
+         // to it.
+         var P2 = document.createElement("p");
+         P2.setAttribute("id", "p2");
+         P2.innerHTML = "New Content";
+         
+         // Insert this new <p> tag before the existing
+         // button.
+         document.body.insertBefore(P2,
+            document.getElementById("btnFirst"));
+         
+         // Create a new button and assign values to it.
+         var Button2 = document.createElement("input");
+         Button2.setAttribute("id", "btnSecond");
+         Button2.setAttribute("type", "button");
+         Button2.setAttribute("value", "Remove Nodes");
+         Button2.setAttribute("onclick", "RemoveNodes()");
+         
+         // Add this new button after the existing
+         // button.
+         document.body.appendChild(Button2);
+      }
+      
+      function RemoveNodes()
+      {
+         // Remove the new <p> node that we just added.
+         document.body.removeChild(
+            document.getElementById("p2"));
+         
+         // Remove the new button.
+         document.body.removeChild(
+            document.getElementById("btnSecond"));
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Changing Page Nodes</h1>
+   <p>Existing Content</p>
+   <input id="btnFirst"
+          type="button"
+          value="Add Nodes"
+          onclick="AddNodes()" />
+</body>
+</html>

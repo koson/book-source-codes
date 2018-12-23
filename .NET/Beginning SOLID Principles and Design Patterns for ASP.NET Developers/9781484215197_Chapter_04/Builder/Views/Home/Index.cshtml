@@ -1,0 +1,18 @@
+﻿<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Get Your Own PC!</h1>
+    <form asp-controller="Home" asp-action="Build" method="post">
+        <h4>Select Usage Type :</h4>
+        <select name="usagetype">
+            <option value="home">Home Use</option>
+            <option value="office">Office Use</option>
+            <option value="development">Software Development and Graphic Designing</option>
+        </select>
+        <br /><br />
+        <input type="submit" value="Show Configuration" />
+    </form>
+</body>
+</html>

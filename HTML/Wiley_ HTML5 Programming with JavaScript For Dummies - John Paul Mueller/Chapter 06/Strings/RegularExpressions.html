@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Using Regular Expressions</title>
+   <script language="JavaScript">
+      // Define a global search string.
+      var SearchString =
+        "Use a regular expression to search a string!"
+      
+      function FindString()
+      {
+         // Obtain the value the user wants to find.
+         var FindValue =
+            document.getElementById("SearchString").value;
+         
+         // Obtain the modifiers the user wants to use.
+         var Modifiers =
+            document.getElementById("Modifiers").value;
+            
+         // Create a search pattern.
+         var Pattern = new RegExp(FindValue, Modifiers);
+            
+         // Perform the search.
+         document.getElementById("Result").innerHTML =
+            SearchString.match(Pattern);
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Using Regular Expressions</h1>
+   <p>
+      This is the original string:
+      <script language="JavaScript">
+         document.write(SearchString);
+      </script>
+   </p>
+   <p>Type a search string:
+      <input id="SearchString" type="text" value="search" />
+      <input id="Modifiers" type="text" value="g" />
+      <input id="FindIt" type="button" value="Find It" onclick="FindString()" />
+   </p>
+   <p id="Result" />
+</body>
+</html>

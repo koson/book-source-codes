@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+   
+<html>
+<head>
+   <title>Using jQuery and AJAX to Change Content</title>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script language="JavaScript">
+   function ChangeText()
+   {
+      $("#ChangeText").load("Special.txt");
+   }
+   </script>
+</head>
+
+<body>
+   <h1>Using jQuery and AJAX to Change Content</h1>
+   <div id="ChangeText">
+      Some Standard Text
+   </div>
+   <input id="btnChange"
+          type="button"
+          value="Change the Text"
+          onclick="ChangeText()" />
+</body>
+</html>
+

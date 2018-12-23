@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvisibleForm", "InvisibleForm.csproj", "{A6D0638C-6CD3-4723-B7BB-0F4BE61B175C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{A6D0638C-6CD3-4723-B7BB-0F4BE61B175C}.Debug.ActiveCfg = Debug|.NET
+		{A6D0638C-6CD3-4723-B7BB-0F4BE61B175C}.Debug.Build.0 = Debug|.NET
+		{A6D0638C-6CD3-4723-B7BB-0F4BE61B175C}.Release.ActiveCfg = Release|.NET
+		{A6D0638C-6CD3-4723-B7BB-0F4BE61B175C}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

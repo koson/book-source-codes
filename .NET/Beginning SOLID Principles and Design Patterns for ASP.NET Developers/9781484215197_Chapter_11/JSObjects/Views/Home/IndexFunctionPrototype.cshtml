@@ -1,0 +1,85 @@
+﻿<html>
+    <head>
+        <title>Function Prototype</title>
+        <script src="~/scripts/jquery-2.1.1.js"></script>
+
+        <script type="text/javascript">
+
+            var employee = function (id,firstname,lastname) {
+                this._ID = 0;
+                this._firstName = "";
+                this._lastName = "";
+
+                if (arguments.length == 3) {
+                    this._ID = id;
+                    this._firstName = firstname;
+                    this._lastName = lastname;
+                }
+            }
+
+            employee.prototype.getID = function () {
+                return this._ID;
+            }
+            employee.prototype.setID = function (id) {
+                this._ID = id;
+            }
+            employee.prototype.getFirstName = function () {
+                return this._firstName;
+            }
+            employee.prototype.setFirstName = function (firstname) {
+                this._firstName = firstname;
+            }
+            employee.prototype.getLastName = function () {
+                return this._lastName;
+            }
+            employee.prototype.setLastName = function (lastname) {
+                this._lastName = lastname;
+            }
+            employee.prototype.display = function () {
+                alert("#" + this._ID + " - " + this._firstName + " " + this._lastName);
+            }
+
+            $(document).ready(function () {
+
+                $("#display").click(function () {
+                    var emp = new employee();
+                    emp.setID($("#employeeid").val());
+                    emp.setFirstName($("#firstname").val());
+                    emp.setLastName($("#lastname").val());
+                    emp.display();
+
+                    emp = new employee($("#employeeid").val(), $("#firstname").val(), $("#lastname").val());
+                    emp.display();
+                });
+
+            });
+
+        </script>
+
+
+    </head>
+
+    <body>
+        <h1>Employee Details</h1>
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>Employee ID :</td>
+                <td><input type="text" id="employeeid" /></td>
+            </tr>
+            <tr>
+                <td>First Name :</td>
+                <td><input type="text" id="firstname" /></td>
+            </tr>
+            <tr>
+                <td>Last Name :</td>
+                <td><input type="text" id="lastname" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Display" id="display" />
+                </td>
+            </tr>
+
+        </table>
+    </body>
+</html>

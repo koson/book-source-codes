@@ -1,0 +1,15 @@
+﻿@model List<TemplateMethod.Core.OrderLog>
+
+<html>
+<head>
+    <title>Success</title>
+</head>
+<body>
+    <h1>Order Log Details for Order #@Model.First().OrderId</h1>
+    <hr />
+    @foreach(var item in Model)
+    {
+        <h2>@item.Status</h2>
+    }
+</body>
+</html>

@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexer", "Indexer.csproj", "{1132B941-80FC-4E4A-BAA6-482985E60EC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1132B941-80FC-4E4A-BAA6-482985E60EC9}.Debug.ActiveCfg = Debug|.NET
+		{1132B941-80FC-4E4A-BAA6-482985E60EC9}.Debug.Build.0 = Debug|.NET
+		{1132B941-80FC-4E4A-BAA6-482985E60EC9}.Release.ActiveCfg = Release|.NET
+		{1132B941-80FC-4E4A-BAA6-482985E60EC9}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

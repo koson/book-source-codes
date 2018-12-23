@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <title>XML-based Tabbed Interface Example</title>
+   <style>
+      .Tabs
+      {
+         width: 70%;
+      }
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            // Create variables to hold temporary data.
+            var TabHeads = "";
+            var TabContent = "";
+            
+            // Obtain the XML data file and process it.
+            $.get("XMLTabData.xml", function(data)
+               {
+                  // Locate each Heading entry and use it to
+                  // create a tab heading.
+                  $(data).find("Heading").each(function()
+                     {
+                        TabHeads +=
+                           "<li><a href='" +
+                           $(this).attr("href") +
+                           "'>" + $(this).attr("caption") +
+                           "</a></li>";
+                     });
+                  
+                  // Append the data to the heading area.
+                  $("#Headings").append(TabHeads);
+                  
+                  // Locate each Content entry and use it to
+                  // create the tab content.
+                  $(data).find("Content").each(function()
+                     {
+                        TabContent +=
+                           "<div id='" + $(this).attr("id") +
+                           "'>" + $(this).text() + "</div>";
+                     });
+                  
+                  // Append the data to the tab content area.
+                  $("#Tabs").append(TabContent);
+                  
+                  // Complete the process by displaying the
+                  // tabs.
+                  $("#Tabs").tabs();
+               });
+        });
+   </script>
+</head>
+
+<body>
+   <h1>XML-based Tabbed Interface Example</h1>
+   <div id="Tabs">
+      <ul id="Headings" />
+   </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+<script src="~/Scripts/angular-1.2.js"></script>
+
+    <script type="text/javascript">
+
+        var app = angular.module("EmployeeApp", []);
+
+        app.controller("EmployeeController", function ($scope) {
+            var Model = [
+                { EmployeeID: 1, FirstName: "Nancy", LastName: "Davolio"},
+                { EmployeeID: 2, FirstName: "Steven", LastName: "Buchanbarg" },
+                { EmployeeID: 3, FirstName: "Janet", LastName: "Margaret" }
+            ];
+
+            $scope.Model = Model;
+        });
+
+
+    </script>
+</head>
+<body>
+
+    <div ng-app="EmployeeApp">
+        <div ng-controller="EmployeeController">
+
+            <table border="1" cellpadding="10">
+                <tr>
+                    <th>EmployeeID</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                </tr>
+                <tr ng-repeat="item in Model">
+                    <td><input ng-model="item.EmployeeID" /></td>
+                    <td><input ng-model="item.FirstName" /></td>
+                    <td><input ng-model="item.LastName" /></td>
+                </tr>
+            </table>
+
+            <br /><br />
+
+            <table border="1" cellpadding="10">
+                <tr>
+                    <th>EmployeeID</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                </tr>
+                <tr ng-repeat="item in Model">
+                    <td>{{item.EmployeeID}}</td>
+                    <td>{{item.FirstName}}</td>
+                    <td>{{item.LastName}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

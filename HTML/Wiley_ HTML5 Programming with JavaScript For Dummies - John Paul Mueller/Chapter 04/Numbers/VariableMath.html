@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Performing Simple Math</title>
+    <script language="JavaScript">
+        function DoAdd()
+        {
+            // Obtain the current values of Value1 and Value2.
+            var Value1 = new Number(
+                document.getElementById("Value1").value);
+            var Value2 = new Number(
+                document.getElementById("Value2").value);
+            
+            // Set the result to reflect the addition
+            // of the two numbers.
+            document.getElementById("Result").setAttribute(
+                "value", Value1 + Value2);
+        }
+        
+        function DoSub()
+        {
+            // Obtain the current values of Value1 and Value2.
+            var Value1 = new Number(
+                document.getElementById("Value1").value);
+            var Value2 = new Number(
+                document.getElementById("Value2").value);
+            
+            // Set the result to reflect the addition
+            // of the two numbers.
+            document.getElementById("Result").setAttribute(
+                "value", Value1 - Value2);
+        }
+        
+        function DoMul()
+        {
+            // Obtain the current values of Value1 and Value2.
+            var Value1 = new Number(
+                document.getElementById("Value1").value);
+            var Value2 = new Number(
+                document.getElementById("Value2").value);
+            
+            // Set the result to reflect the addition
+            // of the two numbers.
+            document.getElementById("Result").setAttribute(
+                "value", Value1 * Value2);
+        }
+        
+        function DoDiv()
+        {
+            // Obtain the current values of Value1 and Value2.
+            var Value1 = new Number(
+                document.getElementById("Value1").value);
+            var Value2 = new Number(
+                document.getElementById("Value2").value);
+            
+            // Set the result to reflect the addition
+            // of the two numbers.
+            document.getElementById("Result").setAttribute(
+                "value", Value1 / Value2);
+        }        
+    </script>
+</head>
+
+<body>
+    <h1>Performing Simple Math</h1>
+    <p>
+        Value1:
+        <input type="text" id="Value1" value="4">
+    </p>
+    <p>
+        Value1:
+        <input type="text" id="Value2" value="5">
+    </p>
+    <p>
+        Result:
+        <input type="text" id="Result" value=""
+               readonly="true">
+    </p>
+    <input type="button"
+           value="+"
+           onclick="DoAdd()" />
+    <input type="button"
+           value="-"
+           onclick="DoSub()" />
+    <input type="button"
+           value="*"
+           onclick="DoMul()" />
+    <input type="button"
+           value="/"
+           onclick="DoDiv()" />
+</body>
+</html>

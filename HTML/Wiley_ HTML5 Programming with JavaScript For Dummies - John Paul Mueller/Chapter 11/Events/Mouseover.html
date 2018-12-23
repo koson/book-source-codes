@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Creating a Mouseover Effect</title>
+   <style type="text/css">
+      .Normal {color: red;font-style: italic;font-family: sans-serif;}
+      .Selected {color: blue;font-weight: bold;font-family: cursive;}
+   </style>
+   <script language="JavaScript">
+      function SayHello()
+      {
+         alert("Hello There!");
+      }
+      
+      function ChangeDisplay(Id, Class)
+      {
+         // Change the class of the specified
+         // element or control to a new value.
+         document.getElementById(Id).setAttribute(
+            "class", Class);
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Creating a Mouseover Effect</h1>
+   <input id="btnClick"
+          class="Normal"
+          type="button"
+          value="ClickMe"
+          onmouseover="ChangeDisplay('btnClick', 'Selected')"
+          onmouseout="ChangeDisplay('btnClick', 'Normal')";
+          onclick="SayHello()" />
+</body>
+</html>

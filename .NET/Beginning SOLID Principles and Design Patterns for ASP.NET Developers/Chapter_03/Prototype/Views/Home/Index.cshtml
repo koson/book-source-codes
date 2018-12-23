@@ -1,0 +1,16 @@
+﻿<html>
+<head>
+    <title></title>
+</head>
+<body>
+    
+    <h1>Select File(s) to Upload :</h1>
+    <form action="/home/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="files" id="files" multiple />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <h4>@ViewBag.Message</h4>
+
+</body>
+</html>

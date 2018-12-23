@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Handling Errors</title>
+</head>
+
+<body>
+   <h1>Using a Try...Catch Block</h1>
+   <script language="JavaScript">
+      try
+      {
+         // Generate an error.
+         allert("Display a message");
+      }
+      catch(Err)
+      {
+         // Write the error information on screen.
+         document.write("<p>The Error Type is: " +
+            Err.name + "</p>");
+         document.write("<p>The Error Message is: " +
+            Err.message + "</p>");
+      }
+   </script>
+
+</body>
+</html>

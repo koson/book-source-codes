@@ -1,0 +1,29 @@
+﻿@model Dictionary<LSP.Core.IReadableSettings,Dictionary<string,string>>
+
+@*@model Dictionary<LSP.Core.ISettings,Dictionary<string,string>>*@
+
+<html><head><title></title></head>
+<body>
+    <h1>All Settings</h1>
+    <form asp-controller="Home" asp-action="Save" method="post">
+        <input type="submit" value="Change Settings" />
+    </form>
+
+    <table border="1" cellpadding="10">
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Key.ToString()</td>
+                <td>
+                    @foreach(var subItem in item.Value)
+                    {
+                        <div>@subItem.Key = @subItem.Value</div>
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+
+
+</body>
+</html>

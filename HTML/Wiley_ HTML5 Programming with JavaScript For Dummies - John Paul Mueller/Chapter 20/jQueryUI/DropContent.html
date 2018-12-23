@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Dropping an Item Into a Container</title>
+   <script
+      src="http://code.jquery.com/jquery-latest.js">
+   </script>
+   <script
+      src="http://code.jquery.com/ui/1.9.2/jquery-ui.js">
+   </script>
+   <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+   <style>
+      #MoveMe
+      {
+         border: solid;
+         width: 200px;
+         height: 5em;
+         text-align: center;
+         line-height: 5em;
+      }
+      #FillMe
+      {
+         border: solid;
+         width: 400px;
+         height: 10em;
+         text-align: center;
+         line-height: 10em;
+         position: absolute;
+         top: 250px;
+         left: 250px;
+      }
+      .Filled
+      {
+         background-color: lightblue;
+      }
+   </style>
+   <script language="JavaScript">
+      $(function()
+        {
+            $("#MoveMe").draggable();
+            $("#FillMe").droppable(
+               {
+                  drop: function(event, ui)
+                  {
+                     $(this)
+                        .addClass("Filled")
+                        .html("Filled!");
+                  }
+               });
+        });
+   </script>
+</head>
+
+<body>
+   <h1>Dropping an Item Into a Container</h1>
+   <p id="MoveMe">
+      Moveable Paragraph
+   </p>
+   <p id="FillMe">
+      Container
+   </p>
+</body>
+</html>

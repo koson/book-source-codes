@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <style>
+      #indent
+      {
+         padding: 20px;
+      }
+   </style>
+   <title>Detect the Screen Characteristics</title>
+</head>
+
+<body>
+   <h1>Detect the Screen Characteristics</h1>
+   <div>Total Screen Height: 
+      <script language="JavaScript">
+         document.write(screen.height);
+      </script>
+   </div>
+   <div>Total Screen Width: 
+      <script language="JavaScript">
+         document.write(screen.width);
+      </script>
+   </div>
+   <div>Available Screen Height: 
+      <script language="JavaScript">
+         document.write(screen.availHeight);
+      </script>
+   </div>
+   <div>Available Screen Width: 
+      <script language="JavaScript">
+         document.write(screen.availWidth);
+      </script>
+   </div>
+   <div>Color Depth (Bits): 
+      <script language="JavaScript">
+         document.write(screen.colorDepth);
+      </script>
+   </div>
+   <div>Color Resolution (Bits/Pixel): 
+      <script language="JavaScript">
+         document.write(screen.pixelDepth);
+      </script>
+   </div>
+   <div>Screen Dimensions:
+      <ul>
+         <li>
+            Left:
+            <script language="JavaScript">
+               document.write(screen.left);
+            </script>
+         </li>
+         <li>
+            Top:
+            <script language="JavaScript">
+               document.write(screen.top);
+            </script>
+         </li>
+         <li>
+            Right:
+            <script language="JavaScript">
+               document.write(screen.left + screen.width);
+            </script>
+         </li>
+         <li>
+            Bottom:
+            <script language="JavaScript">
+               document.write(screen.top + screen.height);
+            </script>
+         </li>
+      </ul>
+   </div>
+</body>
+</html>

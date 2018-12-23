@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegionHit", "RegionHit.csproj", "{63C70F2C-8AEA-4F14-BA66-E98810745984}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{63C70F2C-8AEA-4F14-BA66-E98810745984}.Debug.ActiveCfg = Debug|.NET
+		{63C70F2C-8AEA-4F14-BA66-E98810745984}.Debug.Build.0 = Debug|.NET
+		{63C70F2C-8AEA-4F14-BA66-E98810745984}.Release.ActiveCfg = Release|.NET
+		{63C70F2C-8AEA-4F14-BA66-E98810745984}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

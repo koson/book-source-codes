@@ -1,0 +1,20 @@
+﻿[
+  {
+    "AssemblyName": "FileManagerLib.dll",
+    "ClassName": "FileManagerLib.FileManager",
+    "MethodName": "CreateFolder",
+    "Parameters": [ "TestFolder" ]
+  },
+  {
+    "AssemblyName": "FileManagerLib.dll",
+    "ClassName": "FileManagerLib.FileManager",
+    "MethodName": "CopyFiles",
+    "Parameters": ["Images","TestFolder","*.*"]
+  },
+  {
+    "AssemblyName": "FileManagerLib.dll",
+    "ClassName": "FileManagerLib.FileManager",
+    "MethodName": "DeleteFiles",
+    "Parameters": ["TestFolder","*.csv"]
+  }
+]

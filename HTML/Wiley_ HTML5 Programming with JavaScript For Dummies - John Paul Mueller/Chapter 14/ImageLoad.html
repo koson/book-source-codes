@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Loading and Documenting an Image</title>
+   <script language="JavaScript">
+      function LoadImage()
+      {
+         // Specify the image.
+         var Image = document.getElementById("Image");
+         Image.alt = "This is a test image.";
+         Image.src = "TestImage.png";
+         
+         // Set the caption.
+         var Caption = document.getElementById("Caption");
+         Caption.innerHTML = "A Test Image";
+      }
+      
+      function Clicked()
+      {
+         // Display a message.
+         alert("You clicked the image.");
+      }
+   </script>
+</head>
+
+<body>
+   <h1>Loading and Documenting an Image</h1>
+   <figure onclick="Clicked()">
+      <img id="Image"
+           src=""
+           alt=""
+           height="200px"
+           width="200px">
+      <figcaption id="Caption" />
+   </figure>
+   <input id="btnLoad"
+          type="button"
+          value="Load the Image"
+          onclick="LoadImage()" />
+</body>
+</html>
