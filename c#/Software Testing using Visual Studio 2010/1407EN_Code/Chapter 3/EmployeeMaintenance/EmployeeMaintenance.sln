@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeMaintenance", "EmployeeMaintenance\EmployeeMaintenance.csproj", "{33EAD0BD-78FE-47DA-9282-85D8709FD372}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DE84A0BB-043E-49CF-A114-183FD2CA4736}"
+	ProjectSection(SolutionItems) = preProject
+		EmployeeMaintenance.vsmdi = EmployeeMaintenance.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeTestProject", "EmployeeTestProject\EmployeeTestProject.csproj", "{CD939118-4B6B-455A-81FF-4E257DD85563}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://my-pc:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = EmployeeMaintenance\\EmployeeMaintenance.csproj
+		SccProjectName1 = EmployeeMaintenance
+		SccLocalPath1 = EmployeeMaintenance
+		SccProjectUniqueName2 = TestProject3\\TestProject3.csproj
+		SccProjectName2 = TestProject3
+		SccLocalPath2 = TestProject3
+		SccProjectUniqueName3 = TestProject\\TestProject.csproj
+		SccProjectName3 = TestProject
+		SccLocalPath3 = TestProject
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = EmployeeMaintenance.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33EAD0BD-78FE-47DA-9282-85D8709FD372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33EAD0BD-78FE-47DA-9282-85D8709FD372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33EAD0BD-78FE-47DA-9282-85D8709FD372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33EAD0BD-78FE-47DA-9282-85D8709FD372}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD939118-4B6B-455A-81FF-4E257DD85563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD939118-4B6B-455A-81FF-4E257DD85563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD939118-4B6B-455A-81FF-4E257DD85563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD939118-4B6B-455A-81FF-4E257DD85563}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

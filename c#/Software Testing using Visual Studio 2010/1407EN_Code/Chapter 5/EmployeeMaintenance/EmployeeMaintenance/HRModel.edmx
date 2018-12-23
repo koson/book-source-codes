@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HumanResourceModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="HumanResourceModelStoreContainer">
+          <EntitySet Name="Absence" EntityType="HumanResourceModel.Store.Absence" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmergencyContact" EntityType="HumanResourceModel.Store.EmergencyContact" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employee" EntityType="HumanResourceModel.Store.Employee" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Absence_Employee" Association="HumanResourceModel.Store.FK_Absence_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Absence" EntitySet="Absence" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmergencyContact_Employee" Association="HumanResourceModel.Store.FK_EmergencyContact_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="EmergencyContact" EntitySet="EmergencyContact" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Absence">
+          <Key>
+            <PropertyRef Name="AbsenceID" />
+          </Key>
+          <Property Name="AbsenceID" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="Max Casual Leave" Type="decimal" Nullable="false" />
+          <Property Name="Max Privilege Leave" Type="decimal" Nullable="false" />
+          <Property Name="Casual Leave Taken" Type="decimal" />
+          <Property Name="Privilege Leave Taken" Type="decimal" />
+          <Property Name="Remaining Casual Leave" Type="decimal" />
+          <Property Name="Remaining Privilege Leave" Type="decimal" />
+        </EntityType>
+        <EntityType Name="EmergencyContact">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="Contact Name" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="Contact Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Address 1" Type="varbinary" MaxLength="50" />
+          <Property Name="Address 2" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="25" />
+          <Property Name="State" Type="varchar" MaxLength="25" />
+          <Property Name="Country" Type="varchar" MaxLength="25" />
+          <Property Name="Phone 1" Type="int" />
+          <Property Name="Phone 2" Type="int" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="First Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Last Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Middle Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Department" Type="nvarchar" MaxLength="50" />
+          <Property Name="Occupation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="int" />
+        </EntityType>
+        <Association Name="FK_Absence_Employee">
+          <End Role="Employee" Type="HumanResourceModel.Store.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Absence" Type="HumanResourceModel.Store.Absence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Absence">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmergencyContact_Employee">
+          <End Role="Employee" Type="HumanResourceModel.Store.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="EmergencyContact" Type="HumanResourceModel.Store.EmergencyContact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="EmergencyContact">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HumanResourceModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="HumanResourceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Absence" EntityType="HumanResourceModel.Absence" />
+          <EntitySet Name="EmergencyContact" EntityType="HumanResourceModel.EmergencyContact" />
+          <EntitySet Name="Employee" EntityType="HumanResourceModel.Employee" />
+          <AssociationSet Name="FK_Absence_Employee" Association="HumanResourceModel.FK_Absence_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Absence" EntitySet="Absence" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmergencyContact_Employee" Association="HumanResourceModel.FK_EmergencyContact_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="EmergencyContact" EntitySet="EmergencyContact" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Absence">
+          <Key>
+            <PropertyRef Name="AbsenceID" />
+          </Key>
+          <Property Name="AbsenceID" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="Max_Casual_Leave" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Max_Privilege_Leave" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Casual_Leave_Taken" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Privilege_Leave_Taken" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Remaining_Casual_Leave" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Remaining_Privilege_Leave" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="Employee" Relationship="HumanResourceModel.FK_Absence_Employee" FromRole="Absence" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="EmergencyContact">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+            <PropertyRef Name="Contact_Name" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="Contact_Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Address_1" Type="Binary" MaxLength="50" FixedLength="false" />
+          <Property Name="Address_2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="Phone_1" Type="Int32" />
+          <Property Name="Phone_2" Type="Int32" />
+          <NavigationProperty Name="Employee" Relationship="HumanResourceModel.FK_EmergencyContact_Employee" FromRole="EmergencyContact" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="First_Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Last_Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Middle_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Department" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Occupation" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="Int32" />
+          <NavigationProperty Name="Absences" Relationship="HumanResourceModel.FK_Absence_Employee" FromRole="Employee" ToRole="Absence" />
+          <NavigationProperty Name="EmergencyContacts" Relationship="HumanResourceModel.FK_EmergencyContact_Employee" FromRole="Employee" ToRole="EmergencyContact" />
+        </EntityType>
+        <Association Name="FK_Absence_Employee">
+          <End Role="Employee" Type="HumanResourceModel.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Absence" Type="HumanResourceModel.Absence" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Absence">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmergencyContact_Employee">
+          <End Role="Employee" Type="HumanResourceModel.Employee" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="EmergencyContact" Type="HumanResourceModel.EmergencyContact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="EmergencyContact">
+              <PropertyRef Name="EmployeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HumanResourceModelStoreContainer" CdmEntityContainer="HumanResourceEntities">
+          <EntitySetMapping Name="Absence"><EntityTypeMapping TypeName="HumanResourceModel.Absence"><MappingFragment StoreEntitySet="Absence">
+            <ScalarProperty Name="AbsenceID" ColumnName="AbsenceID" />
+            <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+            <ScalarProperty Name="Max_Casual_Leave" ColumnName="Max Casual Leave" />
+            <ScalarProperty Name="Max_Privilege_Leave" ColumnName="Max Privilege Leave" />
+            <ScalarProperty Name="Casual_Leave_Taken" ColumnName="Casual Leave Taken" />
+            <ScalarProperty Name="Privilege_Leave_Taken" ColumnName="Privilege Leave Taken" />
+            <ScalarProperty Name="Remaining_Casual_Leave" ColumnName="Remaining Casual Leave" />
+            <ScalarProperty Name="Remaining_Privilege_Leave" ColumnName="Remaining Privilege Leave" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="EmergencyContact"><EntityTypeMapping TypeName="HumanResourceModel.EmergencyContact"><MappingFragment StoreEntitySet="EmergencyContact">
+            <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+            <ScalarProperty Name="Contact_Name" ColumnName="Contact Name" />
+            <ScalarProperty Name="Address_1" ColumnName="Address 1" />
+            <ScalarProperty Name="Address_2" ColumnName="Address 2" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="State" ColumnName="State" />
+            <ScalarProperty Name="Country" ColumnName="Country" />
+            <ScalarProperty Name="Phone_1" ColumnName="Phone 1" />
+            <ScalarProperty Name="Phone_2" ColumnName="Phone 2" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Employee"><EntityTypeMapping TypeName="HumanResourceModel.Employee"><MappingFragment StoreEntitySet="Employee">
+            <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+            <ScalarProperty Name="First_Name" ColumnName="First Name" />
+            <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+            <ScalarProperty Name="Middle_Name" ColumnName="Middle Name" />
+            <ScalarProperty Name="Department" ColumnName="Department" />
+            <ScalarProperty Name="Occupation" ColumnName="Occupation" />
+            <ScalarProperty Name="Gender" ColumnName="Gender" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="State" ColumnName="State" />
+            <ScalarProperty Name="Country" ColumnName="Country" />
+            <ScalarProperty Name="Phone" ColumnName="Phone" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="HRModel" ZoomLevel="89">
+        <EntityTypeShape EntityType="HumanResourceModel.Absence" Width="1.5" PointX="4.25" PointY="0.875" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResourceModel.EmergencyContact" Width="1.5" PointX="4.25" PointY="3.875" Height="2.9417936197916656" IsExpanded="true" />
+        <EntityTypeShape EntityType="HumanResourceModel.Employee" Width="1.5" PointX="1.375" PointY="1.625" Height="3.5186979166666656" IsExpanded="true" />
+        <AssociationConnector Association="HumanResourceModel.FK_Absence_Employee" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.875" PointY="2.62474609375" />
+          <ConnectorPoint PointX="4.25" PointY="2.62474609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="HumanResourceModel.FK_EmergencyContact_Employee" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.875" PointY="4.5093489583333328" />
+          <ConnectorPoint PointX="4.25" PointY="4.5093489583333328" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

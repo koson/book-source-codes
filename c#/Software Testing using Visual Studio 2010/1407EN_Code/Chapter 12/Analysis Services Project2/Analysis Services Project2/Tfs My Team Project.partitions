@@ -1,0 +1,45 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1c1a8338-2d4f-47ca-9db1-708b9de79c12" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Tfs My Team Project</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Vw Test Result</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="bfeff6f2-a5b7-41a4-8879-7c9c96aeb6ed">
+          <ID>Vw Test Result</ID>
+          <Name>Vw Test Result</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="52769fe0-79d7-44b2-9c19-b599de37c95a">
+            <DataSourceViewID>Tfs My Team Project</DataSourceViewID>
+            <TableID>dbo_vw_TestResult</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vw Test Run</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="ce59a35b-4cd7-468a-91e7-13ec29552e14">
+          <ID>Vw Test Run</ID>
+          <Name>Vw Test Run</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="af53f999-76f5-4431-bac3-8234da5b52c2">
+            <DataSourceViewID>Tfs My Team Project</DataSourceViewID>
+            <TableID>dbo_vw_TestRun</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

@@ -1,0 +1,532 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="8a6e2f82-1cec-4d1e-b488-55a5d93a3494" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Tfs My Team Project</ID>
+  <Name>Tfs My Team Project</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4857" scrolltop="-4458" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="10398" y="11800" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="vw_TestResult" left="-4346" top="-1508" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4101" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800000510000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vw_TestResult" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="vw_TestRun" left="1248" top="-1694" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3784" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000c80e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_vw_TestRun" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-4857</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4458</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-4346</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-1694</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="e52d36d3-cbd3-46c1-ba7e-ea9d97bc9669">
+      <ID>Vw Test Result</ID>
+      <Name>Vw Test Result</Name>
+      <DimensionID>Vw Test Result</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="da6eb2b8-aa7b-4512-a956-8b2d5475e733">
+          <AttributeID>Test Run Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="5d7c6fc2-a862-4541-84f2-3267d32a0848">
+      <ID>Vw Test Run</ID>
+      <Name>Vw Test Run</Name>
+      <DimensionID>Vw Test Run</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="80c20816-d0e3-4cdb-8c76-a2d225bd54b7">
+          <AttributeID>Test Run Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="68b1eec6-dca9-4996-9711-e97bf0d8d76a">
+      <ID>Vw Test Result</ID>
+      <Name>Vw Test Result</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="ccec7744-54e4-409e-9049-0ac24ee9d840">
+          <ID>Test Case Id</ID>
+          <Name>Test Case Id</Name>
+          <Source dwd:design-time-name="534407d9-a44c-4565-bac1-6bd77bea029c">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="12f27693-3ecd-4c71-9d67-cf2a48ed36f0">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>TestCaseId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="5c22a791-f854-4363-b20e-b65248cc4063">
+          <ID>Configuration Id</ID>
+          <Name>Configuration Id</Name>
+          <Source dwd:design-time-name="d1b39103-161e-4a64-9811-8b6c99de64f2">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="fa6e4185-b94a-4903-a33c-d0c52d7251f1">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>ConfigurationId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="48f59f69-685f-4808-89dc-5d01c92f9dff">
+          <ID>Test Point Id</ID>
+          <Name>Test Point Id</Name>
+          <Source dwd:design-time-name="80e9c2e3-b9d1-4903-b009-e77dbf486546">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="de6d9dc4-abcf-45f9-a542-d537fcd6e18f">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>TestPointId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="bdc994f6-ce95-4a72-88af-7e4884947a2c">
+          <ID>Outcome</ID>
+          <Name>Outcome</Name>
+          <Source dwd:design-time-name="31af32e8-0ce5-48ab-a611-0c9543ca8072">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="55392250-5a90-4ed9-aebf-185fab62cc32">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>Outcome</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="dd74b0b7-be37-4bc3-a537-2c8f7ef2e051">
+          <ID>State</ID>
+          <Name>State</Name>
+          <Source dwd:design-time-name="d92a2bf7-7a26-4098-bf05-380acfa89575">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f6d2f346-8ce7-43f1-bd4b-0cc8696d87d1">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>State</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="711c0d75-6cf3-4eb9-a592-6287f533ef96">
+          <ID>Duration</ID>
+          <Name>Duration</Name>
+          <Source dwd:design-time-name="e9fee0dc-736b-4462-9bbf-9fa0239d1cdf">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="32452b74-c7e3-476c-a8c5-831d5f2a6cb9">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>Duration</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="cda176c7-1c8b-4a17-a062-ccfa70085fb4">
+          <ID>Resolution State Id</ID>
+          <Name>Resolution State Id</Name>
+          <Source dwd:design-time-name="fb6317d5-0644-44c7-9796-521875a36e8a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0e7e2d7a-4362-498d-a9a5-c5d628bf26fe">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>ResolutionStateId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="de31e802-3213-4440-84ef-32529d8656f8">
+          <ID>Priority</ID>
+          <Name>Priority</Name>
+          <Source dwd:design-time-name="4c20d9da-5876-4eaf-bfbf-bb8013b37118">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a868b2f6-486f-4157-9668-3ee20c41df5a">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>Priority</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="80e25453-7fff-4b9c-b595-5af4b71f3ae1">
+          <ID>Test Case Revision</ID>
+          <Name>Test Case Revision</Name>
+          <Source dwd:design-time-name="5466626b-3a63-463d-813d-50591a4a2317">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e1875cb0-a440-46b5-9120-5d3a3f0c3d25">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>TestCaseRevision</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ba2a88b9-b434-4a61-a3bc-070a5c6dbe41">
+          <ID>Afn Strip Id</ID>
+          <Name>Afn Strip Id</Name>
+          <Source dwd:design-time-name="9c92204b-dff2-45d8-8905-be3efcbbc34b">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a6ab5abf-492e-4be0-baf2-fe318d93c4b6">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>AfnStripId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e0b5d675-ff9f-4af1-a152-481b871ae4b1">
+          <ID>Reset Count</ID>
+          <Name>Reset Count</Name>
+          <Source dwd:design-time-name="d5966af1-f263-42cb-8e3c-f8952be50ffc">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="02aca8fe-46e7-4a7d-8fbb-dee96919a4a2">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>ResetCount</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="bf202f63-4c9a-4490-8b1b-63c7da53be4b">
+          <ID>Failure Type</ID>
+          <Name>Failure Type</Name>
+          <Source dwd:design-time-name="9f54675a-294b-4693-95b3-4c08a8386848">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="bc44040a-392e-44d8-8ec8-0277e1b5745d">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>FailureType</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1f363225-4b0e-42a9-9ee4-fd244bee6700">
+          <ID>Revision</ID>
+          <Name>Revision</Name>
+          <Source dwd:design-time-name="8a7b7818-55b0-46c5-9782-4458a60e10a1">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d6052f5c-4be9-4625-a175-1d424f1eadbf">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>Revision</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="fe3afd75-9279-43e6-a822-b5fb15ce333c">
+          <ID>Effective Point State</ID>
+          <Name>Effective Point State</Name>
+          <Source dwd:design-time-name="08ae0bf0-8c9c-4d6d-9468-54de456a0158">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6ff7cf0e-1714-4359-a780-fab8e06b7344">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>EffectivePointState</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e7d40f45-9e1f-42df-b8cc-2ce9d90c85b1">
+          <ID>Area Id</ID>
+          <Name>Area Id</Name>
+          <Source dwd:design-time-name="fd8cf6a3-bb65-47ea-8f4e-6653461746fa">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a6031c8f-102e-4640-be40-69e4878e6b01">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>AreaId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a4e2de72-e0ee-449c-94d2-1073e5bad0ca">
+          <ID>Test Plan Id</ID>
+          <Name>Test Plan Id</Name>
+          <Source dwd:design-time-name="e9411a52-130e-415b-a414-2de19ba41b75">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="b4aa826b-fd34-4ba4-bcbf-f97d1931e2f9">
+              <TableID>dbo_vw_TestResult</TableID>
+              <ColumnID>TestPlanId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c415cd02-eb2c-4b6d-b8d4-85d287d707e1">
+          <ID>Vw Test Result Count</ID>
+          <Name>Vw Test Result Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="fef07aeb-e430-4ad5-b9d0-929800350209">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="dbd358ab-9329-4586-8b53-df02293dbe3b">
+              <TableID>dbo_vw_TestResult</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="7f6d272c-be20-4d16-a648-0a4e598d6cf4">
+          <CubeDimensionID>Vw Test Result</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="17208101-afeb-4b5b-856a-eee5e56b8712">
+              <AttributeID>Test Run Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="39e1c058-b617-43ab-97e3-68fdea973d63">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2bded4fd-9d75-464b-8f69-07666fe6cd5e">
+                    <TableID>dbo_vw_TestResult</TableID>
+                    <ColumnID>TestRunId</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="54028309-f565-45ce-adab-84e106bdae50">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3508683f-2a5f-451e-914d-13578be96bc0">
+                    <TableID>dbo_vw_TestResult</TableID>
+                    <ColumnID>TestResultId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="af68df55-4ff9-47e1-9799-663d23a57fda">
+      <ID>Vw Test Run</ID>
+      <Name>Vw Test Run</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="6a36b59b-50a2-4438-9758-b93b879ca6a3">
+          <ID>State - Vw Test Run</ID>
+          <Name>State - Vw Test Run</Name>
+          <Source dwd:design-time-name="ad09fa1e-6f1c-49dc-b268-e56f3ee2a742">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="779cae9c-1b20-4cb6-83f9-9e56e4d4f6b1">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>State</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="bc438906-c8a0-47c5-b1ec-d1e9b66a6a59">
+          <ID>Incomplete Tests</ID>
+          <Name>Incomplete Tests</Name>
+          <Source dwd:design-time-name="c06d33d2-bb7b-44c0-bf7e-a4a34f5e1543">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="68ce8a98-7e1f-444e-8351-cf8c107908af">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>IncompleteTests</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4d649f58-0f93-4530-bd4c-1d3d2500226a">
+          <ID>Test Plan Id - Vw Test Run</ID>
+          <Name>Test Plan Id - Vw Test Run</Name>
+          <Source dwd:design-time-name="61d2501c-50b3-4394-b498-59995fe2c4a3">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5e44a6e2-a489-47bd-9189-fa991a287471">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>TestPlanId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="caea34a7-d18d-49aa-8622-0ae74f76bd64">
+          <ID>Iteration Id</ID>
+          <Name>Iteration Id</Name>
+          <Source dwd:design-time-name="b1adef24-9722-48bc-8fc1-c40700aba1c9">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="802c3732-9e60-49b4-aa67-2348c66615e4">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>IterationId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="25d4e2f0-d26a-4f71-8161-a9edb61c711b">
+          <ID>Post Process State</ID>
+          <Name>Post Process State</Name>
+          <Source dwd:design-time-name="b774df0a-37d8-4de5-970a-b0e77ea39fcd">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="53a05ab8-4c6e-4cad-9e99-f5a1944d6e60">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>PostProcessState</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2754a276-ecbe-496c-abc1-609d701149f2">
+          <ID>Test Message Log Id</ID>
+          <Name>Test Message Log Id</Name>
+          <Source dwd:design-time-name="f669e83c-b41f-4e32-9ce6-91baa02f31ca">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3deee6c8-b5ef-4c47-a9ec-b6186d76be1f">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>TestMessageLogId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="11b6728a-625d-486b-9f2c-c3898f934831">
+          <ID>Test Settings Id</ID>
+          <Name>Test Settings Id</Name>
+          <Source dwd:design-time-name="92f8bf2c-d1a4-4254-969d-1d08cfe5de0e">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9c7fd080-26c9-435b-9057-efdf44370670">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>TestSettingsId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="b0c8552d-8a18-4a27-865a-2bde1754f742">
+          <ID>Build Configuration Id</ID>
+          <Name>Build Configuration Id</Name>
+          <Source dwd:design-time-name="c388c791-ac28-490b-a3d3-ebf47b89c038">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f0622d63-5c5b-4e3d-98b8-7a350c2b3694">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>BuildConfigurationId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a94459ae-0b00-4bf2-b7ce-8d86e78dda03">
+          <ID>Revision - Vw Test Run</ID>
+          <Name>Revision - Vw Test Run</Name>
+          <Source dwd:design-time-name="e77ee93c-14e0-4cf2-85a7-2230b94bd247">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c0b63958-2f78-4aa9-a1a9-de08f3e2d8b5">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>Revision</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="5795cb8b-3957-47c7-bc02-f904649fcc26">
+          <ID>Type</ID>
+          <Name>Type</Name>
+          <Source dwd:design-time-name="3dc9e785-9999-4127-9427-a4957e30595e">
+            <DataType>UnsignedInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7fc6b25e-13c7-4c3d-af4b-ac5da4ef438c">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>Type</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3387a0b1-b857-4c43-996c-2ae8e29bd7b3">
+          <ID>Coverage Id</ID>
+          <Name>Coverage Id</Name>
+          <Source dwd:design-time-name="bcf651d4-41e4-4bc8-9177-67ba92aecfb9">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5d7b1487-5fb7-44c3-8b2e-b5a44ca4b493">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>CoverageId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="06781fae-5bbd-45f4-9dd4-11ed52e2a88e">
+          <ID>Version</ID>
+          <Name>Version</Name>
+          <Source dwd:design-time-name="5f938023-c103-464c-af48-ff6bf9e07ffc">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6b111232-4173-42d4-aec9-00aa115079fe">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>Version</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2d0c8f9b-b253-430e-9f9c-8cf15fd7dde1">
+          <ID>Public Test Settings Id</ID>
+          <Name>Public Test Settings Id</Name>
+          <Source dwd:design-time-name="995ad25b-5276-40a1-90b0-8cffc6c0eedc">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="47ccc360-76b6-4384-8c3b-047c7849b606">
+              <TableID>dbo_vw_TestRun</TableID>
+              <ColumnID>PublicTestSettingsId</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="7c6f40f5-297f-4f1a-862f-9586723a8ada">
+          <ID>Vw Test Run Count</ID>
+          <Name>Vw Test Run Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="58cb6471-e3d2-4961-aa48-b9595abb366e">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="e93d6480-ff44-4bc7-abc5-8f8ad89f19b5">
+              <TableID>dbo_vw_TestRun</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="bb9df0a6-aac7-430b-9f4c-8e1ec9bbb8be">
+          <CubeDimensionID>Vw Test Run</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8891d6f3-539b-4482-a585-f1082439682a">
+              <AttributeID>Test Run Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="89172e62-da51-4407-a95e-aafdf873ba19">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2faaabf2-8fff-45e8-975e-5929cbcae7e0">
+                    <TableID>dbo_vw_TestRun</TableID>
+                    <ColumnID>TestRunId</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="a09ad88d-e364-4097-8f01-70ac89ac1145">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6795a4c1-3647-449e-9577-ead0961319c8">
+                    <TableID>dbo_vw_TestRun</TableID>
+                    <ColumnID>ProjectId</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="aa51ec89-da09-4de2-a7a4-0b4aecfc8a28">
+    <DataSourceViewID>Tfs My Team Project</DataSourceViewID>
+  </Source>
+</Cube>

@@ -1,0 +1,303 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="792de8cf-4ae1-4539-aac9-1fed6ec896c7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Tfs My Team Project</ID>
+  <Name>Tfs My Team Project</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Tfs My Team Project</DataSourceID>
+  <Schema>
+    <xs:schema id="Tfs_x0020_My_x0020_Team_x0020_Project" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Tfs_x0020_My_x0020_Team_x0020_Project" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="ec3e8436-70e4-4ce9-8dc4-b92bf6da1763">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_vw_TestResult" msprop:FriendlyName="vw_TestResult" msprop:DbSchemaName="dbo" msprop:DbTableName="vw_TestResult" msprop:design-time-name="60638cb4-65f2-48fa-a012-e9ea8cd0d8aa" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TestRunId" msprop:FriendlyName="TestRunId" msprop:DbColumnName="TestRunId" msprop:design-time-name="96a92d21-363a-487a-8827-facec7079d88" type="xs:int" />
+                  <xs:element name="TestResultId" msprop:FriendlyName="TestResultId" msprop:DbColumnName="TestResultId" msprop:design-time-name="a8a16317-6f91-41ee-ae17-43f06985f6d7" type="xs:int" />
+                  <xs:element name="TestCaseId" msprop:FriendlyName="TestCaseId" msprop:DbColumnName="TestCaseId" msprop:design-time-name="8cdf41e7-7f76-460c-a9bf-406446d986b8" type="xs:int" />
+                  <xs:element name="ConfigurationId" msprop:FriendlyName="ConfigurationId" msprop:DbColumnName="ConfigurationId" msprop:design-time-name="42e4223c-de36-4b36-ac3d-acab0837e86b" type="xs:int" />
+                  <xs:element name="TestPointId" msprop:FriendlyName="TestPointId" msprop:DbColumnName="TestPointId" msprop:design-time-name="9b2bb202-30e4-446e-982d-10654b3cc74d" type="xs:int" />
+                  <xs:element name="CreationDate" msprop:FriendlyName="CreationDate" msprop:DbColumnName="CreationDate" msprop:design-time-name="0e5129f0-e623-42b5-9f00-3cb985c1defc" type="xs:dateTime" />
+                  <xs:element name="LastUpdated" msprop:FriendlyName="LastUpdated" msprop:DbColumnName="LastUpdated" msprop:design-time-name="6f8bc4d0-4bf9-4c01-bf4e-43773fcb2930" type="xs:dateTime" />
+                  <xs:element name="Outcome" msprop:FriendlyName="Outcome" msprop:DbColumnName="Outcome" msprop:design-time-name="be610b5f-e0fc-4c6c-9eca-0e831f02fe32" type="xs:unsignedByte" />
+                  <xs:element name="State" msprop:FriendlyName="State" msprop:DbColumnName="State" msprop:design-time-name="85458f82-d890-4c53-b460-8c0714b719ad" type="xs:unsignedByte" />
+                  <xs:element name="ErrorMessage" msprop:FriendlyName="ErrorMessage" msprop:DbColumnName="ErrorMessage" msprop:design-time-name="5f8c3a06-b420-4ed5-8258-f7dabd18167a">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="512" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DateStarted" msprop:FriendlyName="DateStarted" msprop:DbColumnName="DateStarted" msprop:design-time-name="afed3d6a-8ce3-4a16-952a-d3eddbe4f746" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="DateCompleted" msprop:FriendlyName="DateCompleted" msprop:DbColumnName="DateCompleted" msprop:design-time-name="c367c8ca-d326-4a7b-9d3b-09786d4be36f" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Duration" msprop:FriendlyName="Duration" msprop:DbColumnName="Duration" msprop:design-time-name="f6801725-c0a2-48fe-a2fe-0acd808145ca" type="xs:long" />
+                  <xs:element name="ResolutionStateId" msprop:FriendlyName="ResolutionStateId" msprop:DbColumnName="ResolutionStateId" msprop:design-time-name="df96c791-a9e4-4dcb-a0e7-f8bc6fa5d171" type="xs:int" />
+                  <xs:element name="Comment" msprop:FriendlyName="Comment" msprop:DbColumnName="Comment" msprop:design-time-name="8dc0b232-06c3-413f-99e8-75932f2c73d1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1073741823" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Owner" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:FriendlyName="Owner" msprop:DbColumnName="Owner" msprop:design-time-name="d43b4b52-351c-4f2a-97f8-36e5a1a08b37" type="xs:string" />
+                  <xs:element name="Priority" msprop:FriendlyName="Priority" msprop:DbColumnName="Priority" msprop:design-time-name="43b3fb88-69d0-484e-876d-234c0fa55575" type="xs:unsignedByte" />
+                  <xs:element name="TestCaseTitle" msprop:FriendlyName="TestCaseTitle" msprop:DbColumnName="TestCaseTitle" msprop:design-time-name="77e4ef19-1329-436a-ac75-41d83118e0fb">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TestCaseRevision" msprop:FriendlyName="TestCaseRevision" msprop:DbColumnName="TestCaseRevision" msprop:design-time-name="83811dee-a843-47cb-8f0c-f128babb425b" type="xs:int" />
+                  <xs:element name="ComputerName" msprop:FriendlyName="ComputerName" msprop:DbColumnName="ComputerName" msprop:design-time-name="f8f27f2d-c990-4732-bc8b-94c84fb03c41">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="64" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AfnStripId" msprop:FriendlyName="AfnStripId" msprop:DbColumnName="AfnStripId" msprop:design-time-name="b2c34710-0fd6-4b90-b5c0-64f68cca22e2" type="xs:int" minOccurs="0" />
+                  <xs:element name="ResetCount" msprop:FriendlyName="ResetCount" msprop:DbColumnName="ResetCount" msprop:design-time-name="3bdc0589-c5d9-4045-b0c1-4d8b42942e43" type="xs:int" />
+                  <xs:element name="FailureType" msprop:FriendlyName="FailureType" msprop:DbColumnName="FailureType" msprop:design-time-name="25471989-4732-4642-bcbd-4c6ae7a86dcf" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="AutomatedTestName" msprop:FriendlyName="AutomatedTestName" msprop:DbColumnName="AutomatedTestName" msprop:design-time-name="4dafd6f2-f0b0-48e2-9222-e45350d4156f" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AutomatedTestStorage" msprop:FriendlyName="AutomatedTestStorage" msprop:DbColumnName="AutomatedTestStorage" msprop:design-time-name="6171af33-cb4e-47d1-add1-d2da54e5d96d" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AutomatedTestType" msprop:FriendlyName="AutomatedTestType" msprop:DbColumnName="AutomatedTestType" msprop:design-time-name="ea2f239f-2cd9-4fd8-bc35-d7ebf04b9174" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AutomatedTestTypeId" msprop:FriendlyName="AutomatedTestTypeId" msprop:DbColumnName="AutomatedTestTypeId" msprop:design-time-name="802be50a-89e1-454b-bb25-1d4b012eddb0" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="64" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AutomatedTestId" msprop:FriendlyName="AutomatedTestId" msprop:DbColumnName="AutomatedTestId" msprop:design-time-name="0e2a4d74-7e9e-4477-96b5-6de8f4f16e9a" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="64" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Revision" msprop:FriendlyName="Revision" msprop:DbColumnName="Revision" msprop:design-time-name="6d106e57-758a-4f7c-8496-76eda17193d5" type="xs:int" />
+                  <xs:element name="RunBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:FriendlyName="RunBy" msprop:DbColumnName="RunBy" msprop:design-time-name="15e23d79-df95-430f-9328-304dbaa35607" type="xs:string" />
+                  <xs:element name="LastUpdatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:FriendlyName="LastUpdatedBy" msprop:DbColumnName="LastUpdatedBy" msprop:design-time-name="b35f4b9b-8d27-4088-a0cd-792781399c14" type="xs:string" />
+                  <xs:element name="EffectivePointState" msprop:FriendlyName="EffectivePointState" msprop:DbColumnName="EffectivePointState" msprop:design-time-name="6cfe82e5-8ecb-4d41-a8db-59cd70104b6e" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="RV" msdata:ReadOnly="true" msprop:FriendlyName="RV" msprop:DbColumnName="RV" msprop:design-time-name="2a1ba2df-92a7-48ac-9671-54f9345d3d5f" msprop:DataSize="8" type="xs:base64Binary" />
+                  <xs:element name="AreaId" msprop:FriendlyName="AreaId" msprop:DbColumnName="AreaId" msprop:design-time-name="3969a51b-2a19-4869-bdf2-ac5f350008dc" type="xs:int" minOccurs="0" />
+                  <xs:element name="TestCaseArea" msprop:FriendlyName="TestCaseArea" msprop:DbColumnName="TestCaseArea" msprop:design-time-name="cb899f89-b5b1-42a1-a59e-66353cacf1bc" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TestCaseAreaPath" msprop:FriendlyName="TestCaseAreaPath" msprop:DbColumnName="TestCaseAreaPath" msprop:design-time-name="e8915788-2f93-48e5-8357-694697a891e7" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4000" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ProjectName" msprop:FriendlyName="ProjectName" msprop:DbColumnName="ProjectName" msprop:design-time-name="61aa0b03-50a7-4c10-a602-db85bd66b0b4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TestPlanId" msprop:FriendlyName="TestPlanId" msprop:DbColumnName="TestPlanId" msprop:design-time-name="a7ad3567-d56b-4f9b-8d58-b3b1e0698e90" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_vw_TestRun" msprop:FriendlyName="vw_TestRun" msprop:DbSchemaName="dbo" msprop:DbTableName="vw_TestRun" msprop:design-time-name="156ad799-998c-4fc4-958e-e7b958236289" msprop:TableType="View">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="TestRunId" msprop:FriendlyName="TestRunId" msprop:DbColumnName="TestRunId" msprop:design-time-name="2caed4d5-4720-40bd-91e1-3d06cc089ed9" type="xs:int" />
+                  <xs:element name="Title" msprop:FriendlyName="Title" msprop:DbColumnName="Title" msprop:design-time-name="a12266e1-18d7-417b-a253-c61837443cc9">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CreationDate" msprop:FriendlyName="CreationDate" msprop:DbColumnName="CreationDate" msprop:design-time-name="8d008208-770c-4026-a183-337ca01d3952" type="xs:dateTime" />
+                  <xs:element name="LastUpdated" msprop:FriendlyName="LastUpdated" msprop:DbColumnName="LastUpdated" msprop:design-time-name="28da6a33-f9a6-461c-9b5a-343a8d3462de" type="xs:dateTime" />
+                  <xs:element name="Owner" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:FriendlyName="Owner" msprop:DbColumnName="Owner" msprop:design-time-name="69470e00-93bc-4b33-8780-6ff044b47bf7" type="xs:string" />
+                  <xs:element name="State" msprop:FriendlyName="State" msprop:DbColumnName="State" msprop:design-time-name="d34e6249-0464-458f-963c-cdf85ee5ad98" type="xs:unsignedByte" />
+                  <xs:element name="IncompleteTests" msprop:FriendlyName="IncompleteTests" msprop:DbColumnName="IncompleteTests" msprop:design-time-name="82e658b0-c54a-4428-b3c3-f971263e6d28" type="xs:int" />
+                  <xs:element name="ProjectId" msprop:FriendlyName="ProjectId" msprop:DbColumnName="ProjectId" msprop:design-time-name="642fa24d-8bb9-429d-a82b-c47313735fab" type="xs:int" />
+                  <xs:element name="TestPlanId" msprop:FriendlyName="TestPlanId" msprop:DbColumnName="TestPlanId" msprop:design-time-name="0a90e851-41b0-48ac-ae8d-07e857f91842" type="xs:int" />
+                  <xs:element name="IterationId" msprop:FriendlyName="IterationId" msprop:DbColumnName="IterationId" msprop:design-time-name="f283078a-09f2-46ca-9bf7-5c8160b1821e" type="xs:int" minOccurs="0" />
+                  <xs:element name="DropLocation" msprop:FriendlyName="DropLocation" msprop:DbColumnName="DropLocation" msprop:design-time-name="e7b43ad7-1797-4cff-9d4c-891bfece18ef" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="260" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="BuildNumber" msprop:FriendlyName="BuildNumber" msprop:DbColumnName="BuildNumber" msprop:design-time-name="2f77777b-2bcb-493e-9679-ee224f764fe4" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="260" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ErrorMessage" msprop:FriendlyName="ErrorMessage" msprop:DbColumnName="ErrorMessage" msprop:design-time-name="8fd9729e-87d7-40f7-9079-65a870b04f62">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="512" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="StartDate" msprop:FriendlyName="StartDate" msprop:DbColumnName="StartDate" msprop:design-time-name="8ba5694c-7ab4-40e9-8801-d4d9563428d8" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="CompleteDate" msprop:FriendlyName="CompleteDate" msprop:DbColumnName="CompleteDate" msprop:design-time-name="6e2241d2-3d69-4da5-9e69-90b591f1b277" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="PostProcessState" msprop:FriendlyName="PostProcessState" msprop:DbColumnName="PostProcessState" msprop:design-time-name="fa8a8e5a-60c2-4f85-8444-affe5c9c12d2" type="xs:unsignedByte" />
+                  <xs:element name="DueDate" msprop:FriendlyName="DueDate" msprop:DbColumnName="DueDate" msprop:design-time-name="fb77bb69-5691-4594-8dec-b8764cb899c3" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Controller" msprop:FriendlyName="Controller" msprop:DbColumnName="Controller" msprop:design-time-name="8c4b34a3-da08-408c-afbd-2035386f60b7" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TestMessageLogId" msprop:FriendlyName="TestMessageLogId" msprop:DbColumnName="TestMessageLogId" msprop:design-time-name="b996a836-1cd2-45e4-b2a0-efb2add77f21" type="xs:int" />
+                  <xs:element name="LegacySharePath" msprop:FriendlyName="LegacySharePath" msprop:DbColumnName="LegacySharePath" msprop:design-time-name="6086535c-729d-4849-9774-9a1db44d45d2">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1024" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TestSettingsId" msprop:FriendlyName="TestSettingsId" msprop:DbColumnName="TestSettingsId" msprop:design-time-name="e0248cca-623d-4933-b63e-6aade5f5a957" type="xs:int" />
+                  <xs:element name="BuildConfigurationId" msprop:FriendlyName="BuildConfigurationId" msprop:DbColumnName="BuildConfigurationId" msprop:design-time-name="d0fe5b38-68b0-439a-b5c1-793b44b37bb8" type="xs:int" />
+                  <xs:element name="Revision" msprop:FriendlyName="Revision" msprop:DbColumnName="Revision" msprop:design-time-name="9a0d3a46-3f8b-421b-80f5-63f96d4dc5e2" type="xs:int" />
+                  <xs:element name="LastUpdatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:FriendlyName="LastUpdatedBy" msprop:DbColumnName="LastUpdatedBy" msprop:design-time-name="7e55f695-a20a-4f81-b052-aa98c40353a6" type="xs:string" />
+                  <xs:element name="Type" msprop:FriendlyName="Type" msprop:DbColumnName="Type" msprop:design-time-name="8e78a963-054c-4664-b2ce-eb1d6bfed3ee" type="xs:unsignedByte" />
+                  <xs:element name="CoverageId" msprop:FriendlyName="CoverageId" msprop:DbColumnName="CoverageId" msprop:design-time-name="87644177-ebbf-4d20-a96b-2e52be81ac24" type="xs:int" minOccurs="0" />
+                  <xs:element name="IsAutomated" msprop:FriendlyName="IsAutomated" msprop:DbColumnName="IsAutomated" msprop:design-time-name="93789060-37ae-4368-bdb6-afa7a1c4e955" type="xs:boolean" />
+                  <xs:element name="TestEnvironmentId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:FriendlyName="TestEnvironmentId" msprop:DbColumnName="TestEnvironmentId" msprop:design-time-name="c323e987-d28d-4d58-805e-9fe5a305340b" type="xs:string" />
+                  <xs:element name="Version" msprop:FriendlyName="Version" msprop:DbColumnName="Version" msprop:design-time-name="a2d0ad6f-1fc2-4044-8a54-80fae28f3073" type="xs:int" />
+                  <xs:element name="PublicTestSettingsId" msprop:FriendlyName="PublicTestSettingsId" msprop:DbColumnName="PublicTestSettingsId" msprop:design-time-name="c3c42558-0668-4dcb-a749-79374317120a" type="xs:int" />
+                  <xs:element name="IsBvt" msprop:FriendlyName="IsBvt" msprop:DbColumnName="IsBvt" msprop:design-time-name="faf08ddd-5099-4d56-bd21-63bbdbfbcf28" type="xs:boolean" />
+                  <xs:element name="RV" msdata:ReadOnly="true" msprop:FriendlyName="RV" msprop:DbColumnName="RV" msprop:design-time-name="39ca766f-d834-4e4c-a68e-064b2fea9e9e" msprop:DataSize="8" type="xs:base64Binary" />
+                  <xs:element name="Comment" msprop:FriendlyName="Comment" msprop:DbColumnName="Comment" msprop:design-time-name="8d7ad495-1662-4fd4-8dfa-ea31bada24e7">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1073741823" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="BuildUri" msprop:FriendlyName="BuildUri" msprop:DbColumnName="BuildUri" msprop:design-time-name="6d3d3fb6-8625-4455-8404-fdfaa1c31100" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="BuildPlatform" msprop:FriendlyName="BuildPlatform" msprop:DbColumnName="BuildPlatform" msprop:design-time-name="ed31cda0-a27a-4196-a181-46b2a4428e3c" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="BuildFlavor" msprop:FriendlyName="BuildFlavor" msprop:DbColumnName="BuildFlavor" msprop:design-time-name="ec7909c0-e2e4-47a1-98cc-471e33f18720" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ProjectName" msprop:FriendlyName="ProjectName" msprop:DbColumnName="ProjectName" msprop:design-time-name="062f60e2-669d-4126-8ae8-e94b02aa3b0c" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ProjectUri" msprop:FriendlyName="ProjectUri" msprop:DbColumnName="ProjectUri" msprop:design-time-name="e9f96c28-3eac-49b2-ba93-b02614014009" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="256" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Iteration" msprop:FriendlyName="Iteration" msprop:DbColumnName="Iteration" msprop:design-time-name="2abb0668-a9de-4105-bbb5-a65f8d05b753" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4000" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_vw_TestResult" />
+          <xs:field xpath="TestRunId" />
+          <xs:field xpath="TestResultId" />
+        </xs:unique>
+        <xs:unique name="dbo_vw_TestRun_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_vw_TestRun" />
+          <xs:field xpath="TestRunId" />
+          <xs:field xpath="ProjectId" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
+  </Schema>
+</DataSourceView>

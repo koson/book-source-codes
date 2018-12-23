@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebPerformanceTest" Id="163cd7b4-5e1d-43a2-aa4f-03532f781c19" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="WebPerformanceTest.38005100-3722-4eab-9d1c-502629f2f971.rec.webtestresult">
+  <Items>
+    <TransactionTimer Name="Transaction1">
+      <Items>
+        <Request Method="GET" Version="1.1" Url="http://localhost:3062/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+        <Request Method="GET" Version="1.1" Url="http://localhost:3062/Employee/List.aspx" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" />
+        <Request Method="GET" Version="1.1" Url="http://localhost:3062/Employee/Insert.aspx" ThinkTime="27" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractAttributeValue, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="ImageSource" DisplayName="Extract Attribute Value" Description="Extract the value of an attribute from a specified HTML tag.">
+              <RuleParameters>
+                <RuleParameter Name="TagName" Value="img" />
+                <RuleParameter Name="AttributeName" Value="src" />
+                <RuleParameter Name="MatchAttributeName" Value="title" />
+                <RuleParameter Name="MatchAttributeValue" Value="Image1" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+        </Request>
+        <Request Method="POST" Version="1.1" Url="http://localhost:3062/Employee/Insert.aspx" ThinkTime="9" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://localhost:3062/Employee/List.aspx" ReportingName="">
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam1.EmployeeID" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?EmployeeID=" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="Index" Value="4" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__EVENTTARGET" Value="ctl00$ContentPlaceHolder1$FormView1$ctl02" RecordedValue="ctl00$ContentPlaceHolder1$FormView1$ctl02" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="__EVENTARGUMENT" Value="{{$HIDDEN1.__EVENTARGUMENT}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="__VIEWSTATE" Value="{{$HIDDEN1.__VIEWSTATE}}" RecordedValue="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" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="__EVENTVALIDATION" Value="{{$HIDDEN1.__EVENTVALIDATION}}" RecordedValue="/wEWDQLH8IGFAQK07ZaWAQKtrLPoAgLviNyhAwLYgNhjAqyzhLkKAuCo46IMAsqQscoNAsvTy4UIAv/F3cgHAsOH+Y8NArqt6a0GArmt6a0GfObJah0dtgIW4+rf+M8z6tE5wef04jwyGXiVVlm8y30=" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ctl00$ContentPlaceHolder1$FormView1$ctl04$ctl00$__First_Name$TextBox1" Value="Satheesh" RecordedValue="Satheesh" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ctl00$ContentPlaceHolder1$FormView1$ctl04$ctl01$__Last_Name$TextBox1" Value="Kumar" RecordedValue="Kumar" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ctl00$ContentPlaceHolder1$FormView1$ctl04$ctl02$__Middle_Name$TextBox1" Value="N" RecordedValue="N" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ctl00$ContentPlaceHolder1$FormView1$ctl04$ctl03$__Department$TextBox1" Value="IT" RecordedValue="IT" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ctl00$ContentPlaceHolder1$FormView1$ctl04$ctl04$__Occupation$TextBox1" Value="Architect" RecordedValue="Architect" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ctl00$ContentPlaceHolder1$FormView1$ctl04$ctl05$__Gender$TextBox1" Value="Male" RecordedValue="Male" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ctl00$ContentPlaceHolder1$FormView1$ctl04$ctl06$__City$TextBox1" Value="Bangalore" RecordedValue="Bangalore" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ctl00$ContentPlaceHolder1$FormView1$ctl04$ctl07$__State$TextBox1" Value="Karnataka" RecordedValue="Karnataka" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ctl00$ContentPlaceHolder1$FormView1$ctl04$ctl08$__Country$TextBox1" Value="India" RecordedValue="India" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ctl00$ContentPlaceHolder1$FormView1$ctl04$ctl09$__Phone$TextBox1" Value="1112223330" RecordedValue="1112223330" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="GET" Version="1.1" Url="http://localhost:3062/Employee/Details.aspx" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="">
+          <QueryStringParameters>
+            <QueryStringParameter Name="EmployeeID" Value="159" RecordedValue="159" CorrelationBinding="{{QueryStringParam1.EmployeeID}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>
