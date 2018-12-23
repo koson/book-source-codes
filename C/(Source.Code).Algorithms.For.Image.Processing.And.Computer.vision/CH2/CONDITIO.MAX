@@ -1,0 +1,14 @@
+// Fill a region with 1 pixels - Conditional Dilation
+image a, b, c, d;
+begin
+	do a << "$1";
+	do c << "$2";		// Forbidden image.
+	b := {[3,3], [1,1], "111111111"};
+
+	loop
+	  d := (a ++ b) * c;
+	  exit when d=a;
+	  a := d;
+	end;
+	do a >> "$3";
+end;

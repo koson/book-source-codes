@@ -1,0 +1,11 @@
+// Test of simple dilation
+//
+image a, b;
+begin
+	a := {[4,4], [0,0], "0000011001100000"};
+	message "Before dilation:";
+	message a;
+	b := {[3,3], [1,1], "111111111"};
+	message "After dilation:";
+	message a++b;
+end;

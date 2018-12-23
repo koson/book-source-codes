@@ -1,0 +1,8 @@
+// Grey level erosion
+image a, b, c;
+begin
+	do a << "$1";
+	do b << "$2";
+	c :=  (a--b) >> "out";
+	message "Output file is 'out'"; message;
+end;

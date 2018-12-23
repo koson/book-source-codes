@@ -1,0 +1,58 @@
+Opertors:
+
+	++	Dilation 	A ++ B dilates A by B
+	-- 	Erosion		A -- B erodes A by B
+	<=	Subset		A <= B is true if A is a subset of B
+	>=	Subset		A >= B is true if B is a subset of A
+	=	Equality	A = B is true if A,B are the same.
+		Equality	A = k is true for integer k if all
+				 pixels in A are equal to k.
+		Equality	P1=P2 for P1,P2 pixels is true if
+				 they are the same pixel.
+	-	Difference	A-B is the set difference between
+				 images A and B
+		Difference	k1-k2 is subtraction from k1,k2 integer.
+		Difference	P1-P2 is a vector subtraction for pixels.
+	+	Sum		A+B is a Union (OR) of images A, b.
+		Sum		k1+k2 is integer addition.
+		Sum		P1+P2 is vector addition.
+	*	Intersection	A*B is the intersection of A and B, images
+		Product		k1*k2 is integer multiplication.
+	~	Complement	~A is the set complement of image A.
+	<<	Input		A << "f1" reads file 'f1' into image A
+		Input		k1 << "f1" reads an integer from f1
+		Input		P1 << "f1" reads a pixel from f1.
+	>> 	Output		A >> "f2" writes a PBM file from A.
+		Output		k1 >> "F2" writes an integer to F2
+		Output 		P1 >> "F2" writes a pixel to f2.
+	!	Alloc		New image.
+	@	Membership	Pixel IN image.
+	->
+	<-	Translation	Image translated by a pixel.
+	[]	Pixel generator	Create a pixel value.
+	.	attributes	Image.rows = number of possible rows.
+				Image.cols = number of possible columns.
+
+Statements:
+	if (expression) then statement
+	if (expression) then statement else statement
+
+	do expression
+
+	loop ... end
+
+	exit # when expression
+
+	message expression
+
+	variable := expression
+
+	begin
+		statement; ... 
+	end
+
+Declarations:
+	image a;
+	int b;
+	pixel c;
+

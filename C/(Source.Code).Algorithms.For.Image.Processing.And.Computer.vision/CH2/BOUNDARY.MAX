@@ -1,0 +1,11 @@
+// Boundary extraction
+image a, b, c;
+begin
+	do a << "$1";
+	message a;
+	b := {[3,3], [1,1], "111111111"};    // SIMPLE structuring element
+	message b;
+	c := (a - (a--b));
+	message c;
+	do c >> "boundary.pbm";
+end;

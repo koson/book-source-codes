@@ -1,0 +1,26 @@
+//
+//	MAX Program to perform a dilation the hard way.
+//
+int i,j;
+image x, y, z, a;
+begin
+	i := 0; j := 0;
+	y := !(x<<"$1");
+	z := z<<"$2";
+
+	loop
+	  j := 0;
+	  loop
+	    if ([i,j] @ x) then
+	    begin
+	      y := y + (z->[i,j]);
+	    end;
+	    j := j + 1;
+	    exit when j >= x.cols;
+	  end;
+	  i := i + 1;
+	  exit when i >= y.rows;
+	end;
+
+	y := y>>"dilated";
+end;

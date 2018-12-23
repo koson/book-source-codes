@@ -1,0 +1,26 @@
+// Test of membership
+image a, b;
+pixel x;
+int i,j;
+begin
+	do a << "image1.pbm";
+	message a;
+	i := 0;
+	loop
+	  j:=0;
+	  loop
+	    x := [i,j];
+	    exit when j >= a.cols;
+	    if (x @ a) then
+	    begin
+	      message "Member pixel:";
+	      message i;
+	      message j;
+	      message;
+	    end;
+	    j := j + 1;
+	  end;
+	  i := i + 1;
+	  exit when i >= a.rows;
+	end;
+end;

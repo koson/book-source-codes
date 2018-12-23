@@ -1,0 +1,11 @@
+image a, b, c, d;
+begin
+	do a << "$1";
+	do b << "$2";
+	c := a - (a -- b);
+	d := (a++b) - (a--b);
+	message "Like bilevel edge detector";
+	message c;
+	message "Gradient";
+	message d;
+end;

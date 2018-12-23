@@ -1,0 +1,26 @@
+// Grey scale opening
+image a, b, c;
+int n,i;
+begin
+	do a << "$1";
+	do b << "$2";
+	message "Enter the depth: ";
+	do n << "";
+
+	i := 0;
+	c := a;
+	loop
+	  c := c -- b;
+	  i := i + 1;
+	  exit when (i>= n);
+	end;
+
+	i := 0;
+	loop
+	  c := c ++ b;
+	  i := i + 1;
+	  exit when (i>= n);
+	end;
+
+	do c >> "opened";
+end;

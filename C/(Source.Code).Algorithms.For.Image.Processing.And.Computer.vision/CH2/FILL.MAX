@@ -1,0 +1,26 @@
+// Fill a region with 1 pixels - Conditional Dilation
+pixel p;
+int i,j;
+image a, b, c, d;
+begin
+	do a << "$1";
+
+	message "FILL: Enter the coordinates of the seed pixel  ";
+	do i << "";
+	do j << "";
+	p := [i, j];	// SEED pixel.
+	b := {[3,3], [1,1], "010111010"};
+	message "SE:"; message b;
+
+	c := !a;
+	c := c + p;
+	a := ~a;
+	message "Complement of input:"; message a;
+	loop
+	  message "Intermediate: "; message c;
+	  d := (c ++ b) * a;
+	  exit when d=c;
+	  c := d;
+	end;
+	do  c + ~a >> "$2";
+end;

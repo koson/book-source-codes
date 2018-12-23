@@ -1,0 +1,22 @@
+// Test of translate.
+image a, b;
+pixel x;
+int i,j;
+begin
+	a := {[5,5], [0,0], "0000001000000000000000000"};
+	message a;
+	i := 0; j := 0;
+	loop
+	  j := 0;
+	  loop
+	    x := [i, j];
+	    message "Translation by "; message x; 
+	    message a -> x;
+	    message;
+	    j := j + 1;
+	    exit when j  >= a.cols;
+	  end;
+	  i := i + 1;
+	  exit when i >= a.rows;
+	end;
+end;

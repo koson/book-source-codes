@@ -1,0 +1,5 @@
+// Erosion using --
+image a, b;
+begin
+	do (a << "$1")--(b<<"$2") >> "$3"
+end;

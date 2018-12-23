@@ -1,0 +1,9 @@
+image a, b, c;
+begin
+	do a << "$1";
+	do b << "$2";
+	c := (a--b)++b;
+	message c;
+	c := a - c;
+	message c;
+end;

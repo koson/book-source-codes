@@ -1,0 +1,27 @@
+// Close, depth input from the terminal.
+int i, n;
+image a, b;
+begin
+	do a << "$1";	// Read the image
+	message "Enter the depth of the OPENING (int): ";
+	do n << "";
+	b := {[3,3], [1,1], "111111111"};
+
+ // Dilate N times.
+         i := 0;
+         loop
+           a := a ++ b;
+           i := i + 1;
+           exit when i>=n;
+         end;
+
+// Erode N times
+	i := 0;
+	loop
+	  a := a -- b;
+	  i := i + 1;
+	  exit when i >= n;
+	end;
+
+	do a >> "$2";
+end;

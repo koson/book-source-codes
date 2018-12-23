@@ -1,0 +1,19 @@
+// Count 8-connected regions.
+image L1, L2, L3, L4, a, b;
+int count;
+begin
+	L1 := {[2,2], [0,1], "0101"};
+	L2 := {[2,2], [0,1], "0110"};
+	L3 := {[2,2], [0,1], "1001"};
+	L4 := {[2,2], [0,1], "1100"};
+	do a << "$1";
+
+	count := 0; 
+	loop
+	   count := #a + count;
+	   b := (a--L1) + (a--L2) + (a--L3) + (a--L4);
+	   exit when b = 0;
+	   a := b;
+	end;
+	message "Number of 8 regions is "; message count; message;
+end;

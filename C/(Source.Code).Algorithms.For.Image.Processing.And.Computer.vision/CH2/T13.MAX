@@ -1,0 +1,8 @@
+// Test of pixel + image
+pixel p;
+image a;
+begin
+	a := {[5,5], [0,0], "0000000000000000000000000"};
+	p := [3,3];
+	message p+a;
+end;

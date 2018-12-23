@@ -1,0 +1,10 @@
+// Test of intersection
+image a, b;
+begin
+	a := {[5,5], [0,0], "0000001110011100111000000"};
+	b := ~a;
+	message a;
+	message b;
+	b := a*b;
+	message b;
+end;

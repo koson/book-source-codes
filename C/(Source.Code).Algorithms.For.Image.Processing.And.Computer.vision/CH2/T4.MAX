@@ -1,0 +1,43 @@
+// Test: see if erosion restores a dilation.
+// Also test of equality and subset operators
+//
+image a, b, c;
+begin
+	a := {[4,4], [0,0], "0000011001100000"};
+	message "Before dilation:";
+	message a;
+	b := {[3,3], [1,1], "111111111"};
+	c := a ++ b;
+	message "After dilation:";
+	message c;
+
+	c := c--b;
+	message "Next 2 messages should indicate equality. Test of =.";
+	message;
+	if (a = c) then message "A = C."
+	 else message "A <> C";
+	if (a <> c) then message "A <> C"
+	 else message "A = C";
+	message;
+
+	message "Next 2 messages should indicate subset. Set of <= >=";
+	message;
+	if (a <= c) then message "A <= C"
+	 else message "A not a subset of C";
+	if (c <= a) then message "C <= A"
+	 else message "C is not a subset of A.";
+	message;
+
+	message "Next 2 messages should indicate no subset. Test of < >.";
+	message;
+	if (a < c) then message "A is a proper subset of C"
+	 else message "A NOT proper subset of C";
+	message;
+	if (a > c) then message "C is a proper subset of A"
+	 else message "C NOT proper subset of A";
+
+	message;
+	message "Next 2 messages should be: YES NO";
+	if (a <> b) then message "YES" else message "NO";
+	if (a <> c) then message "YES" else message "NO";
+end;

@@ -1,0 +1,7 @@
+// Test of image constant/generator
+//
+image a;
+begin
+	a := {[3,3], [1,1], "111111111"};
+	message a;
+end;

@@ -1,0 +1,24 @@
+// Simple integer expressions 
+int i,j,k;
+pixel z;
+begin
+	i := 12; j := 4; k := 100;
+	message "Should be: 12 4 100"; message;
+	message i; message j; message k; message;
+
+	message "Should be : 1204 8 -100"; message;
+	message i*k+j; message i-j; message -k;
+
+	message "Should be: Pixel [12, 4]"; message;
+	z := [i,j];
+	message z;
+	message;
+
+	message "Should be: Pixel [0, -8] ";
+	z := z - [12, 12];
+	message z;
+	message;
+
+	message "Should be: 2 integers: 0 -8"; message;
+	message z.row; message z.col; message;
+end;

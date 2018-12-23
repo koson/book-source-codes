@@ -1,0 +1,7 @@
+// AND of two binary images.
+image a, b;
+begin
+	do a << "residualt.pbm";
+	do b << "disk2closed.pbm";
+	do ((~a)*(~b)) >> "and.pbm";
+end;

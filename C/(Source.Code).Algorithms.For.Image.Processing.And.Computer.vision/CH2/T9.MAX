@@ -1,0 +1,9 @@
+// Test of union..
+image a, b, c;
+begin
+	do a << "$1";
+	message a;
+	do b << "$2";
+	message b;
+	message (a+b);
+end;

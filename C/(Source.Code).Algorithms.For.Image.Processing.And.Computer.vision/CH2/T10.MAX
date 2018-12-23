@@ -1,0 +1,13 @@
+// Nested LOOP statements.
+int i,j;
+begin
+	i := 0;
+	loop
+	  loop
+	    i := i + 1;
+	    exit 2 when i > 10;
+	  end;
+	  i := 0;
+	end;
+	message "Done."; message;
+end;

@@ -1,0 +1,8 @@
+// Test of isolated pixel operator #
+image a;
+begin
+	a := {[5,5], [0,0], "0000001000000100100000001"};
+	message a;
+	message #a;
+	message;
+end;

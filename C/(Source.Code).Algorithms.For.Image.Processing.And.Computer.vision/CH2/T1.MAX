@@ -1,0 +1,13 @@
+// Test of input and output in MAX
+//
+image a, b;
+begin
+
+// Read in two images
+	a := a << "a";
+	b := b << "b";
+
+// Copy them to new files.
+	b := b>>"copyb";
+	a := a>>"copya";
+end;

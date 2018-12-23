@@ -393,3 +393,5 @@ Release
 *.vbproj.user
 ipch
 *sdf
+
+.DS_Store

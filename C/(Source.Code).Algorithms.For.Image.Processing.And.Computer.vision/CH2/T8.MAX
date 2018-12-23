@@ -1,0 +1,10 @@
+// Test of subset operator => and <=
+//
+image a, b, c;
+int i,j;
+begin
+	do a << "c";
+	do b << "b";
+	if (b <= a) then message "B<=C";
+	if (a >= b) then message "C >= B";
+end;

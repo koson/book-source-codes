@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginControl", "LoginControl.csproj", "{B2DE2603-3715-4CE9-9CB5-6E622F0B47EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B2DE2603-3715-4CE9-9CB5-6E622F0B47EF}.Debug.ActiveCfg = Debug|.NET
+		{B2DE2603-3715-4CE9-9CB5-6E622F0B47EF}.Debug.Build.0 = Debug|.NET
+		{B2DE2603-3715-4CE9-9CB5-6E622F0B47EF}.Release.ActiveCfg = Release|.NET
+		{B2DE2603-3715-4CE9-9CB5-6E622F0B47EF}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

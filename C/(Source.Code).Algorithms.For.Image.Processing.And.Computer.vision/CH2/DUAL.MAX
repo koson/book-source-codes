@@ -1,0 +1,20 @@
+// Dual nature of erosion/dilation
+image a, b, c;
+begin
+	do a << "$1";
+	message "Input image:";
+	message a;
+
+	b := {[3,3], [1,1], "111111111"};
+
+	c := a -- b;
+	message "Erosion by SIMPLE:";
+	message c;
+
+	c := ~c;
+	message "Complement of erosion:";
+	message c;
+
+	message "Dilation of complement:";
+	message (~a) ++ b;
+end;

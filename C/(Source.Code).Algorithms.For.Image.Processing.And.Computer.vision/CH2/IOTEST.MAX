@@ -1,0 +1,17 @@
+// Test of translate.
+image a, b;
+pixel x;
+int i,j;
+begin
+
+// Input from stdin
+	do i << "out1";
+	do i >> "";
+	do i << "out2";
+	do i >> "";
+	x := [100,200];
+	do x >> "";
+	do x << "";
+	do x >> "";
+
+end;

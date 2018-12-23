@@ -1,0 +1,11 @@
+// Test of simple erosion
+//
+image a, b;
+begin
+	a := {[4,4], [0,0], "1111111111111111"};
+	message "Before erosion:";
+	message a;
+	b := {[3,3], [1,1], "111111111"};
+	message "After erosion:";
+	message a--b;
+end;

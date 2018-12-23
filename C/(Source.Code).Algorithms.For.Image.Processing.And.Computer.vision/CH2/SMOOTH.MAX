@@ -1,0 +1,8 @@
+image a, b, c;
+begin
+	do a << "$1";
+	do b << "$2";
+	c := (a--b)++b;
+	c := (c++b)--b;
+	message c;
+end;

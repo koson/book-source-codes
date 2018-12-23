@@ -1,0 +1,20 @@
+// Hit and miss transform
+// Example5.11, Haralick & Shapiro
+image a, se1, se2;
+begin
+	do a << "$1";
+	se1 := {[5,5], [2,1], "0000000000110000100000000"};
+	se2 := {[5,5], [2,1], "1111111111001111011111111"};
+
+	message "The HIT portion:";
+	message a--se1;
+	message;
+	message "Complement of A:";
+	message ~a;
+	message;
+	message "The MISS portion:";
+	message ~a -- se2;
+	message;
+	a := (a--se1)*(~a -- se2);
+	message a;
+end;

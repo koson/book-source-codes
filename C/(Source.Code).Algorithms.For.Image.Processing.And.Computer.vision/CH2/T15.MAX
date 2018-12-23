@@ -1,0 +1,15 @@
+// Multiple expressions in a MESSAGE statement.
+int i,j,k;
+image im;
+pixel a, b;
+begin
+	i := 1; j := 2; k := 3;
+	a := [i,j]; b := [j,k];
+	do im << "simple.pbm";
+
+	message "I = ", i, "j=", j, "k=", k;
+	message;
+	message a, i, j, b;
+	message i, im, j;
+	message;
+end;
