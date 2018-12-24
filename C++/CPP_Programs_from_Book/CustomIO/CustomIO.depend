@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1391968899 source:c:\cpp_programs_from_book\customio\main.cpp
+	<cstdlib>
+	<cstdio>
+	<iostream>
+	"student.h"
+
+1391916285 c:\cpp_programs_from_book\customio\student.h
+	<iostream>
+	<string>
+
+1392068874 source:c:\cpp_programs_from_book\customio\student.cpp
+	"student.h"
+

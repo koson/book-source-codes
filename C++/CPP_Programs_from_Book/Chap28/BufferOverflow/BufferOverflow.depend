@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1396577007 source:c:\cpp_programs_from_book\chap28\bufferoverflow\main.cpp
+	<cstdio>
+	<cstdlib>
+	<fstream>
+	<iostream>
+	<cstring>
+	<string>
+

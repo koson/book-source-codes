@@ -1,0 +1,1 @@
+\"program files (x86)"\codeblocks\mingw\bin\gdb %1
